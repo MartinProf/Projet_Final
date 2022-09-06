@@ -10,7 +10,8 @@ body{
 }
 
 .navigation{
-    background-color: #5f4444;
+    background: rgba(188, 101, 47, 1.0);
+    background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
     height: 80px;
     width: 100%;
     display: inline-block;
@@ -33,22 +34,23 @@ body{
 }
 
 .navigation > a{
-    color: black;
+    color: #2809a0;
     float: right;
-    background-color: #95d398;
+    background-color: #70ad47;
     font-size: large;
     margin: 15px 10px;
-    padding: 10px;
+    padding: 13px;
     text-decoration: none;
-    border-radius: 10% 30% 50% 70%;
+    border-radius: 10px 0% 10px 10%;
 }
 .navigation>a:hover{
-    background-color: #70AD47;
+    background-color: #efab17;
 }
 
 @media screen and (max-width:924px) {
     .navigation{
-        background-color: #5f4444;
+        background: rgba(188, 101, 47, 1.0);
+        background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
         height: 60px;
         width: 100%;
         display: inline-block;
@@ -65,66 +67,22 @@ body{
     }
     
     .navigation > a{
-        color: black;
+        color: #2809a0;
         float: right;
-        background-color: #95d398;
+        background-color: #70ad47;
         font-size: small;
         margin: 10px 5px;
         padding: 5px;
         margin-top: 20px;
         text-decoration: none;
-        border-radius: 10% 30% 50% 70%;
+        border-radius: 10px 0% 10px 10%;
     }
     .navigation>a:hover{
-        background-color: #70AD47;
+        background-color: #efab17;
     }
 }
 
-/*@media screen and (max-width:924px) {
-    .navigation{
-        background-color: #5f4444;
-        height: 60px;
-        width: 100%;
-        display: inline-block;
-    }
-    #btnNav{
-        position: absolute;;
-        top: 25px;
-        right: 50px;
-        width: auto;
-        transform: scale(2);
-        background-color: #70AD47;
-    }
-    
-    .navigation > img{
-        float: left;
-        height: 30px;
-        margin: 15px;
-    }
-
-    #LogoListe{
-        position:absolute;
-        right: 50px;
-        right: 25px;
-        background-color: #5f4444;
-        visibility: hidden;
-    }
-    
-    .navigation >a:nth-child(2){
-        margin-right: 10px;
-    }
-    
-    .navigation > a{
-        visibility: collapse;
-    }
-
-    #btnNav:active{
-
-    }
-}*/
-
-
-@media screen and (max-width:576px) {
+@media screen and (max-width:650px) {
     .navigation{
         display: flex;
         flex-wrap: wrap-reverse;
@@ -142,7 +100,8 @@ body{
         display: flex;
         flex-wrap:wrap-reverse;
         justify-content: center;
-        background-color: #5f4444;
+        background: rgba(188, 101, 47, 1.0);
+        background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
         color: #70AD47;
         font-size: large;
         width: 100%;
@@ -154,7 +113,8 @@ body{
         align-items: baseline;
     }
     .navigation>a:hover{
-        background-color: #5f4444;
+        background-color: #efab17;
+        color: #2809a0;
     }
     .navigation >a:nth-child(2){
         margin-right: 0px;
@@ -236,8 +196,8 @@ body{
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #5f4444;
-    color: #70AD47;
+    background: rgba(188, 101, 47, 1.0);
+    background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
     display: grid;
     grid-template-columns: 5fr 4fr 3fr;
     gap: 20px;
@@ -246,7 +206,8 @@ body{
 
 .PiedPage > div > a{
     text-decoration: none;
-    color: black;
+    color: #2809a0;
+    font-size: large;
 }
 
 .block1{
@@ -259,10 +220,9 @@ body{
 .block1>a{
     display: block;
     float: left;
-    background-color: rgba(100, 157, 57, .4);
-    border-radius: 5%;
+    border-radius: 10px;
     margin: 5px;
-    padding: 2px;
+    padding: 4px;
 }
 
 .block2{
@@ -274,10 +234,9 @@ body{
 .block2>a{
     display: block;
     float: left;
-    background-color: rgba(100, 157, 57, .4);
-    border-radius: 10%;
+    border-radius: 10px;
     margin: 5px;
-    padding: 2px;
+    padding: 4px;
 }
 
 .block3{
@@ -289,10 +248,9 @@ body{
 .block3>a{
     display: block;
     float: left;
-    background-color: rgba(100, 157, 57, .4);
-    border-radius: 10%;
+    border-radius: 10px;
     margin: 5px;
-    padding: 2px;
+    padding: 4px;
 }
 .block3_2>img{
     display: block;
@@ -307,7 +265,7 @@ body{
 }
 
 .PiedPage > div >a:hover{
-    background-color: #70AD47;
+    background-color: #efab17;
 }
 
 @media screen and (max-width:924px) {
@@ -320,7 +278,7 @@ body{
 
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:650px) {
     .PiedPage{
         grid-template-columns: 1fr;
         gap: 20px;
