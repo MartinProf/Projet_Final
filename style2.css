@@ -7,7 +7,9 @@ margin: 0;
 
 .navbar-nav > li{
     padding: 5px;
+
 }   
+
 
 #login {
     margin-right: 100px;
@@ -19,12 +21,14 @@ margin: 0;
 
 
   
+
   .sidebar {
     position: fixed;
     top: 96px;
     bottom: 0;
     left: 0;
     padding: 58px 0 0;
+
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     width: 240px;
     z-index: 600;
@@ -40,6 +44,7 @@ margin: 0;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   }
   
+
   main {
     position: relative;
     top: 0;
@@ -47,5 +52,6 @@ margin: 0;
     padding-top: 0.5rem;
     overflow-x: hidden;
     overflow-y: hidden; 
+
   }
 

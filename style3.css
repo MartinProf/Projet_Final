@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 15px;
+}
+
+body{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation{
+    background-color: #5f4444;
+    height: 80px;
+    width: 100%;
+    display: inline-block;
+    position:relative;
+}
+
+#btnNav{
+    width: 0px;
+}
+
+.navigation > img{
+    float: left;
+    height: 50px;
+    margin: 15px;
+}
+
+
+.navigation >a:nth-child(2){
+    margin-right: 30px;
+}
+
+.navigation > a{
+    color: black;
+    float: right;
+    background-color: #95d398;
+    font-size: large;
+    margin: 15px 10px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10% 30% 50% 70%;
+}
+.navigation>a:hover{
+    background-color: #70AD47;
+}
+
+@media screen and (max-width:924px) {
+    .navigation{
+        background-color: #5f4444;
+        height: 60px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .navigation > img{
+        float: left;
+        height: 30px;
+        margin: 15px;
+    }
+    
+    .navigation >a:nth-child(2){
+        margin-right: 10px;
+    }
+    
+    .navigation > a{
+        color: black;
+        float: right;
+        background-color: #95d398;
+        font-size: small;
+        margin: 10px 5px;
+        padding: 5px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 10% 30% 50% 70%;
+    }
+    .navigation>a:hover{
+        background-color: #70AD47;
+    }
+}
+
+/*@media screen and (max-width:924px) {
+    .navigation{
+        background-color: #5f4444;
+        height: 60px;
+        width: 100%;
+        display: inline-block;
+    }
+    #btnNav{
+        position: absolute;;
+        top: 25px;
+        right: 50px;
+        width: auto;
+        transform: scale(2);
+        background-color: #70AD47;
+    }
+    
+    .navigation > img{
+        float: left;
+        height: 30px;
+        margin: 15px;
+    }
+
+    #LogoListe{
+        position:absolute;
+        right: 50px;
+        right: 25px;
+        background-color: #5f4444;
+        visibility: hidden;
+    }
+    
+    .navigation >a:nth-child(2){
+        margin-right: 10px;
+    }
+    
+    .navigation > a{
+        visibility: collapse;
+    }
+
+    #btnNav:active{
+
+    }
+}*/
+
+
+@media screen and (max-width:576px) {
+    .navigation{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .navigation>img{
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .navigation>a{
+        display: flex;
+        flex-wrap:wrap-reverse;
+        justify-content: center;
+        background-color: #5f4444;
+        color: #70AD47;
+        font-size: large;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: auto;
+        border-radius: 0;
+        border: black solid 1px;
+        align-items: baseline;
+    }
+    .navigation>a:hover{
+        background-color: #5f4444;
+    }
+    .navigation >a:nth-child(2){
+        margin-right: 0px;
+    }
+}
+
+
+.contenerMain{
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+}
+
+.sectionGauche{
+    background-color: #70AD47;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    padding: 2px;
+}
+
+.sectionGauche > p{
+    background-color: #E2F0D9;
+    width: 95%;
+    height: 50px;
+    border: 1px solid;
+    text-align: end;
+}
+
+#titreGauche{
+    background-color: #A9D18E;
+    border: 1px solid;
+}
+
+.mainPage{
+    background-color: #FFC000;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    text-align: end;
+    border: 1px solid;
+}
+.mainPage > p{
+    background-color: #FFD966;
+    height: 50px;
+    border: 1px solid;
+    margin: 0 0 0 5px;
+}
+.mainPage > div{
+    background-color: #FFF2CC;
+    border: 1px solid;
+    height: 100px;
+    margin: 0 1px 1px 10%;
+}
+
+.sectionDroite{
+    background-color:#A365D1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    border: 1px solid;
+}
+.sectionDroite > p{
+    background-color: #E9B5ED;
+    margin: 2px;
+    height: 50px;
+    border: 1px solid;
+    left: 5px;
+}
+
+.PiedPage{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #5f4444;
+    color: #70AD47;
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr;
+    gap: 20px;
+    padding: 20px 50px 20px 50px;
+}
+
+.PiedPage > div > a{
+    text-decoration: none;
+    color: black;
+}
+
+.block1{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+    margin: 0px 0px 10px 0px;
+}
+.block1>a{
+    display: block;
+    float: left;
+    background-color: rgba(100, 157, 57, .4);
+    border-radius: 5%;
+    margin: 5px;
+    padding: 2px;
+}
+
+.block2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+}
+.block2>a{
+    display: block;
+    float: left;
+    background-color: rgba(100, 157, 57, .4);
+    border-radius: 10%;
+    margin: 5px;
+    padding: 2px;
+}
+
+.block3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+}
+.block3>a{
+    display: block;
+    float: left;
+    background-color: rgba(100, 157, 57, .4);
+    border-radius: 10%;
+    margin: 5px;
+    padding: 2px;
+}
+.block3_2>img{
+    display: block;
+    float: left;
+    padding: 5px;
+}
+.block3_2>img:nth-child(1){
+    display: block;
+    float: left;
+    padding: 5px;
+
+}
+
+.PiedPage > div >a:hover{
+    background-color: #70AD47;
+}
+
+@media screen and (max-width:924px) {
+    .PiedPage{
+        padding: 5px;
+    }
+    .PiedPage > div > a{
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .PiedPage{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 50px 20px 50px;
+    }
+
+}
