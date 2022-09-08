@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    background-color: rgba(234, 242, 214, 0.9);
+    position: fixed;
+}
+
+#login {
+    margin-right: 100px;
+}
+
+.logo {
+    margin-left: 70px;
+}
+
+.navbar-nav > li{
+    padding: 5px;
+}
+
+.wrapper .sidenav{
+    background: rgb(117, 183, 0);
+    opacity: 0.9;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 90px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidenav #listesgauche ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #386600;
+    color: rgb(237, 241, 237);
+    font-size: 18px;
+    position: relative;
+    font-family: 'Shadows into light';
+    margin-left: -30px;
+}
+
+.wrapper .sidenav #listesgauche ul li a .icon{
+    color: rgb(237, 241, 237);
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover,
+.wrapper .sidenav #listesgauche ul li a.active{
+    color: #549900;
+    background:white;
+    border-right: 2px solid rgb(56, 102, 0);
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover .icon,
+.wrapper .sidenav #listesgauche ul li a.active .icon{
+    color: #549900;
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover:before,
+.wrapper .sidenav #listesgauche ul li a.active:before{
+    display: block;
+}
+
+.imageprincipale img{
+    image-resolution: auto;
+    position: fixed;
+    left: 225.8px;
+    top: 96px;
+    height: 799px;
+    width: 100%;
+    opacity: 50%;
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+}
+
+.cereales img {
+    image-resolution: auto;
+    position: relative;
+    height: 200px;
+    width: 300px;
+}
