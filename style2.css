@@ -45,13 +45,13 @@ margin: 0;
   }
   
 
-  main {
+  .wrapper {
     position: relative;
     top: 0;
     height: 100vh;
     padding-top: 0.5rem;
     overflow-x: hidden;
     overflow-y: hidden; 
-
+    background: url(/images/WallpaperDog-20535103.jpg) no-repeat 50% 50%;
   }
 
