@@ -1,11 +1,13 @@
-/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-function openNav() {
-    document.getElementById("wrapper").style.width = "250px";
-    document.getElementById("centre").style.marginLeft = "250px";
-  }
   
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-  function closeNav() {
-    document.getElementById("wrapper").style.width = "0";
-    document.getElementById("centre").style.marginLeft = "0";
-  }
+function openNav() {
+    document.getElementById("sidenavElement").style.display = "block";
+    document.getElementById("centreElement").style.marginLeft = "15%";
+    document.getElementById("sidenavElement").style.width = "15%";
+    document.getElementById("openbtnElement").style.display = 'none';
+}
+
+function closeNav() {
+    document.getElementById("sidenavElement").style.display = "none";
+    document.getElementById("centreElement").style.marginLeft = "0%";
+    document.getElementById("openbtnElement").style.display = "inline-block";
+}

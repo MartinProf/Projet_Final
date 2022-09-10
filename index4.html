@@ -11,17 +11,7 @@
     <script src="jquery/jquery-3.5.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/fontawesome-free-6.2.0-web/css/all.css">
-    <script>/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-        function openNav() {
-          document.getElementById("sidenavElement").style.width = "225px";
-          document.getElementById("centreElement").style.marginLeft = "225px";
-        }
-        
-        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-        function closeNav() {
-          document.getElementById("sidenavElement").style.width = "0";
-          document.getElementById("centreElement").style.marginLeft = "0";
-        }</script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -65,79 +55,90 @@
     <!-- Barre navigation gauche et partie centrale -->
 
     <main>
-        <div class="wrapper">
-            <nav class="sidenav"  id="sidenavElement">
-                <div id="listesgauche">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
-                    <ul>                    
-                        <li>
-                            <a href="#" class="active">
-                                <span class="icon"><i class="fas fa-home"></i></span>
-                                <span class="item">Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-desktop"></i></span>
-                                <span class="item">My Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-user-friends"></i></span>
-                                <span class="item">People</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                                <span class="item">Perfomance</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-database"></i></span>
-                                <span class="item">Development</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                                <span class="item">Reports</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-user-shield"></i></span>
-                                <span class="item">Admin</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><i class="fas fa-cog"></i></span>
-                                <span class="item">Settings</span>
-                            </a>
-                        </li>
-                    </ul>
+        <section>
+            <div class="wrapper">
+                <nav class="sidenav" id="sidenavElement" style="display: none;">
+                    <div id="listesgauche">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <ul>
+                            <li>
+                                <a href="#" class="active">
+                                    <span class="icon"><i class="fas fa-home"></i></span>
+                                    <span class="item">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                                    <span class="item">My Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-user-friends"></i></span>
+                                    <span class="item">People</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                    <span class="item">Perfomance</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-database"></i></span>
+                                    <span class="item">Development</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                                    <span class="item">Reports</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-user-shield"></i></span>
+                                    <span class="item">Admin</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-cog"></i></span>
+                                    <span class="item">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+
+            <!-- Partie centrale -->
+            <div class="centre" id="centreElement">
+                <div class="imageprincipale">
+                    <img src="images/pexels-flambo-1112080.jpg" alt="background">
                 </div>
-
-            </nav>
-
-        </div>
-
-        <!-- Partie centrale -->
-        <div class="centre" id="centreElement">
-            <div class="imageprincipale">
-             <img src="images/pexels-flambo-1112080.jpg" alt="background"></div>
-            <section class="produits">
-                <!-- <div class="cereales">
-                    <img src="images/pexels-pixabay-164504.jpg" class="fa-flip" style="--fa-animation-duration: 1s"
-                        alt="cereales">
-                </div> -->
-            </section>
-        </div>
-
-
+            </div>
+        </section>
+        <section id="sectionProduits">
+            <div class="produits">
+                <div class="imagesProduits">
+                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+                </div>
+                <div class="imagesProduits">
+                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+                </div>
+                <div class="imagesProduits">
+                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+                </div>
+                <div class="imagesProduits">
+                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
