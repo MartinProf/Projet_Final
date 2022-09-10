@@ -11,7 +11,7 @@
     <script src="jquery/jquery-3.5.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/fontawesome-free-6.2.0-web/css/all.css">
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </head>
 
 <body>
@@ -55,91 +55,91 @@
     <!-- Barre navigation gauche et partie centrale -->
 
     <main>
-        <section>
-            <div class="wrapper">
-                <nav class="sidenav" id="sidenavElement" style="display: none;">
-                    <div id="listesgauche">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <ul>
-                            <li>
-                                <a href="#" class="active">
-                                    <span class="icon"><i class="fas fa-home"></i></span>
-                                    <span class="item">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-desktop"></i></span>
-                                    <span class="item">My Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-user-friends"></i></span>
-                                    <span class="item">People</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                                    <span class="item">Perfomance</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-database"></i></span>
-                                    <span class="item">Development</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-chart-line"></i></span>
-                                    <span class="item">Reports</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-user-shield"></i></span>
-                                    <span class="item">Admin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-cog"></i></span>
-                                    <span class="item">Settings</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="wrapper">
+            <nav class="sidenav"  id="sidenavElement" style="display: none;">
+                <div id="listesgauche">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+                    <ul>                    
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="item">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-desktop"></i></span>
+                                <span class="item">My Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-user-friends"></i></span>
+                                <span class="item">People</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                <span class="item">Perfomance</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-database"></i></span>
+                                <span class="item">Development</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                                <span class="item">Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-user-shield"></i></span>
+                                <span class="item">Admin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-cog"></i></span>
+                                <span class="item">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                </nav>
+            </nav>
 
-            </div>
+        </div>
 
-            <!-- Partie centrale -->
-            <div class="centre" id="centreElement">
-                <div class="imageprincipale">
-                    <img src="images/pexels-flambo-1112080.jpg" alt="background">
-                </div>
-            </div>
-        </section>
-        <section id="sectionProduits">
-            <div class="produits">
-                <div class="imagesProduits">
-                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
-                </div>
-                <div class="imagesProduits">
-                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
-                </div>
-                <div class="imagesProduits">
-                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
-                </div>
-                <div class="imagesProduits">
-                    <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
-                </div>
-            </div>
-        </section>
+        <!-- Partie centrale -->
+        <div class="centre" id="centreElement">
+            <div class="imageprincipale">
+             <img src="images/pexels-flambo-1112080.jpg" alt="imagePrincipale"></div>
+        </div>
     </main>
+    
+    <div class="produits" id="produitsElement">
+        <div class="imagesProduits">
+            <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+            <p class="descriptionImages">Des produits d'une fraîcheur exceptionnelle</p>
+        </div>
+        <div class="imagesProduits">
+            <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+            <p class="descriptionImages">Des produits d'une fraîcheur exceptionnelle</p>
+        </div>
+        <div class="imagesProduits">
+            <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+            <p class="descriptionImages">Des produits d'une fraîcheur exceptionnelle</p>
+        </div>
+        <div class="imagesProduits">
+            <img src="images/pexels-pixabay-164504.jpg" alt="cereales">
+            <p class="descriptionImages">Des produits d'une fraîcheur exceptionnelle</p>
+        </div>
+    </div>
 
 </body>
 
