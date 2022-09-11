@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Shop | Sami ul Haq</title>
+  <!-- Font Awesome -->
+  <script src="css/fontawesome-free-6.2.0-web/js/all.js"></script>
+  <script src="boutique.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="boutique.css" />
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="jquery/jquery-3.5.0.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid topnav">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button id="openbtnElement" class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+        <a class="navbar-brand logo" href="#">
+          <img src="images/bio-logo-3.png" alt="Logo Bio" height="70">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nous découvrir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notre fonctionnement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Points de cueillette</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Infolettre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boutique</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right p-1">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li id="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <div class="allWrapper">
+      <!-- Products Section -->
+      <section class="products">
+        <div class="product-item">
+          <div class="product-img">
+            <img src="images/Mango.png" alt="apple" />
+          </div>
+
+          <div class="product-description">
+            <h2 class="product-name"><a href="#">Apple</a></h2>
+
+            <p id="applePrice">$10</p>
+            <div class="buttons">
+              <button class="btn-plus" onclick="increaseItem('apple' , 'applePrice')">+</button>
+              <input type="text" id="apple" value="0" />
+              <button class="btn-minus" onclick="decreaseItem('apple' , 'applePrice')">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-img">
+            <img src="images/Orange.png" alt="apple" />
+          </div>
+
+          <div class="product-description">
+            <h2 class="product-name"><a href="#">Orange</a></h2>
+
+            <p id="orangePrice">$20</p>
+            <div class="buttons">
+              <button class="btn-plus" onclick="increaseItem('orange' , 'orangePrice')">+</button>
+              <input type="text" id="orange" value="0" />
+              <button class="btn-minus" onclick="decreaseItem('orange' , 'orangePrice')">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-img">
+            <img src="images/Apple.png" alt="apple" />
+          </div>
+
+          <div class="product-description">
+            <h2 class="product-name"><a href="#">Mango</a></h2>
+
+            <p id="mangoPrice">$30</p>
+            <div class="buttons">
+              <button class="btn-plus" onclick="increaseItem('mango' , 'mangoPrice')">+</button>
+              <input type="text" id="mango" value="0" />
+              <button class="btn-minus" onclick="decreaseItem('mango' , 'mangoPrice')">-</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="amount-details">
+        <h3>Number of Items: <span id="numOfItem">0</span></h3>
+        <h3>Total price: $ <span id="total">0</span></h3>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
