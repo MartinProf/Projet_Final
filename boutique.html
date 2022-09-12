@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fruit Shop | Sami ul Haq</title>
+  <title>Bio</title>
   <!-- Font Awesome -->
   <script src="css/fontawesome-free-6.2.0-web/js/all.js"></script>
   <script src="boutique.js"></script>
@@ -23,8 +23,6 @@
   <header>
     <div class="container-fluid topnav">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <button id="openbtnElement" class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
-        <a class="navbar-brand logo" href="#">
           <img src="images/bio-logo-3.png" alt="Logo Bio" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Nous découvrir</a>
+              <a class="nav-link" href="#">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Notre fonctionnement</a>
@@ -43,13 +41,11 @@
               <a class="nav-link" href="#">Points de cueillette</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Infolettre</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Boutique</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right p-1">
+            <li><a href="#"><i class="fas fa-cart-arrow-down"></i></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li id="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
@@ -72,9 +68,10 @@
 
             <p id="applePrice">$10</p>
             <div class="buttons">
-              <button class="btn-plus" onclick="increaseItem('apple' , 'applePrice')">+</button>
-              <input type="text" id="apple" value="0" />
               <button class="btn-minus" onclick="decreaseItem('apple' , 'applePrice')">-</button>
+              <input type="text" id="apple" value="0" />
+              <button class="btn-plus" onclick="increaseItem('apple' , 'applePrice')">+</button>
+              
             </div>
           </div>
         </div>
@@ -89,9 +86,9 @@
 
             <p id="orangePrice">$20</p>
             <div class="buttons">
-              <button class="btn-plus" onclick="increaseItem('orange' , 'orangePrice')">+</button>
-              <input type="text" id="orange" value="0" />
               <button class="btn-minus" onclick="decreaseItem('orange' , 'orangePrice')">-</button>
+              <input type="text" id="orange" value="0" />
+              <button class="btn-plus" onclick="increaseItem('orange' , 'orangePrice')">+</button>
             </div>
           </div>
         </div>
@@ -106,9 +103,9 @@
 
             <p id="mangoPrice">$30</p>
             <div class="buttons">
-              <button class="btn-plus" onclick="increaseItem('mango' , 'mangoPrice')">+</button>
-              <input type="text" id="mango" value="0" />
               <button class="btn-minus" onclick="decreaseItem('mango' , 'mangoPrice')">-</button>
+              <input type="text" id="mango" value="0" />
+              <button class="btn-plus" onclick="increaseItem('mango' , 'mangoPrice')">+</button>
             </div>
           </div>
         </div>
@@ -116,7 +113,7 @@
 
       <div class="amount-details">
         <h3>Number of Items: <span id="numOfItem">0</span></h3>
-        <h3>Total price: $ <span id="total">0</span></h3>
+        <h3>Total price: $ <span id="userTotalAmount">0</span></h3>
       </div>
     </div>
   </main>
