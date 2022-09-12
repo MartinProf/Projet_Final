@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .dropdown-item{
+    font-family: 'Crimson', sans-serif !important;
+    color: rgb(56, 102, 0) !important;
+}
+a:hover, a:active{
+    color:rgb(117, 183, 0) !important;
+}
+#couleurDropDown, nav{
+    background-color: #EDF1ED;
+}
+
+.navbar {
+    color: #386600 !important;
+    box-shadow: 1px 1px 3px rgba(56, 102, 0, 0.54) !important;
+}
+
+.mv-navbar .nav-link{
+    border-bottom: 1px solid transparent !important;
+    transition: padding-bottom .4s ease-in-out, border-color 0.3s ease;
+}
+
+.mv-navbar .nav-link:hover{
+    padding-bottom: 10px;
+    border-bottom-color: rgb(117, 183, 0) !important;;
+}
