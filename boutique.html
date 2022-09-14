@@ -16,42 +16,52 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="jquery/jquery-3.5.0.min.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
 
   <header>
-    <div class="container-fluid topnav">
-      <nav class="navbar navbar-expand-lg navbar-light">
-          <img src="images/bio-logo-3.png" alt="Logo Bio" height="70">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="mv-navbar navbar navbar-expand-sm position-fixed w-100 fw-bold">
+      <div class="container-fluid">
+        <img src="images/bio-logo-3.png" alt="BioLogo" height="30px" class="mx-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Notre fonctionnement</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Points de cueillette</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Boutique</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right p-1">
-            <li><a href="#"><i class="fas fa-cart-arrow-down"></i></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li id="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          </ul>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header" id="couleurDropDown">
+            <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Boutique</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" id="couleurDropDown">
+            <ul class="navbar-nav justify-content-end flex-grow-1">
+              <li class="nav-item">
+                <a class="nav-link active pe-2" aria-current="page" href="#">Nous découvrir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pe-2" href="#">Notre fonctionnement</a>
+              </li>
+              <li><a href="#"><i class="fas fa-cart-arrow-down"></i></a></li>
+              <li class="nav-item dropdown" id="couleurDropDown">
+                <a class="nav-link pe-2 dropdown-toggle" id="couleurDropDown" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Boutique</a>
+                <ul class="dropdown-menu dropdown-menu-end" id="couleurDropDown">
+                  <li><a class="dropdown-item" href="#">Magasiner</a></li>
+                  <li><a class="dropdown-item" href="#">Points de cueillette</a></li>
+                  <li><a class="dropdown-item" href="#">Infolettre</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">S'authentifier</a></li>
+                  <li><a class="dropdown-item" href="#">S'enregistrer</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
   <main>
 
@@ -71,7 +81,7 @@
               <button class="btn-minus" onclick="decreaseItem('apple' , 'applePrice')">-</button>
               <input type="text" id="apple" value="0" />
               <button class="btn-plus" onclick="increaseItem('apple' , 'applePrice')">+</button>
-              
+
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .drop
     font-family: 'Crimson', sans-serif !important;
     color: rgb(56, 102, 0) !important;
 }
-a:hover, a:active{
+a:hover, .active{
     color:rgb(117, 183, 0) !important;
 }
 #couleurDropDown, nav{
