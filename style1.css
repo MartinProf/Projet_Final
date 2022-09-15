@@ -28,7 +28,7 @@ a:hover, .active {
 }
 
 .banner {
-    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(/images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
+    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
     color: #EDF1ED;
@@ -39,7 +39,7 @@ a:hover, .active {
 }
 
 .banner2 {
-    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(/images/lagriculture-bio.png) center center fixed no-repeat;
+    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(images/lagriculture-bio.png) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
     color: #EDF1ED;

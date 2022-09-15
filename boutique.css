@@ -16,52 +16,36 @@ html {
     scroll-behavior: smooth;
 }
 
-.topnav {
-    font-family: 'Crimson';
-    background-color: rgba(237, 241, 237);
-    position: fixed;
-    z-index: 9;
+nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .dropdown-item{
+    font-family: 'Crimson', sans-serif !important;
+    color: rgb(56, 102, 0) !important;
+}
+a:hover, .active{
+    color:rgb(117, 183, 0) !important;
+}
+#couleurDropDown, nav{
+    background-color: #EDF1ED;
 }
 
-.topnav ul li a {
-    font-size: 1.2em;
-    color: rgb(56, 102, 0);
-    text-shadow: 1px 1px rgb(117, 183, 0);
+.navbar {
+    color: #386600 !important;
+    box-shadow: 1px 1px 3px rgba(56, 102, 0, 0.54) !important;
 }
 
-.topnav ul li a:hover {
-    color: rgb(117, 183, 0);
+.mv-navbar .nav-link{
+    border-bottom: 1px solid transparent !important;
+    transition: padding-bottom .4s ease-in-out, border-color 0.3s ease;
 }
 
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgb(117, 183, 0);
-    color: rgb(237, 241, 237);
-    padding: 10px 15px;
-    margin-left: 20px;
-    border: none;
-    -webkit-box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
-
-#login {
-    margin-right: 100px;
-}
-
-.logo {
-    margin-left: 70px;
-}
-
-.navbar-nav > li{
-    padding: 5px;
+.mv-navbar .nav-link:hover{
+    padding-bottom: 10px;
+    border-bottom-color: rgb(117, 183, 0) !important;;
 }
 
 /*--------------------------------------------------------------*/
 
 .allWrapper {
-    top: 96px;
-    position: fixed; 
+    top: 96px; 
     width: 100%;
     height: 799px;
 }
