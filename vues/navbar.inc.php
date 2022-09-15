@@ -17,6 +17,7 @@
                             <a class="nav-link active pe-2" aria-current="page" href="/vues/decouvrir.inc.php">Nous découvrir</a></li>
                         <li class="nav-item">
                             <a class="nav-link pe-2" href="/vues/fonctionnement.inc.php">Notre fonctionnement</a></li>
+                            <li><a href="#"><i class="fas fa-cart-arrow-down"></i></a></li>
                         <li class="nav-item dropdown" id="couleurDropDown">
                             <a class="nav-link pe-2 dropdown-toggle" id="couleurDropDown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Boutique</a>
                         <ul class="dropdown-menu dropdown-menu-end" id="couleurDropDown">
