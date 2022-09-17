@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    font-family: 'Crimson';
+    background-color: rgba(237, 241, 237);
+    position: fixed;
+    z-index: 9;
+}
+
+.topnav ul li a {
+    font-size: 1.2em;
+    color: rgb(56, 102, 0);
+    text-shadow: 1px 1px rgb(117, 183, 0);
+}
+
+.topnav ul li a:hover {
+    color: rgb(117, 183, 0);
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(117, 183, 0);
+    color: rgb(237, 241, 237);
+    padding: 10px 15px;
+    margin-left: 20px;
+    border: none;
+    -webkit-box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+
+#login {
+    margin-right: 100px;
+}
+
+.logo {
+    margin-left: 70px;
+}
+
+.navbar-nav > li{
+    padding: 5px;
+}
+
+.wrapper .sidenav{
+    background: rgb(117, 183, 0);
+    opacity: 0.9;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 90px 0;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: rgb(237, 241, 237);
+  }
+
+  .closebtn:hover {
+    color: rgb(56, 102, 0);
+  }
+
+.wrapper .sidenav #listesgauche ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #386600;
+    color: rgb(237, 241, 237);
+    font-size: 18px;
+    position: relative;
+    font-family: 'Shadows into light';
+    margin-left: -30px;
+}
+
+.wrapper .sidenav #listesgauche ul li a .icon{
+    color: rgb(237, 241, 237);
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover,
+.wrapper .sidenav #listesgauche ul li a.active{
+    color: #549900;
+    background:rgb(237, 241, 237);
+    border-right: 2px solid rgb(56, 102, 0);
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover .icon,
+.wrapper .sidenav #listesgauche ul li a.active .icon{
+    color: #549900;
+}
+
+.wrapper .sidenav #listesgauche ul li a:hover:before,
+.wrapper .sidenav #listesgauche ul li a.active:before{
+    display: block;
+}
+
+#centreElement {
+    transition: margin-left .5s;
+  }
+
+#produitsElement {
+transition: margin-left .5s;
+}
+
+.imageprincipale img{
+    margin-top: 96px;
+    height: 799px;
+    width: 100%;
+    opacity: 50%;
+    background-size: cover;
+    position: sticky;
+}
+
+#sectionProduits {
+    background-color: rgb(237, 241, 237);
+    padding: 10px 0px 100px 0px;   
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.imagesProduits {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px;
+    font-weight: 300;
+}
+
+.imagesProduits img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.7);
+    width: 250px;
+    height: 350px;
+}
+
+.produits .imagesProduits:hover img {
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+
+.produits .imagesProduits {
+position: relative;
+}
+  
+.produits .descriptionImages {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+color: black;
+visibility: hidden;
+opacity: 0;
+transition: opacity .2s, visibility .2s;
+}
+
+ .produits .imagesProduits:hover .descriptionImages {
+visibility: visible;
+opacity: 1;
+}

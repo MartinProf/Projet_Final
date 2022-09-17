@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap');
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -17,19 +18,21 @@ html {
 }
 
 nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .dropdown-item{
-    font-family: 'Crimson', sans-serif !important;
+    font-family: 'Caveat', sans-serif;
+    font-size: 1.5em !important;
     color: rgb(56, 102, 0) !important;
 }
 a:hover, .active{
-    color:rgb(117, 183, 0) !important;
+    color:rgb(152, 122, 61) !important;
 }
 #couleurDropDown, nav{
-    background-color: #EDF1ED;
+    background-color: rgb(243, 245, 242);
 }
 
 .navbar {
     color: #386600 !important;
     box-shadow: 1px 1px 3px rgba(56, 102, 0, 0.54) !important;
+    z-index: 9;
 }
 
 .navbar img {
@@ -43,36 +46,36 @@ a:hover, .active{
 
 .mv-navbar .nav-link:hover{
     padding-bottom: 10px;
-    border-bottom-color: rgb(117, 183, 0) !important;;
+    border-bottom-color:rgb(152, 122, 61) !important;;
 }
 
 /*--------------------------------------------------------------*/
 
 /* Products */
 
+
 .products{
-    padding-top: 96px;
-    padding-bottom: 120px;
     flex-wrap: wrap;
+    padding-top: 96px;
 }
 
 .product-item{
     width: 300px;
     height: 350px;
     margin: 1rem 0rem;
-    background-color: rgb(237, 241, 237);
+    background-color: rgb(243, 245, 242);
     border-radius: 5px;
     padding: 2rem;
     margin: 1rem;
-    -webkit-box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: rgb(117, 183, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(56, 102, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: rgb(56, 102, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .product-img img{
     margin: auto;
     display: block;
     width: 100%;
-    height: 170px;
+    height: 160px;
     cursor: pointer;
 }
 
@@ -80,26 +83,72 @@ a:hover, .active{
     text-align: center;
 }
 
-.product-description h2 a,
+.product-description h4 a,
 .product-description p{
+    text-decoration: none;
+    position: relative;
+    top: 15px;
     color: rgb(56, 102, 0);
-    text-shadow: 1px 1px rgb(117, 183, 0);
+    font-family: 'Pacifico', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#fruits {
+    background: center/cover url("images/fruits.png") no-repeat;
+    height: 300px;
+    position: relative;
+    top: 86px;
+}
+
+#legumes {
+    background: center/cover url("images/legumes.png") no-repeat;
+    height: 300px;
+    position: relative;
+    top: 86px;
+}
+
+#viandes {
+    background: center/cover url("images/Meat-new.png") no-repeat;
+    height: 300px;
+    position: relative;
+    top: 86px;
+}
+
+#diversProd {
+    background: center url("images/divers.png") no-repeat;
+    height: 300px;
+    position: relative;
+    top: 86px;
+}
+
+.foodwrap {
+    height: 10px;
+    position: relative;
+    top: 86px;
+    background-color: rgb(152, 122, 61);
+    opacity: 50%;
+}
+
+#divers {
+    margin-bottom: 206px;
 }
 
 
 /* Buttons */
 .buttons{
     display: inline-block;
-    border: 1px solid rgb(117, 183, 0);
+    border: 1px solid rgb(152, 122, 61);
     margin-top: 10px;
+    opacity: 80%;
 }
 
 .buttons button{
-    color: #ffffff;
+    
+    color: rgb(243, 245, 242);
     border: none;
     outline: none;
     padding: 5px 10px;
-    background-color: rgb(117, 183, 0);
+    background-color: rgb(152, 122, 61);
     cursor: pointer;
     font-size: 1rem;
 }
@@ -110,20 +159,51 @@ a:hover, .active{
     width: 20px;
     font-size: 1rem;
     margin: 5px 5px; 
-    color: #ffffff;
-    background-color: rgb(117, 183, 0);
+    color: rgb(152, 122, 61);
+    background-color: rgb(243, 245, 242);
     text-align: center;
 }
 
-
 .amount-details{
     padding: 11px;
-    background-color: rgb(117, 183, 0);
-    color: #ffffff;
+    background-color: rgb(152, 122, 61);
+    color: rgb(243, 245, 242);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.amount-details h3 {
+    font-family: 'Crimson Text', sans-serif;
+    font-size: 2em;
+    padding: 30px 20px 20px 20px;
+}
+
+.btnSubmit {
+    text-decoration:none; 
+    text-align:center; 
+    padding:12px 16px; 
+    border:none; 
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px; 
+    border-radius: 5px; 
+    font: 2em 'Crimson Text', Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#eef1ec; 
+    background-color:#eef1ec; 
+    background-image: -moz-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
+    background-image: -webkit-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
+    background-image: -o-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
+    background-image: -ms-linear-gradient(top, #eef1ec 0% ,#406b00 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#406b00', endColorstr='#406b00',GradientType=0 ); 
+    background-image: linear-gradient(top, #eef1ec 0% ,#406b00 100%);   
+    -webkit-box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec; 
+    -moz-box-shadow: 0px 0px 4px #eef1ec,  inset 2px 1px 1px #eef1ec;  
+    box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec;  
+
+    text-shadow: 3px 1px 0px #406b00; 
+    filter: dropshadow(color=#406b00, offx=3, offy=1);
 }
 
 

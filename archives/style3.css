@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 15px;
+}
+
+body{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation{
+    background: rgba(188, 101, 47, 1.0);
+    background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
+    height: 80px;
+    width: 100%;
+    display: inline-block;
+    position:relative;
+}
+
+#btnNav{
+    width: 0px;
+}
+
+.navigation > img{
+    float: left;
+    height: 50px;
+    margin: 15px;
+}
+
+
+.navigation >a:nth-child(2){
+    margin-right: 30px;
+}
+
+.navigation > a{
+    color: #2809a0;
+    float: right;
+    background-color: #70ad47;
+    font-size: large;
+    margin: 15px 10px;
+    padding: 13px;
+    text-decoration: none;
+    border-radius: 10px 0% 10px 10%;
+}
+.navigation>a:hover{
+    background-color: #efab17;
+}
+
+@media screen and (max-width:924px) {
+    .navigation{
+        background: rgba(188, 101, 47, 1.0);
+        background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
+        height: 60px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .navigation > img{
+        float: left;
+        height: 30px;
+        margin: 15px;
+    }
+    
+    .navigation >a:nth-child(2){
+        margin-right: 10px;
+    }
+    
+    .navigation > a{
+        color: #2809a0;
+        float: right;
+        background-color: #70ad47;
+        font-size: small;
+        margin: 10px 5px;
+        padding: 5px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 10px 0% 10px 10%;
+    }
+    .navigation>a:hover{
+        background-color: #efab17;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .navigation{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .navigation>img{
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .navigation>a{
+        display: flex;
+        flex-wrap:wrap-reverse;
+        justify-content: center;
+        background: rgba(188, 101, 47, 1.0);
+        background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
+        color: #70AD47;
+        font-size: large;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: auto;
+        border-radius: 0;
+        border: black solid 1px;
+        align-items: baseline;
+    }
+    .navigation>a:hover{
+        background-color: #efab17;
+        color: #2809a0;
+    }
+    .navigation >a:nth-child(2){
+        margin-right: 0px;
+    }
+}
+
+
+.contenerMain{
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+}
+
+.sectionGauche{
+    background-color: #70AD47;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    padding: 2px;
+}
+
+.sectionGauche > p{
+    background-color: #E2F0D9;
+    width: 95%;
+    height: 50px;
+    border: 1px solid;
+    text-align: end;
+}
+
+#titreGauche{
+    background-color: #A9D18E;
+    border: 1px solid;
+}
+
+.mainPage{
+    background-color: #FFC000;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    text-align: end;
+    border: 1px solid;
+}
+.mainPage > p{
+    background-color: #FFD966;
+    height: 50px;
+    border: 1px solid;
+    margin: 0 0 0 5px;
+}
+.mainPage > div{
+    background-color: #FFF2CC;
+    border: 1px solid;
+    height: 100px;
+    margin: 0 1px 1px 10%;
+}
+
+.sectionDroite{
+    background-color:#A365D1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    border: 1px solid;
+}
+.sectionDroite > p{
+    background-color: #E9B5ED;
+    margin: 2px;
+    height: 50px;
+    border: 1px solid;
+    left: 5px;
+}
+
+.PiedPage{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: rgba(188, 101, 47, 1.0);
+    background: radial-gradient(ellipse at center, rgba(188, 101, 47, 1.0), rgba(186, 132, 57, 1.0));
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr;
+    gap: 20px;
+    padding: 20px 50px 20px 50px;
+}
+
+.PiedPage > div > a{
+    text-decoration: none;
+    color: #2809a0;
+    font-size: large;
+}
+
+.block1{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+    margin: 0px 0px 10px 0px;
+}
+.block1>a{
+    display: block;
+    float: left;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+}
+
+.block2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+}
+.block2>a{
+    display: block;
+    float: left;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+}
+
+.block3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    height: auto;
+}
+.block3>a{
+    display: block;
+    float: left;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+}
+.block3_2>img{
+    display: block;
+    float: left;
+    padding: 5px;
+}
+.block3_2>img:nth-child(1){
+    display: block;
+    float: left;
+    padding: 5px;
+
+}
+
+.PiedPage > div >a:hover{
+    background-color: #efab17;
+}
+
+@media screen and (max-width:924px) {
+    .PiedPage{
+        padding: 5px;
+    }
+    .PiedPage > div > a{
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .PiedPage{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 50px 20px 50px;
+    }
+
+}
+
+#sectionProduits {
+    background-color: rgb(237, 241, 237);
+    padding: 10px 0px 100px 0px;   
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.imagesProduits {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px;
+    font-weight: 300;
+}
+
+.imagesProduits img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.7);
+    width: 250px;
+    height: 350px;
+}
+
+.imagesProduits img:hover {
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
