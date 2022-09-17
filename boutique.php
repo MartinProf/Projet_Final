@@ -8,11 +8,11 @@ $nav = "boutique";
 
 <head>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="../boutique.css" />
-  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="boutique.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
 
   <title><?php echo $titre; ?></title>
 
@@ -403,7 +403,7 @@ $nav = "boutique";
   </footer>
 
   <script src="/jquery/jquery-3.5.0.min.js"></script>
-  <script src="/js/bootstrap.bundle.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="/css/fontawesome-free-6.2.0-web/js/all.js"></script>
   <script src="boutique.js"></script>
 
