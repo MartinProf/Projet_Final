@@ -1,7 +1,7 @@
 <?php
-  $nav = "boutique";
+$titre = "Boutique biologique";
+$nav = "boutique";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +10,11 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="../boutique.css" />
   <link rel="stylesheet" href="../css/bootstrap.css">
 
-  <title>Boutique biologique</title>
+  <title><?php echo $titre; ?></title>
 
 </head>
 <body>
@@ -48,9 +47,7 @@
                 <ul class="dropdown-menu dropdown-menu-end" id="couleurDropDown">
                   <li><a class="dropdown-item" href="boutique.php">Magasiner</a></li>
                   <li><a class="dropdown-item" href="https://www.google.com/maps/place/Coll%C3%A8ge+de+Rosemont/@45.5572595,-73.584483,17z/data=!3m2!4b1!5s0x4cc91eacc6eada2d:0x671302f39d629607!4m5!3m4!1s0x4cc91eace22b9bcf:0x18799aed17aa23d9!8m2!3d45.5572558!4d-73.5822943">Points de cueillette</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
+                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="authentifier.php">S'authentifier</a></li>
                   <li><a class="dropdown-item" href="enregistrer.php">S'enregistrer</a></li>
                 </ul>
@@ -405,10 +402,10 @@
     </div>
   </footer>
 
-  <script src="../jquery/jquery-3.5.0.min.js"></script>
-  <script src="../js/bootstrap.bundle.js"></script>
-  <script src="../css/fontawesome-free-6.2.0-web/js/all.js"></script>
-  <script src="../boutique.js"></script>
+  <script src="/jquery/jquery-3.5.0.min.js"></script>
+  <script src="/js/bootstrap.bundle.js"></script>
+  <script src="/css/fontawesome-free-6.2.0-web/js/all.js"></script>
+  <script src="boutique.js"></script>
 
 </body>
 </html>

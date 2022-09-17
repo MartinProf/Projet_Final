@@ -29,6 +29,7 @@ a:hover{
 .navbar {
     color: #386600 !important;
     box-shadow: 1px 1px 3px rgba(56, 102, 0, 0.54) !important;
+    z-index: 1;
 }
 
 .mv-navbar .nav-link{
@@ -38,7 +39,7 @@ a:hover{
 
 .mv-navbar .nav-link:hover{
     padding-bottom: 10px;
-    border-bottom-color: rgb(117, 183, 0) !important;;
+    border-bottom-color: rgb(117, 183, 0) !important;
 }
 
 .banner {
@@ -83,4 +84,11 @@ a:hover{
     border-radius: 175px;
     border: thick double black;
     padding: 5px;
+}
+
+.foodwrap {
+    height: 10px;
+    background-color: rgb(152, 122, 61);
+    opacity: 50%;
+    z-index: 0;
 }

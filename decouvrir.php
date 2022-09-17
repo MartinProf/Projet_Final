@@ -6,31 +6,34 @@
 ?>
 
 <section class="banner d-flex justify-content-center align-items-center pt-5">
-<div class="container">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8 text-center banner-desc">
-            <h1>Bienvenue chez vous!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center banner-desc">
+                <h1>Bienvenue chez vous!</h1>
+                <h1>La seul épicerie biologique en ligne sans but lucratif</h1>
+            </div>
+            <div class="col-2"></div>
         </div>
-        <div class="col-2"></div>
     </div>
-</div>
 </section>
 
+<div class="container-fluid foodwrap"></div>
 
 <section class="py-5" id="couleurDropDown">
-<div class="container" >
-    <div class="row">
-        <div class="col-lg-6">
-            <img src="images/Champs_bio.jpeg" class="img-fluid rounded-3" alt="">
-        </div>
-        <div class="col-lg-6">
-            <h1>Pourquoi nous existons?</h1>
-            <p>Nous sommes guidé par notre raison d’être, qui est de favoriser la transition de notre société vers des écosystèmes en santé et durables à travers l’alimentation biologique et éthique. Nous nous y prenons en rendant accessibles des produits biologiques non périssables d’excellente qualité tout en créant un impact positif sur la Terre et sur ses habitants!</p>
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="images/Champs_bio.jpeg" class="img-fluid rounded-3" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h1>Pourquoi nous existons?</h1>
+                <p>Nous sommes guidé par notre raison d’être, qui est de favoriser la transition de notre société vers des écosystèmes en santé et durables à travers l’alimentation biologique et éthique. Nous nous y prenons en rendant accessibles des produits biologiques non périssables d’excellente qualité tout en créant un impact positif sur la Terre et sur ses habitants!</p>
+            </div>
         </div>
     </div>
-</div>
 </section>
+
 
 <section class="py-5" id="couleurDropDown">
 <div class="container" >
@@ -54,6 +57,7 @@
 </div>
 </section>
 
+<div class="container-fluid foodwrap"></div>
 
 <section class="banner2 d-flex justify-content-center align-items-center pt-5">
 <div class="container">
@@ -61,38 +65,43 @@
         <div class="col-2"></div>
         <div class="col-8 text-center banner2-desc">
             <h1>Bienvenue chez vous!</h1>
+            <h1>La seul épicerie en ligne sans but lucratif</h1>
         </div>
         <div class="col-2"></div>
     </div>
 </div>
 </section>
 
+<div class="container-fluid foodwrap"></div>
+
 <section class="py-5" id="couleurDropDown">
 <div class="container">
-    <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex flex-wrap justify-content-center gap-5">
         <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
             <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                <div class="text-center">Des produits d\'une fraîcheur exceptionnelle</div>
+                <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
             </div>
         </div>
         <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
             <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                <div class="texteImage text-center">Des produits d\'une fraîcheur exceptionnelle</div>
+                <div class="texteImage text-center">Des produits d'une fraîcheur exceptionnelle</div>
             </div>
         </div>
         <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
             <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                <div class="text-center">Des produits d\'une fraîcheur exceptionnelle</div>
+                <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
             </div>
         </div>
         <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
             <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                <div class="text-center">Des produits d\'une fraîcheur exceptionnelle</div>
+                <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
             </div>
         </div>
     </div>
 </div>
 </section>
+
+<div class="container-fluid foodwrap"></div>
 
 <?php 
     include_once "vues/inc/footer.inc.php";
