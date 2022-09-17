@@ -1,5 +1,10 @@
-<?php
-echo'
+<?php 
+    $titre = "Épicerie biologique";
+    $nav = "decouvrir";
+    include_once "vues/inc/entete.inc.php";
+    include_once "vues/inc/navbar.inc.php";
+?>
+
 <section class="banner d-flex justify-content-center align-items-center pt-5">
 <div class="container">
     <div class="row">
@@ -87,6 +92,9 @@ echo'
         </div>
     </div>
 </div>
-</section>';
+</section>
 
+<?php 
+    include_once "vues/inc/footer.inc.php";
+    include_once "vues/inc/piedPage.inc.php";
 ?>
