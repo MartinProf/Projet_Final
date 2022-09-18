@@ -49,6 +49,11 @@ a:hover, .active{
     border-bottom-color:rgb(152, 122, 61) !important;;
 }
 
+.cart {
+    position: relative;
+    top: 10px;
+    padding-left: 20px;
+}
 /*--------------------------------------------------------------*/
 
 /* Products */
@@ -201,7 +206,6 @@ a:hover, .active{
     -webkit-box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec; 
     -moz-box-shadow: 0px 0px 4px #eef1ec,  inset 2px 1px 1px #eef1ec;  
     box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec;  
-
     text-shadow: 3px 1px 0px #406b00; 
     filter: dropshadow(color=#406b00, offx=3, offy=1);
 }
