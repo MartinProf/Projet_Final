@@ -401,7 +401,6 @@
     <div class="amount-details flex-lg-row flex-wrap">
       <h3>Number of Items: <span id="numOfItem">0</span></h3>
       <h3>Total price: $ <span id="userTotalAmount">0</span></h3>
-      <button type="submit" class="btnSubmit">Valider</button>
     </div>
   </footer>
 
