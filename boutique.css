@@ -184,37 +184,3 @@ a:hover, .active{
     font-size: 2em;
     padding: 30px 20px 20px 20px;
 }
-
-.btnSubmit {
-    text-decoration:none; 
-    text-align:center; 
-    padding:12px 16px; 
-    border:none; 
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px; 
-    border-radius: 5px; 
-    font: 2em 'Crimson Text', Arial, Helvetica, sans-serif; 
-    font-weight:bold; 
-    color:#eef1ec; 
-    background-color:#eef1ec; 
-    background-image: -moz-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
-    background-image: -webkit-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
-    background-image: -o-linear-gradient(top, #eef1ec 0%, #406b00 100%); 
-    background-image: -ms-linear-gradient(top, #eef1ec 0% ,#406b00 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#406b00', endColorstr='#406b00',GradientType=0 ); 
-    background-image: linear-gradient(top, #eef1ec 0% ,#406b00 100%);   
-    -webkit-box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec; 
-    -moz-box-shadow: 0px 0px 4px #eef1ec,  inset 2px 1px 1px #eef1ec;  
-    box-shadow:0px 0px 4px #eef1ec, inset 2px 1px 1px #eef1ec;  
-    text-shadow: 3px 1px 0px #406b00; 
-    filter: dropshadow(color=#406b00, offx=3, offy=1);
-}
-
-
-
-
-
-
-
-
-
