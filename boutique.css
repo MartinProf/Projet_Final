@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-a{
+a{ 
     text-decoration: none;
 }
 
@@ -49,11 +49,7 @@ a:hover, .active{
     border-bottom-color:rgb(152, 122, 61) !important;;
 }
 
-.cart {
-    position: relative;
-    top: 10px;
-    padding-left: 20px;
-}
+
 /*--------------------------------------------------------------*/
 
 /* Products */
@@ -103,6 +99,7 @@ a:hover, .active{
     height: 300px;
     position: relative;
     top: 86px;
+    z-index: -1;
 }
 
 #legumes {
@@ -110,6 +107,7 @@ a:hover, .active{
     height: 300px;
     position: relative;
     top: 86px;
+    z-index: -1;
 }
 
 #viandes {
@@ -117,6 +115,7 @@ a:hover, .active{
     height: 300px;
     position: relative;
     top: 86px;
+    z-index: -1;
 }
 
 #diversProd {
@@ -124,6 +123,7 @@ a:hover, .active{
     height: 300px;
     position: relative;
     top: 86px;
+    z-index: -1;
 }
 
 .foodwrap {
@@ -178,4 +178,12 @@ a:hover, .active{
     font-family: 'Crimson Text', sans-serif;
     font-size: 2em;
     padding: 30px 20px 20px 20px;
+}
+
+#underNav {
+    height: 10px;
+    background-color: rgb(152, 122, 61);
+    z-index: 0;
+    position: fixed;
+    top: 86px;
 }
