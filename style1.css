@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap');
 
 nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .dropdown-item{
-    font-family: 'Crimson', sans-serif !important;
+    font-family: 'Caveat', sans-serif;
+    font-size: 1.5em !important;
     color: rgb(56, 102, 0) !important;
 }
 a:hover{
-    color:rgb(117, 183, 0) !important;
+    color:rgb(152, 122, 61) !important;
 }
 
 #decouvrir>a{
-    color:rgb(117, 183, 0) !important;
+    color:rgb(152, 122, 61) !important;
 }
 
 #fonctionnement>a{
-    color:rgb(117, 183, 0) !important;
+    color:rgb(152, 122, 61) !important;
 }
 
 #boutique>a{
-    color:rgb(117, 183, 0) !important;
+    color:rgb(152, 122, 61) !important;
     background-color: #EDF1ED;
 }
 
@@ -39,8 +41,9 @@ a:hover{
 
 .mv-navbar .nav-link:hover{
     padding-bottom: 10px;
-    border-bottom-color: rgb(117, 183, 0) !important;
+    border-bottom-color: rgb(152, 122, 61) !important;
 }
+
 
 .banner {
     background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
@@ -91,4 +94,12 @@ a:hover{
     background-color: rgb(152, 122, 61);
     opacity: 50%;
     z-index: 0;
+}
+
+#underNav {
+    height: 10px;
+    background-color: rgb(152, 122, 61);
+    z-index: 0;
+    position: fixed;
+    top: 86px;
 }
