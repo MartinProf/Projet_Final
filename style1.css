@@ -1,30 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
-nav > div > div > div> ul > li > a, #modalFontColor, #staticBackdropLabel, .dropdown-item{
+nav>div>div>div>ul>li>a, #modalFontColor, #staticBackdropLabel, .dropdown-item {
     font-family: 'Caveat', sans-serif;
     font-size: 1.5em !important;
     color: rgb(56, 102, 0) !important;
 }
-a:hover{
-    color:rgb(152, 122, 61) !important;
+
+a:hover {
+    color: rgb(152, 122, 61) !important;
 }
 
-#decouvrir>a{
-    color:rgb(152, 122, 61) !important;
+#decouvrir>a {
+    color: rgb(152, 122, 61) !important;
 }
 
-#fonctionnement>a{
-    color:rgb(152, 122, 61) !important;
+#fonctionnement>a {
+    color: rgb(152, 122, 61) !important;
 }
 
-#boutique>a{
-    color:rgb(152, 122, 61) !important;
+#boutique>a {
+    color: rgb(152, 122, 61) !important;
     background-color: #EDF1ED;
 }
 
-#couleurDropDown, nav{
+#couleurDropDown, nav {
     background-color: #EDF1ED;
 }
 
@@ -34,40 +36,44 @@ a:hover{
     z-index: 1;
 }
 
-.mv-navbar .nav-link{
+.mv-navbar .nav-link {
     border-bottom: 1px solid transparent !important;
     transition: padding-bottom .4s ease-in-out, border-color 0.3s ease;
 }
 
-.mv-navbar .nav-link:hover{
+.mv-navbar .nav-link:hover {
     padding-bottom: 10px;
     border-bottom-color: rgb(152, 122, 61) !important;
 }
 
 
 .banner {
-    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
-    color: #EDF1ED;
-    font-family: 'Times New Roman', Times, serif;
+    color: rgb(233, 228, 212);
+    font-family: 'Rubik Dirt', Times, serif;
 }
-.banner .banner-desc{
+
+.banner .banner-desc {
     font-size: 50px;
 }
 
 .banner2 {
-    background: linear-gradient( rgba(0,0,0, .2), rgba(0,0,0, .5)), url(images/lagriculture-bio.png) center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(images/lagriculture-bio.png) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
     color: #EDF1ED;
     font-family: 'Times New Roman', Times, serif;
 }
-.banner2 .banner2-desc{
+
+.banner2 .banner2-desc {
     font-size: 50px;
+    color: rgb(233, 228, 212);
+    font-family: 'Rubik Dirt', Times, serif;
 }
 
-.imageFond{
+.imageFond {
     background: center /cover no-repeat url("images/pexels-pixabay-164504.jpg");
     font-family: 'Dancing Script', cursive;
     font-size: 1.8em;
@@ -75,18 +81,75 @@ a:hover{
     color: black;
 }
 
-.imageFond:hover{
+.imageFond:hover {
     opacity: 0.5;
     transform: scale(1.05);
     transition: 0.6s ease-in-out;
 }
-#imageGAFAM{
+
+#imageGAFAM {
     height: 50px;
 }
-.imageRonde{
-    border-radius: 175px;
-    border: thick double black;
+
+.imageRonde {
+    border-radius: 275px;
     padding: 5px;
+    width: 420px;
+}
+
+.textAnim {
+    animation-name: textAnim;
+    animation-duration: 2sec;
+}
+
+@keyframes textAnim {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.imageConteneur {
+    background-color: rgb(152, 122, 61);
+    border-radius: 275px;
+    border: solid rgb(96, 68, 12);
+    height: 290px;
+    width: 425px;
+}
+
+.desc {
+    justify-content: space-evenly;
+}
+
+.card-header {
+    background-color: rgb(152, 122, 61);
+    color: rgb(96, 68, 12);
+    height: 60px;
+    border-top: solid rgb(96, 68, 12);
+    border-right: solid rgb(96, 68, 12);
+    border-left: solid rgb(96, 68, 12);
+    text-align: center;
+    font-size: 1.6em;
+    font-family: ;
+}
+
+.card-body {
+    background-color: rgb(233, 228, 212);
+    border: solid rgb(96, 68, 12);
+    height: 230px;
 }
 
 .foodwrap {
@@ -102,4 +165,76 @@ a:hover{
     z-index: 0;
     position: fixed;
     top: 86px;
+}
+
+/***********************************************/
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    overflow: hidden;
+    background-color: #EDF1ED;
+}
+
+.wrapper .carousel {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.wrapper .cardd {
+    background-color: #8f8251 !important;
+    line-height: 250px;
+    text-align: center;
+    width: 300px;
+    margin: 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    pointer-events: none;
+}
+
+.wrapper .cardd {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 770px;
+    animation: carousel 35s linear infinite;
+}
+
+.carddImg {
+    height: 250px;
+    width: 100%;
+}
+
+@keyframes carousel {
+    80% {
+        left: -770px;
+    }
+
+    90% {
+        left: 770px;
+    }
+}
+
+.wrapper .carousel:hover .cardd {
+    animation-play-state: paused;
+}
+
+@media (max-width: 980px) {
+    .wrapper {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    @keyframes carousel {
+        80% {
+            left: -1070px;
+        }
+
+        90% {
+            left: 1070px;
+        }
+    }
 }
