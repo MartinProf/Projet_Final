@@ -53,6 +53,7 @@ a:hover {
     height: 800px;
     color: rgb(233, 228, 212);
     font-family: 'Rubik Dirt', Times, serif;
+    padding-top: 200px;
 }
 
 .banner .banner-desc {
@@ -143,7 +144,6 @@ a:hover {
     border-left: solid rgb(96, 68, 12);
     text-align: center;
     font-size: 1.6em;
-    font-family: ;
 }
 
 .card-body {
@@ -155,7 +155,6 @@ a:hover {
 .foodwrap {
     height: 10px;
     background-color: rgb(152, 122, 61);
-    opacity: 50%;
     z-index: 0;
 }
 
@@ -236,3 +235,67 @@ a:hover {
         }
     }
 }
+/* ---- Boutique ---- */
+.products{
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-item{
+    width: 300px;
+    height: 350px;
+    margin: 1rem 0rem;
+    background-color: rgb(243, 245, 242);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 1rem;
+    -webkit-box-shadow: rgb(56, 102, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: rgb(56, 102, 0) -1px 3px 8px 5px inset, rgb(56, 102, 0) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.product-img img{
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 160px;
+    cursor: pointer;
+}
+
+.product-description{
+    text-align: center;
+}
+
+.product-description h4 a,
+.product-description p{
+    text-decoration: none;
+    position: relative;
+    top: 15px;
+    color: rgb(56, 102, 0);
+    font-family: 'Pacifico', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#fruits {
+    background: center/cover url("images/fruits.png") no-repeat;
+    height: 300px;
+    z-index: -1;
+}
+
+#legumes {
+    background: center/cover url("images/legumes.png") no-repeat;
+    height: 300px;
+    z-index: -1;
+}
+
+#viandes {
+    background: center/cover url("images/Meat-new.png") no-repeat;
+    height: 300px;
+    z-index: -1;
+}
+
+#diversProd {
+    background: center url("images/divers.png") no-repeat;
+    height: 300px;
+    z-index: -1;
+}
+
