@@ -185,13 +185,11 @@ a:hover {
 }
 
 .wrapper .cardd {
-    background-color: #8f8251 !important;
+    background-color: #EDF1ED !important;
     line-height: 250px;
     text-align: center;
     width: 300px;
     margin: 20px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     pointer-events: none;
 }
 
