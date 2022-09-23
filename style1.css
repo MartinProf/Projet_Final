@@ -30,6 +30,10 @@ a:hover {
     background-color: #EDF1ED;
 }
 
+/* .dropdown-menu {
+    z-index: 2;
+} */
+
 .navbar {
     color: #386600 !important;
     box-shadow: 1px 1px 3px rgba(56, 102, 0, 0.54) !important;
@@ -230,7 +234,7 @@ a:hover {
 
 .carddLetter {
     font-family: 'Caveat', sans-serif;
-    font-size: 1.5em !important;
+    font-size: 6em !important;
     color: rgb(56, 102, 0) !important;
 }
 
