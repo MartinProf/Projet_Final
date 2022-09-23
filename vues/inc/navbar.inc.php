@@ -1,6 +1,6 @@
 <nav class="mv-navbar navbar navbar-expand-sm position-fixed w-100 fw-bold">
     <div class="container-fluid">
-        <a href="http://localhost/Projet_Final/" target="_self"><img src="images/logo.png" alt="BioLogo" height="70px" class="mx-3"></a>
+        <a target="_self"><img src="images/logo.png" alt="BioLogo" height="70px" class="mx-3"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,7 +17,6 @@
                     <li class="nav-item" id="<?php if ($nav === 'fonctionnement') : ?>fonctionnement<?php endif; ?>">
                         <a class="nav-link pe-2" href="fonctionnement.php">Notre fonctionnement</a>
                     </li>
-                    <li class="nav-item ps-4 my-auto align-middle"><a href="#"><i class="fas fa-cart-arrow-down cart"></i></a></li>
                     <li class="nav-item dropdown" id="<?php echo (($nav === 'boutique') ? "boutique" : "couleurDropDown"); ?>">
                         <a class="nav-link pe-2 dropdown-toggle" id="couleurDropDown" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Boutique</a>
                         <ul class="dropdown-menu dropdown-menu-end" id="couleurDropDown">
@@ -29,6 +28,9 @@
                             <li><a class="dropdown-item" href="authentifier.php">S'authentifier</a></li>
                             <li><a class="dropdown-item" href="enregistrer.php">S'enregistrer</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item invisible">
+                        <a class="nav-link pe-2" aria-current="page"><img src="images/cart-plus.png" alt="Cart" height="40px">10</a>
                     </li>
                 </ul>
             </div>
