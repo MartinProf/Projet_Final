@@ -11,7 +11,7 @@ include_once "vues/inc/navbar.inc.php";
 <div class="container-fluid w-100" id="fruits"></div>
 <div class="container-fluid foodwrap"></div>
 
-<div class="container-fluid d-inline-flex justify-content-center products">
+<div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
 <?php
 		$servername = "localhost";
     $username = "root";
@@ -57,7 +57,7 @@ include_once "vues/inc/navbar.inc.php";
 <div class="container-fluid w-100" id="legumes"></div>
 <div class="container-fluid foodwrap"></div>
 
-<div class="container-fluid d-inline-flex justify-content-center products">
+<div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
 
     for ($i=0; $i < count($tableauArticles); $i++) { 
@@ -86,7 +86,7 @@ include_once "vues/inc/navbar.inc.php";
 <div class="container-fluid w-100" id="viandes"></div>
 <div class="container-fluid foodwrap"></div>
 
-<div class="container-fluid d-inline-flex justify-content-center products">
+<div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
     for ($i=0; $i < count($tableauArticles); $i++) { 
       if ($tableauArticles[$i]->getIdArticle() == 3) {
@@ -114,7 +114,7 @@ include_once "vues/inc/navbar.inc.php";
 <div class="container-fluid w-100" id="diversProd"></div>
 <div class="container-fluid foodwrap"></div>
 
-<div class="container-fluid d-inline-flex justify-content-center products">
+<div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
     for ($i=0; $i < count($tableauArticles); $i++) { 
       if ($tableauArticles[$i]->getIdArticle() == 4) {
