@@ -10,7 +10,7 @@
 	// ********* Classe englobante de PDO *************
 	class ConnexionBD  {
 
-        	private static $instance=null;
+        private static $instance=null;
 		
 		private function __construct() {}
 		
