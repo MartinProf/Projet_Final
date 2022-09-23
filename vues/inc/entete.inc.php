@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome-free-6.2.0-web/css/all.css">
     <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="#">
 
     <title><?php echo isset($titre) ? $titre: 'Épicerie biologique'; ?></title>
 
