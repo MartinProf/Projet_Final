@@ -29,4 +29,4 @@ function decreaseItem(param , itemPrice){
             total = document.getElementById('userTotalAmount').innerHTML = (noOfItem.value) * itemsPrice;
             document.getElementById('numOfItem').innerHTML = noOfItem.value;
         }
-    }
+}
