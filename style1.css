@@ -46,6 +46,13 @@ a:hover {
     border-bottom-color: rgb(152, 122, 61) !important;
 }
 
+#underNav {
+    height: 10px;
+    background-color: rgb(152, 122, 61);
+    z-index: 1;
+    position: fixed;
+    top: 86px;
+}
 
 .banner {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
@@ -75,15 +82,46 @@ a:hover {
 }
 
 .imageFond {
-    background: center /cover no-repeat url("images/pexels-pixabay-164504.jpg");
+    color: transparent;
     font-family: 'Dancing Script', cursive;
-    font-size: 1.8em;
-    font-weight: 300;
-    color: black;
+    font-size: 2.0em;
+    font-weight: 900;
 }
 
 .imageFond:hover {
-    opacity: 0.5;
+    background-color: rgba(245, 245, 245, .8);
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+    color: rgba(0, 0, 0);
+}
+
+#imageFondFruit{
+    background: center /cover no-repeat url("images/fruits.png");
+    width: 250px; 
+    height: 350px;
+    text-decoration: none;
+}
+
+#imageFondLegume{
+    background: center /cover no-repeat url("images/legumes.png");
+    width: 250px; 
+    height: 350px;
+    text-decoration: none;
+}
+#imageFondViande{
+    background: center /cover no-repeat url("images/Meat-new.png");
+    width: 250px; 
+    height: 350px;
+    text-decoration: none;
+}
+#imageFondAutre{
+    background: no-repeat url("images/divers.png");
+    width: 250px; 
+    height: 350px;
+    text-decoration: none;
+}
+
+#imageFondFruit:hover, #imageFondLegume:hover, #imageFondViande:hover, #imageFondAutre:hover{
     transform: scale(1.05);
     transition: 0.6s ease-in-out;
 }
@@ -158,13 +196,6 @@ a:hover {
     z-index: 0;
 }
 
-#underNav {
-    height: 10px;
-    background-color: rgb(152, 122, 61);
-    z-index: 0;
-    position: fixed;
-    top: 86px;
-}
 
 /***********************************************/
 
@@ -238,10 +269,6 @@ a:hover {
     }
 }
 /* ---- Boutique ---- */
-.products{
-    flex-wrap: wrap;
-    padding: 20px;
-}
 
 .product-item{
     width: 300px;

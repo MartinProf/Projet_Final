@@ -77,26 +77,18 @@ include_once "vues/inc/navbar.inc.php";
 <section class="py-5" id="couleurDropDown">
     <div class="container">
         <div class="d-flex flex-wrap justify-content-center gap-5">
-            <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
-                <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                    <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
-                </div>
-            </div>
-            <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
-                <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                    <div class="texteImage text-center">Des produits d'une fraîcheur exceptionnelle</div>
-                </div>
-            </div>
-            <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
-                <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                    <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
-                </div>
-            </div>
-            <div class="imageFond m-3 bg-body rounded-3" style="width: 250px; height: 350px;">
-                <div class="d-flex flex-column h-100 justify-content-center align-content-center">
-                    <div class="text-center">Des produits d'une fraîcheur exceptionnelle</div>
-                </div>
-            </div>
+
+            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondFruit">
+                <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Nos fruits</div></a>
+
+            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondLegume">
+                <div class=" d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100" >Nos légumes</div></a>
+
+            <a href="boutique.php" class="justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondViande">
+                <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Nos viandes</div></a>
+
+            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondAutre">
+                <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Autre</div></a>
         </div>
     </div>
 </section>
