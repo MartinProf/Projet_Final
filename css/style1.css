@@ -184,7 +184,8 @@ a:hover {
     border-right: solid rgb(96, 68, 12);
     border-left: solid rgb(96, 68, 12);
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.8em;
+    font-family: 'Rubik Dirt';
 }
 
 .card-body {
@@ -192,6 +193,9 @@ a:hover {
     border: solid rgb(96, 68, 12);
     height: 230px;
     overflow: auto;
+    font-family: 'Caveat', sans-serif;
+    font-size: 1.3em;
+    color: rgb(152, 122, 61);
 }
 
 .foodwrap {
@@ -207,7 +211,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
+    min-height: 150px;
     overflow: hidden;
     background-color: #EDF1ED;
 }
@@ -218,33 +222,38 @@ a:hover {
     padding: 0 30px;
 }
 
+#undercarousel {
+    height: 10px;
+    background-color: rgb(152, 122, 61);
+}
+
 .wrapper .cardd {
     background-color: #EDF1ED !important;
     line-height: 250px;
     text-align: center;
-    width: 300px;
+    width: 200px;
     margin: 20px 20px;
     pointer-events: none;
     display: flex;
     justify-content: space-around;
     position: relative;
-    left: 770px;
+    left: 670px;
     animation: carousel 35s linear infinite;
 }
 
 .carddLetter {
-    font-family: 'Caveat', sans-serif;
+    font-family: 'Rubik Dirt', sans-serif;
     font-size: 6em !important;
     color: rgb(56, 102, 0) !important;
 }
 
 @keyframes carousel {
     80% {
-        left: -770px;
+        left: -670px;
     }
 
     90% {
-        left: 770px;
+        left: 670px;
     }
 }
 
@@ -260,11 +269,11 @@ a:hover {
 
     @keyframes carousel {
         80% {
-            left: -1070px;
+            left: -970px;
         }
 
         90% {
-            left: 1070px;
+            left: 970px;
         }
     }
 }

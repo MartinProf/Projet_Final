@@ -33,7 +33,7 @@ require "vues/inc/navbar.inc.php";
         <div class="cardd cards-10"><h1 class="carddLetter">E</h1></div>
       </div>
     </div>
-
+<div id="undercarousel"></div>
 
 
 
@@ -46,7 +46,7 @@ require "vues/inc/navbar.inc.php";
             </div>
             <div class="col-lg-6 d-flex justify-content-center align-items-center p-5">
                 <div class="card mb-3 textAnim">
-                    <div class="card-header">Des employés et bénévoles fiers et investis</div>
+                    <div class="card-header">Employés et bénévoles</div>
                     <div class="card-body">
                         <h5 class="card-title">Information sur la boutique</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis eius cupiditate quisquam impedit consequatur nihil velit eum illum soluta, corrupti facilis numquam nisi deleniti rem dolorum saepe neque non quas quos! Aut incidunt nesciunt ad, quos delectus ipsam dolores labore doloribus, doloremque soluta laudantium aliquam magni ut veritatis ipsa.</p>
