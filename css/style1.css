@@ -59,7 +59,7 @@ a:hover {
 }
 
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/pexels-flambo-1112080.jpg) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
     color: rgb(233, 228, 212);
@@ -71,7 +71,7 @@ a:hover {
 }
 
 .banner2 {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(images/lagriculture-bio.png) center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/lagriculture-bio.png) center center fixed no-repeat;
     background-size: cover;
     height: 800px;
     color: #EDF1ED;
@@ -99,26 +99,26 @@ a:hover {
 }
 
 #imageFondFruit{
-    background: center /cover no-repeat url("images/fruits.png");
+    background: center /cover no-repeat url("../images/fruits.png");
     width: 250px; 
     height: 350px;
     text-decoration: none;
 }
 
 #imageFondLegume{
-    background: center /cover no-repeat url("images/legumes.png");
+    background: center /cover no-repeat url("../images/legumes.png");
     width: 250px; 
     height: 350px;
     text-decoration: none;
 }
 #imageFondViande{
-    background: center /cover no-repeat url("images/Meat-new.png");
+    background: center /cover no-repeat url("../images/Meat-new.png");
     width: 250px; 
     height: 350px;
     text-decoration: none;
 }
 #imageFondAutre{
-    background: no-repeat url("images/divers.png");
+    background: no-repeat url("../images/divers.png");
     width: 250px; 
     height: 350px;
     text-decoration: none;
@@ -305,25 +305,25 @@ a:hover {
 }
 
 #fruits {
-    background: center/cover url("images/fruits.png") no-repeat;
+    background: center/cover url("../images/fruits.png") no-repeat;
     height: 300px;
     z-index: -1;
 }
 
 #legumes {
-    background: center/cover url("images/legumes.png") no-repeat;
+    background: center/cover url("../images/legumes.png") no-repeat;
     height: 300px;
     z-index: -1;
 }
 
 #viandes {
-    background: center/cover url("images/Meat-new.png") no-repeat;
+    background: center/cover url("../images/Meat-new.png") no-repeat;
     height: 300px;
     z-index: -1;
 }
 
 #diversProd {
-    background: center url("images/divers.png") no-repeat;
+    background: center url("../images/divers.png") no-repeat;
     height: 300px;
     z-index: -1;
 }
