@@ -5,7 +5,7 @@ include_once "vues/inc/entete.inc.php";
 include_once "vues/inc/navbar.inc.php";
 ?>
 
-<section class="banner d-flex justify-content-center align-items-center pt-5">
+<section class="banner d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-1"></div>

@@ -8,12 +8,12 @@ include_once "vues/inc/navbar.inc.php";
 <section class="banner d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8 text-center banner-desc">
+            <div class="col-1"></div>
+            <div class="col-10 text-center banner-desc">
                 <h1 class="display-2">Bienvenue chez vous!</h1>
-                <h1 class="display-5">La seul épicerie biologique en ligne sans but lucratif</h1>
+                <h1 class="display-5">La seul épicerie biologique <br>en ligne<br> sans but lucratif</h1>
             </div>
-            <div class="col-2"></div>
+            <div class="col-1"></div>
         </div>
     </div>
 </section>
