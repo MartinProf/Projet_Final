@@ -116,7 +116,7 @@ class articlesepicerieDAO implements DAO
 	}
 
 	
-	static public function modifierUnParam($unItem)
+	static public function modifierUnParam($id, $modif)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -127,8 +127,8 @@ class articlesepicerieDAO implements DAO
 		$query = $connexion->prepare("UPDATE epiceriebiologique SET prix=? WHERE id=?");
 
 		$tableauInfos = [
-			$unItem->getId(), $unItem->getArticle(),
-			$unItem->getPrix(), $unItem->getIdArticle(), $unItem->getImage_location()];
+			$id->getId(), $id->getArticle(),
+			$id->getPrix(), $id->getIdArticle(), $id->getImage_location()];
 		return $query->execute($tableauInfos);
 	}
 

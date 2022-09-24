@@ -22,9 +22,9 @@ class utilisateur {
 
     public function construct6($nom, $prenom, $pseudo, $courriel, $password, $admin)
     {
-        $this->$nom=$nom;
+        $this->nom=$nom;
         $this->prenom=$prenom;
-        $this->pseudo=-$pseudo;
+        $this->pseudo=$pseudo;
         $this->courriel=$courriel;
         $this->password=$password;
         $this->admin=$admin;
@@ -33,9 +33,9 @@ class utilisateur {
     public function construct7($idUtilisateur, $nom, $prenom, $pseudo, $courriel, $password, $admin)
     {
         $this->idUtilisateur=$idUtilisateur;
-        $this->$nom=$nom;
+        $this->nom=$nom;
         $this->prenom=$prenom;
-        $this->pseudo=-$pseudo;
+        $this->pseudo=$pseudo;
         $this->courriel=$courriel;
         $this->password=$password;
         $this->admin=$admin;
@@ -59,7 +59,7 @@ class utilisateur {
 
     public function __toString()
     {
-        return "Id Utilisateur : ". $this->idUtilisateur . "Nom : ". $this->nom . "Prenom : ". $this->prenom . "Pseudo : ". $this->pseudo . "Courriel : ". $this->courriel . "Password : ". $this->password . "Admin : ". $this->admin;
+        return "IdUtilisateur : ". $this->idUtilisateur . " Nom : ". $this->nom . " Prenom : ". $this->prenom . " Pseudo : ". $this->pseudo . " Courriel : ". $this->courriel . " Password : ". $this->password . " Admin : ". $this->admin;
     }
 
 }

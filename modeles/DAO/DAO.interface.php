@@ -18,10 +18,10 @@
 
 		static public function inserer($unItem);
 
-		static public function modifierUnParam($param);
+		static public function modifierUnParam($id, $modif);
                 
         static public function modifierTout($unItem);
 
-		static public function supprimer($unItem);
+		static public function supprimer($id);
 	}
 ?>
