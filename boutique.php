@@ -1,8 +1,8 @@
 <?php
 $titre = "Boutique biologique";
 $nav = "boutique";
-include_once "vues/inc/entete.inc.php";
-include_once "vues/inc/navbar.inc.php";
+require "vues/inc/entete.inc.php";
+require "vues/inc/navbar.inc.php";
 ?>
 
 
@@ -141,6 +141,6 @@ include_once "vues/inc/navbar.inc.php";
 
 
 <?php
-include_once "vues/inc/footer.inc.php";
-include_once "vues/inc/piedPage.inc.php";
+require "vues/inc/footer.inc.php";
+require "vues/inc/piedPage.inc.php";
 ?>

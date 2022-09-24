@@ -1,8 +1,8 @@
 <?php
 $titre = "Notre fonctionnement";
 $nav = "fonctionnement";
-include_once "vues/inc/entete.inc.php";
-include_once "vues/inc/navbar.inc.php";
+require "vues/inc/entete.inc.php";
+require "vues/inc/navbar.inc.php";
 ?>
 
 <section class="banner d-flex justify-content-center align-items-center">
@@ -98,6 +98,6 @@ include_once "vues/inc/navbar.inc.php";
 
 
 <?php
-include_once "vues/inc/footer.inc.php";
-include_once "vues/inc/piedPage.inc.php";
+require "vues/inc/footer.inc.php";
+require "vues/inc/piedPage.inc.php";
 ?>
