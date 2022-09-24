@@ -9,7 +9,7 @@ include_once("modeles/DAO/DAO.interface.php");
 include_once("modeles/articlesepicerie.class.php");
 
 // ****** CLASSE ******
-class EpicerieDAO implements DAO
+class articlesepicerieDAO implements DAO
 {
 	public static function chercher($id)
 	{
@@ -116,7 +116,7 @@ class EpicerieDAO implements DAO
 	}
 
 	
-	static public function modifierPrix($unItem)
+	static public function modifierUnParam($unItem)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
