@@ -28,7 +28,7 @@ class utilisateurDAO implements DAO
 		if ($query->rowCount() != 0) {
 			$enr = $query->fetch();
 			$unUtilisateur = new utilisateur(
-				$enr['id'],
+				$enr['idUtilisateur'],
 				$enr['nom'],
 				$enr['prenom'],
                 $enr['pseudo'],
@@ -58,7 +58,7 @@ class utilisateurDAO implements DAO
 		
 		foreach ($query as $enr) {
 			$unUtilisateur = new utilisateur(
-				$enr['id'],
+				$enr['idUtilisateur'],
 				$enr['nom'],
 				$enr['prenom'],
                 $enr['pseudo'],
@@ -89,7 +89,7 @@ class utilisateurDAO implements DAO
 		
 		foreach ($query as $enr) {
 			$unUtilisateur = new utilisateur(
-				$enr['id'],
+				$enr['idUtilisateur'],
 				$enr['nom'],
 				$enr['prenom'],
                 $enr['pseudo'],
@@ -122,7 +122,7 @@ class utilisateurDAO implements DAO
 	}
 
 	
-	static public function modifierUnParam($unUtilisateur)
+	static public function modifierUnParam($id, $modif)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -133,8 +133,8 @@ class utilisateurDAO implements DAO
 		$query = $connexion->prepare("UPDATE utilisateur SET password=? WHERE id=?");
 
 		$tableauInfos = [
-			$unUtilisateur->getId(), $unUtilisateur->getNom(),
-			$unUtilisateur->getPrenom(), $unUtilisateur->getPseudo(), $unUtilisateur->getCourriel(),$unUtilisateur->getPassword(), $unUtilisateur->getAdmin()];
+			$id->getIdUtilisateur(), $id->getNom(),
+			$id->getPrenom(), $id->getPseudo(), $id->getCourriel(),$id->getPassword(), $id->getAdmin()];
 		return $query->execute($tableauInfos);
 	}
 
@@ -150,7 +150,7 @@ class utilisateurDAO implements DAO
 		$query = $connexion->prepare("UPDATE utilisateur SET nom=?,prenom=?,pseudo=?,courriel=?, password=?, admin=?  WHERE id=?");
 
 		$tableauInfos = [
-			$unUtilisateur->getId(), $unUtilisateur->getNom(),
+			$unUtilisateur->getIdUtilisateur(), $unUtilisateur->getNom(),
 			$unUtilisateur->getPrenom(), $unUtilisateur->getPseudo(), $unUtilisateur->getCourriel(),$unUtilisateur->getPassword(), $unUtilisateur->getAdmin()];
 		return $query->execute($tableauInfos);
     }
@@ -166,7 +166,7 @@ class utilisateurDAO implements DAO
 		
 		$query = $connexion->prepare("DELETE FROM utilisateur WHERE id=?");
 		
-		$tableauInfos = [$unUtilisateur->getId()];
+		$tableauInfos = [$unUtilisateur->getIdUtilisateur()];
 		return $query->execute($tableauInfos);
 	}
 }
