@@ -18,7 +18,7 @@
 
 		static public function inserer($unItem);
 
-		static public function modifierUnParam($id, $modif);
+		static public function modifierUnParam($id);
                 
         static public function modifierTout($unItem);
 

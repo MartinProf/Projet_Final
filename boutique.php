@@ -31,8 +31,8 @@ require "vues/inc/navbar.inc.php";
     $conn->close();*/
     
     include_once("modeles/articlesepicerie.class.php");
-    include_once("modeles/DAO/EpicerieDAO.class.php");
-    $tableauArticles = EpicerieDAO::chercherTous();
+    include_once("modeles/DAO/articlesepicerieDAO.class.php");
+    $tableauArticles = articlesepicerieDAO::chercherTous();
 
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 1) {

@@ -21,7 +21,7 @@ class utilisateurDAO implements DAO
 		
 		$unUtilisateur = null;
 
-		$query = $connexion->prepare("SELECT * FROM utilisateur WHERE id=?");
+		$query = $connexion->prepare("SELECT * FROM utilisateur WHERE idUtilisateur=?");
 		
 		$query->execute(array($id));
 
@@ -122,15 +122,15 @@ class utilisateurDAO implements DAO
 	}
 
 	
-	static public function modifierUnParam($id, $modif)
+	static public function modifierUnParam($id)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
-		
-		$query = $connexion->prepare("UPDATE utilisateur SET password=? WHERE id=?");
+
+		$query = $connexion->prepare("UPDATE utilisateur SET password=? WHERE idUtilisateur=?");
 
 		$tableauInfos = [
 			$id->getIdUtilisateur(), $id->getNom(),
@@ -147,7 +147,7 @@ class utilisateurDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("UPDATE utilisateur SET nom=?,prenom=?,pseudo=?,courriel=?, password=?, admin=?  WHERE id=?");
+		$query = $connexion->prepare("UPDATE utilisateur SET nom=?,prenom=?,pseudo=?,courriel=?, password=?, admin=?  WHERE idUtilisateur=?");
 
 		$tableauInfos = [
 			$unUtilisateur->getIdUtilisateur(), $unUtilisateur->getNom(),
@@ -164,7 +164,7 @@ class utilisateurDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("DELETE FROM utilisateur WHERE id=?");
+		$query = $connexion->prepare("DELETE FROM utilisateur WHERE idUtilisateur=?");
 		
 		$tableauInfos = [$unUtilisateur->getIdUtilisateur()];
 		return $query->execute($tableauInfos);
