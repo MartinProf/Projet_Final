@@ -18,7 +18,7 @@
 
 		static public function inserer($unItem);
 
-		static public function modifierPrix($unItem);
+		static public function modifierUnParam($param);
                 
         static public function modifierTout($unItem);
 
