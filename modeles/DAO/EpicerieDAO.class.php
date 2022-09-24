@@ -6,7 +6,7 @@
 
 // ****** INLCUSIONS *******
 include_once("modeles/DAO/DAO.interface.php");
-include_once("modeles/epicerie.class.php");
+include_once("modeles/articlesepicerie.class.php");
 
 // ****** CLASSE ******
 class EpicerieDAO implements DAO
@@ -18,21 +18,20 @@ class EpicerieDAO implements DAO
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
-		var_dump($connexion);
+		
 		$unItem = null;
 
-		$query = $connexion->prepare("SELECT * FROM epiceriebiologique WHERE id=?");
-		var_dump($query);
+		$query = $connexion->prepare("SELECT * FROM articlesepicerie WHERE id=?");
 		
 		$query->execute(array($id));
 
 		if ($query->rowCount() != 0) {
 			$enr = $query->fetch();
-			$unItem = new epicerie(
+			$unItem = new articlesepicerie(
 				$enr['id'],
 				$enr['article'],
 				$enr['prix'],
-                $enr['idArcticle'],
+                $enr['idArticle'],
 				$enr['image_location']
 			);
 		}
@@ -52,15 +51,15 @@ class EpicerieDAO implements DAO
 		}
 		
 		$tableau = [];
-		$query = $connexion->prepare("SELECT * FROM epiceriebiologique");
+		$query = $connexion->prepare("SELECT * FROM articlesepicerie");
 		$query->execute();
 		
 		foreach ($query as $enr) {
-			$unProduit = new epicerie(
+			$unProduit = new articlesepicerie(
 				$enr['id'],
 				$enr['article'],
 				$enr['prix'],
-				$enr['idArticle'],
+                $enr['idArticle'],
 				$enr['image_location']
 			);															
 			array_push($tableau, $unProduit);
@@ -81,11 +80,11 @@ class EpicerieDAO implements DAO
 		}
 		
 		$tableau = [];	
-		$query = $connexion->prepare("SELECT * FROM produit " . $filtre);
+		$query = $connexion->prepare("SELECT * FROM articlesepicerie " . $filtre);
 		$query->execute();
 		
 		foreach ($query as $enr) {
-			$unItem = new epicerie(
+			$unItem = new articlesepicerie(
 				$enr['id'],
 				$enr['article'],
 				$enr['prix'],
@@ -110,11 +109,9 @@ class EpicerieDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("INSERT INTO epiceriebiologique (id,article,prix,idArticle,image_location) VALUES (?,?,?,?,?)");
+		$query = $connexion->prepare("INSERT INTO articlesepicerie (article,prix,idArticle,image_location) VALUES (?,?,?,?)");
 		
-		$tableauInfos = [
-			$unItem->getId(), $unItem->getArticle(), $unItem->getPrix(),
-			$unItem->getIdArticle(), $unItem->getImage_location()];
+		$tableauInfos = [$unItem->getArticle(), $unItem->getPrix(), $unItem->getIdArticle(), $unItem->getImage_location()];
 		return $query->execute($tableauInfos);
 	}
 
