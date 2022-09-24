@@ -5,13 +5,12 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("DAO.interface.php");
-include_once("../../modele/epicerie.class.php");
+include_once("modeles/DAO/DAO.interface.php");
+include_once("modeles/epicerie.class.php");
 
 // ****** CLASSE ******
 class EpicerieDAO implements DAO
 {
-
 	public static function chercher($id)
 	{
 		try {
@@ -19,13 +18,15 @@ class EpicerieDAO implements DAO
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
+		var_dump($connexion);
+		$unItem = null;
 
-		$unItem = null;			
-		$query = $connexion->prepare("SELECT * FROM epiceriebiologique WHERE id=?");		
+		$query = $connexion->prepare("SELECT * FROM epiceriebiologique WHERE id=?");
+		var_dump($query);
+		
 		$query->execute(array($id));
 
 		if ($query->rowCount() != 0) {
-
 			$enr = $query->fetch();
 			$unItem = new epicerie(
 				$enr['id'],

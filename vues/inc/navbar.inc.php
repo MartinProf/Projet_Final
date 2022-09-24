@@ -25,13 +25,18 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="authentifier.php">S'authentifier</a></li>
-                            <li><a class="dropdown-item" href="enregistrer.php">S'enregistrer</a></li>
+                            <?php 
+                                if($_SESSION['role'] === 'utilisateur' || $_SESSION['role'] === 'administrateur'){
+                                    echo '  <li><a class="dropdown-item" href="deconnexion.php">Se déconnecter</a></li>';
+                                }
+                                else
+                                    echo '  <li><a class="dropdown-item" href="authentifier.php">S\'authentifier</a></li>
+                                            <li><a class="dropdown-item" href="enregistrer.php">S\'enregistrer</a></li>'; 
+                            ?>                           
                         </ul>
                     </li>
-                    <li class="nav-item invisible">
-                        <a class="nav-link pe-2" aria-current="page"><img src="images/cart-plus.png" alt="Cart" height="40px">10</a>
-                    </li>
+                    <?php if($_SESSION['role'] === 'utilisateur' || $_SESSION['role'] === 'administrateur')
+                        echo '<li class="nav-item"><a class="nav-link pe-2" aria-current="page"><img src="images/cart-plus.png" alt="Cart" height="40px"></a></li>';?>
                 </ul>
             </div>
         </div>
