@@ -113,20 +113,32 @@
 
 <p><br>******************************<br></p>
 
-<h3>Validation méthode modifierUnParam()</h3>
+/<h3>Validation méthode modifierUnParam()</h3>
 <h4>***articlesepicerieDAO***</h4>
 <?php
-include_once("modeles\DAO\DAO.interface.php");
-include_once("modeles\DAO\articlesepicerieDAO.class.php");
-$produitUnParamModifie = articlesepicerieDAO::modifierUnParam(4, 3.97);
-'<h5>Le prix du produit id(4) a été modifié'. $produitUnParamModifie . '<5>';
+// include_once("modeles\DAO\DAO.interface.php");
+// include_once("modeles\DAO\articlesepicerieDAO.class.php");
+// $produitUnParamModifie = articlesepicerieDAO::modifierUnParam(4, 3.97);
+// '<h5>Le prix du produit id(4) a été modifié'. $produitUnParamModifie . '<5>';
 ?>
 <h4><br>***utilisateurDAO***</h4>
 <?php
-include_once("modeles\DAO\DAO.interface.php");
-include_once("modeles\DAO\utilisateurDAO.class.php");
-$utilisateurUnParamModifie = utilisateurDAO::modifierUnParam(4, 65432);
-'<h5>Le password du user id(5) a été modifié'. $utilisateurUnParamModifie . '<5>';
+// include_once("modeles\DAO\DAO.interface.php");
+// include_once("modeles\DAO\utilisateurDAO.class.php");
+// $utilisateurUnParamModifie = utilisateurDAO::modifierUnParam(4, 65432);
+// '<h5>Le password du user id(4) a été modifié'. $utilisateurUnParamModifie . '<5>';
+?>
+
+<p><br>******************************<br></p>
+
+/<h3>Validation méthode modifierUnParam()</h3>
+<h4>***articlesepicerieDAO***</h4>
+<?php
+
+?>
+<h4><br>***utilisateurDAO***</h4>
+<?php
+
 ?>
 
 </body>

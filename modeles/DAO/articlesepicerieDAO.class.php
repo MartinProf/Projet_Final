@@ -116,7 +116,7 @@ class articlesepicerieDAO implements DAO
 	}
 
 	
-	static public function modifierUnParam($id, $modif)
+	static public function modifierUnParam($id)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -124,7 +124,7 @@ class articlesepicerieDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("UPDATE epiceriebiologique SET prix=? WHERE id=?");
+		$query = $connexion->prepare("UPDATE articlesepicerie SET prix=? WHERE id=?");
 
 		$tableauInfos = [
 			$id->getId(), $id->getArticle(),
@@ -141,7 +141,7 @@ class articlesepicerieDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("UPDATE epiceriebiologique SET article=?,prix=?,idArticle=?,image_location=? WHERE id=?");
+		$query = $connexion->prepare("UPDATE articlesepicerie SET article=?,prix=?,idArticle=?,image_location=? WHERE id=?");
 
 		$tableauInfos = [
 			$unItem->getId(), $unItem->getArticle(),
@@ -158,7 +158,7 @@ class articlesepicerieDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("DELETE FROM epiceriebiologique WHERE id=?");
+		$query = $connexion->prepare("DELETE FROM articlesepicerie WHERE id=?");
 		
 		$tableauInfos = [$unItem->getId()];
 		return $query->execute($tableauInfos);
