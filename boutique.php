@@ -13,7 +13,7 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
 <?php
-		$servername = "localhost";
+		/*$servername = "localhost";
     $username = "root";
     $password = "root";
     $dbname = "epiceriebiologique";
@@ -28,7 +28,11 @@ require "vues/inc/navbar.inc.php";
       $nouvelleItem = new epicerie($row["id"], $row["article"], $row["prix"], $row["idArticle"], $row["image_location"]);
       array_push( $tableauArticles ,$nouvelleItem );
     }
-    $conn->close();
+    $conn->close();*/
+    
+    include_once("modeles/articlesepicerie.class.php");
+    include_once("modeles/DAO/EpicerieDAO.class.php");
+    $tableauArticles = EpicerieDAO::chercherTous();
 
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 1) {

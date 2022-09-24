@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['role'] = 'visiteur';
+$_SESSION['role'] = 'utilisateur';
 $_SESSION['logIN'] = '0';
 $_SESSION['admin'] = '0';
 ?>
