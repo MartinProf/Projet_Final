@@ -5,11 +5,12 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/DAO.interface.php");
+include_once("modeles/DAO/articlesepicerieDAOinterface.interface.php");
 include_once("modeles/articlesepicerie.class.php");
 
 // ****** CLASSE ******
-class articlesepicerieDAO implements DAO
+class articlesepicerieDAO implements articlesepicerieDAOinterface
+
 {
 	public static function chercher($id)
 	{

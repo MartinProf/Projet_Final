@@ -20,13 +20,20 @@ class utilisateur {
         }
     }
 
+    public function construct3($courriel, $password, $admin)
+    {
+        $this->courriel = $courriel;
+        $this->password = sha1($password);
+        $this->admin = $admin;
+    }
+
     public function construct6($nom, $prenom, $pseudo, $courriel, $password, $admin)
     {
         $this->nom=$nom;
         $this->prenom=$prenom;
         $this->pseudo=$pseudo;
         $this->courriel=$courriel;
-        $this->password=$password;
+        $this->password=sha1($password);
         $this->admin=$admin;
     }
 
@@ -37,7 +44,7 @@ class utilisateur {
         $this->prenom=$prenom;
         $this->pseudo=$pseudo;
         $this->courriel=$courriel;
-        $this->password=$password;
+        $this->password=sha1($password);
         $this->admin=$admin;
     }
 
