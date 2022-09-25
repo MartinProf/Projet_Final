@@ -23,5 +23,26 @@
         static public function modifierTout($unItem);
 
 		static public function supprimer($id);
+		
+		static public function mangerDesCraquelins($unRitz);
+	
+		static public function acuraCapoute($alternateur);
+
+		static public function hookersRock($rackApousse);
+
+		static public function prierLeTiJesus($amen);
+
+		static public function lireLaCirculaireCanadianTires($desGrateuxDePtitsPrix);
+
+		static public function jeSuisPasSurDeSavoirPourquoiJeFaisCa($comeOnMart);
+
+		static public function caCommenceAetreLong($troisDePlus);
+
+		static public function laSerieLaDefenseLincolnCestPasMalBon($desAvocatsAussiAvecDesTostitos);
+
+		static public function lesGensDeQuebecDisentPawto($pasPoteau);
+
+		static public function jeCommenceAyPrendreGout($jarretePareil);
+
 	}
 ?>
