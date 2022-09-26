@@ -5,7 +5,7 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/DAO.interface.php");
+include_once("modeles/DAO/utilisateurDAO.interface.php");
 include_once("modeles/utilisateur.class.php");
 
 // ****** CLASSE ******

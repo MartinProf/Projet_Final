@@ -28,9 +28,9 @@
 <body>
 <h1>Test unitaire</h1>
 
-<h3>Connexion à la base de données via DAO</h3>
+<h3>Connexion à la base de données via l'interface utilisateurDAO</h3>
 <?php
-	include_once("modeles\DAO\DAO.interface.php");
+	include_once("modeles\DAO\utilisateurDAO.interface.php");
 	try {
 		$connexion = ConnexionBD::getInstance();
 		echo '<h5>Connexion établie</h5>';
@@ -38,7 +38,6 @@
 		throw new Exception("<h5>Impossible d’obtenir la connexion à la BD.</h5>");
 	}
 ?>
-
 <h4><br>***utilisateurDAO***</h4>
 <h3><br>Validation méthode chercherUtilisateur(root@root.com)</h3>
 <?php

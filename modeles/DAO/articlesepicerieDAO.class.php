@@ -5,14 +5,14 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/articlesepicerieDAOinterface.interface.php");
+include_once("modeles/DAO/articlesepicerieDAO.interface.php");
 include_once("modeles/articlesepicerie.class.php");
 
 // ****** CLASSE ******
 class articlesepicerieDAO implements articlesepicerieDAOinterface
 
 {
-	public static function chercher($id)
+	public static function chercherArticle($id)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -72,37 +72,7 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 	}
 
 	
-	static public function rechercheFiltree($filtre)
-	{
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-		
-		$tableau = [];	
-		$query = $connexion->prepare("SELECT * FROM articlesepicerie " . $filtre);
-		$query->execute();
-		
-		foreach ($query as $enr) {
-			$unItem = new articlesepicerie(
-				$enr['id'],
-				$enr['article'],
-				$enr['prix'],
-				$enr['idArticle'],
-				$enr['image_location']
-			);
-																			
-			array_push($tableau, $unItem);
-		}
-
-		$query->closeCursor();
-		ConnexionBD::close();
-		return $tableau;
-	}
-
-
-	static function inserer($unItem)
+	static function insererArticle($article)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -112,29 +82,12 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		
 		$query = $connexion->prepare("INSERT INTO articlesepicerie (article,prix,idArticle,image_location) VALUES (?,?,?,?)");
 		
-		$tableauInfos = [$unItem->getArticle(), $unItem->getPrix(), $unItem->getIdArticle(), $unItem->getImage_location()];
+		$tableauInfos = [$article->getArticle(), $article->getPrix(), $article->getIdArticle(), $article->getImage_location()];
 		return $query->execute($tableauInfos);
 	}
 
 	
-	static public function modifierUnParam($id)
-	{
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-		
-		$query = $connexion->prepare("UPDATE articlesepicerie SET prix=? WHERE id=?");
-
-		$tableauInfos = [
-			$id->getId(), $id->getArticle(),
-			$id->getPrix(), $id->getIdArticle(), $id->getImage_location()];
-		return $query->execute($tableauInfos);
-	}
-
-
-    static public function modifierTout($unItem)
+    static public function modifierArticle($article)
     {
         try {
 			$connexion = ConnexionBD::getInstance();
@@ -145,13 +98,13 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		$query = $connexion->prepare("UPDATE articlesepicerie SET article=?,prix=?,idArticle=?,image_location=? WHERE id=?");
 
 		$tableauInfos = [
-			$unItem->getId(), $unItem->getArticle(),
-			$unItem->getPrix(), $unItem->getIdArticle(), $unItem->getImage_location()];
+			$article->getId(), $article->getArticle(),
+			$article->getPrix(), $article->getIdArticle(), $article->getImage_location()];
 		return $query->execute($tableauInfos);
     }
 	
 
-	static public function supprimer($unItem)
+	static public function supprimerArticle($id)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -161,7 +114,7 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		
 		$query = $connexion->prepare("DELETE FROM articlesepicerie WHERE id=?");
 		
-		$tableauInfos = [$unItem->getId()];
+		$tableauInfos = [$id];
 		return $query->execute($tableauInfos);
 	}
 }
