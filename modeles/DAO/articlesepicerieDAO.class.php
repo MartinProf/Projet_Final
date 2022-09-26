@@ -96,10 +96,9 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		}
 		
 		$query = $connexion->prepare("UPDATE articlesepicerie SET article=?,prix=?,idArticle=?,image_location=? WHERE id=?");
-
-		$tableauInfos = [
-			$article->getId(), $article->getArticle(),
-			$article->getPrix(), $article->getIdArticle(), $article->getImage_location()];
+		
+		$tableauInfos = [$article->getArticle(), $article->getPrix(), $article->getIdArticle(), $article->getImage_location(), $article->getId()];
+		
 		return $query->execute($tableauInfos);
     }
 	
