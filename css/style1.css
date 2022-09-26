@@ -342,8 +342,15 @@ a:hover {
     margin: 0 20px 151px 20px;
     padding: 20px 0;
     background-color: tan;
+    overflow-x: hidden;
   }
 
+  @media (max-width: 800px) {
+    .containerAdmin input {
+        width: 75%;
+    }
+  }
+  
   .containerAdmin form {
     padding-left: 150px;
   }
