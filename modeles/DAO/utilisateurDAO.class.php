@@ -5,13 +5,13 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/DAO.interface.php");
+include_once("modeles/DAO/utilisateurDAO.interface.php");
 include_once("modeles/utilisateur.class.php");
 
 // ****** CLASSE ******
-class utilisateurDAO implements DAO
+class utilisateurDAO implements utilisateurDAOinterface
 {
-	public static function chercher($id)
+	public static function chercherUtilisateur($email)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -19,15 +19,15 @@ class utilisateurDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$unUtilisateur = null;
+		$utilisateur = null;
 
-		$query = $connexion->prepare("SELECT * FROM utilisateur WHERE idUtilisateur=?");
+		$query = $connexion->prepare("SELECT * FROM utilisateur WHERE courriel=?");
 		
-		$query->execute(array($id));
+		$query->execute(array($email));
 
 		if ($query->rowCount() != 0) {
 			$enr = $query->fetch();
-			$unUtilisateur = new utilisateur(
+			$utilisateur = new utilisateur(
 				$enr['idUtilisateur'],
 				$enr['nom'],
 				$enr['prenom'],
@@ -40,11 +40,10 @@ class utilisateurDAO implements DAO
 		
 		$query->closeCursor();		
 		ConnexionBD::close();		
-		return $unUtilisateur;
+		return $utilisateur;
 	}
-
 	
-	static public function chercherTous()
+	static function ajouterUtilisateur($utilisateur)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -52,111 +51,14 @@ class utilisateurDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$tableau = [];
-		$query = $connexion->prepare("SELECT * FROM utilisateur");
-		$query->execute();
+		$query = $connexion->prepare("INSERT INTO utilisateur (courriel,password,admin) VALUES (?,?,?)");
 		
-		foreach ($query as $enr) {
-			$unUtilisateur = new utilisateur(
-				$enr['idUtilisateur'],
-				$enr['nom'],
-				$enr['prenom'],
-                $enr['pseudo'],
-				$enr['courriel'],
-                $enr['password'],
-                $enr['admin']
-			);															
-			array_push($tableau, $unUtilisateur);
-		}
+		$tableauInfos = [$utilisateur->getCourriel(), $utilisateur->getPassword(), $utilisateur->getAdmin()];
 
-		$query->closeCursor();
-		ConnexionBD::close();
-		return $tableau;
-	}
-
-	
-	static public function rechercheFiltree($filtre)
-	{
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-		
-		$tableau = [];	
-		$query = $connexion->prepare("SELECT * FROM utilisateur " . $filtre);
-		$query->execute();
-		
-		foreach ($query as $enr) {
-			$unUtilisateur = new utilisateur(
-				$enr['idUtilisateur'],
-				$enr['nom'],
-				$enr['prenom'],
-                $enr['pseudo'],
-				$enr['courriel'],
-                $enr['password'],
-                $enr['admin']
-			);
-																			
-			array_push($tableau, $unUtilisateur);
-		}
-
-		$query->closeCursor();
-		ConnexionBD::close();
-		return $tableau;
-	}
-
-
-	static function inserer($unUtilisateur)
-	{
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-		
-		$query = $connexion->prepare("INSERT INTO utilisateur (nom,prenom,pseudo,courriel,password,admin) VALUES (?,?,?,?,?,?)");
-		
-		$tableauInfos = [$unUtilisateur->getNom(), $unUtilisateur->getPrenom(), $unUtilisateur->getPseudo(), $unUtilisateur->getCourriel(), $unUtilisateur->getPassword(), $unUtilisateur->getAdmin()];
 		return $query->execute($tableauInfos);
 	}
 
-	
-	static public function modifierUnParam($id)
-	{
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-
-		$query = $connexion->prepare("UPDATE utilisateur SET password=? WHERE idUtilisateur=?");
-
-		$tableauInfos = [
-			$id->getIdUtilisateur(), $id->getNom(),
-			$id->getPrenom(), $id->getPseudo(), $id->getCourriel(),$id->getPassword(), $id->getAdmin()];
-		return $query->execute($tableauInfos);
-	}
-
-
-    static public function modifierTout($unUtilisateur)
-    {
-        try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-		
-		$query = $connexion->prepare("UPDATE utilisateur SET nom=?,prenom=?,pseudo=?,courriel=?, password=?, admin=?  WHERE idUtilisateur=?");
-
-		$tableauInfos = [
-			$unUtilisateur->getIdUtilisateur(), $unUtilisateur->getNom(),
-			$unUtilisateur->getPrenom(), $unUtilisateur->getPseudo(), $unUtilisateur->getCourriel(),$unUtilisateur->getPassword(), $unUtilisateur->getAdmin()];
-		return $query->execute($tableauInfos);
-    }
-	
-
-	static public function supprimer($unUtilisateur)
+	static public function supprimerUtilisateur($courriel)
 	{
 		try {
 			$connexion = ConnexionBD::getInstance();
@@ -164,9 +66,9 @@ class utilisateurDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("DELETE FROM utilisateur WHERE idUtilisateur=?");
+		$query = $connexion->prepare("DELETE FROM utilisateur WHERE courriel=?");
 		
-		$tableauInfos = [$unUtilisateur->getIdUtilisateur()];
+		$tableauInfos = [$courriel];
 		return $query->execute($tableauInfos);
 	}
 }

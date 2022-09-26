@@ -18,17 +18,17 @@ class articlesepicerie{
         }
     }
 
-    public function construct5($id, $article, $prix, $idArticle, $image_location)
+    public function construct4($article, $prix, $idArticle, $image_location)
     {
-        $this->id = $id;
         $this->article = $article;
         $this->prix = $prix;
         $this->idArticle = $idArticle;
         $this->image_location = $image_location;
     }
-
-    public function construct4($article, $prix, $idArticle, $image_location)
+    
+    public function construct5($id, $article, $prix, $idArticle, $image_location)
     {
+        $this->id = $id;
         $this->article = $article;
         $this->prix = $prix;
         $this->idArticle = $idArticle;
