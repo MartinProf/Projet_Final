@@ -1,4 +1,6 @@
 <?PHP
-    $_SESSION['role'] = 'visiteur';
-    header ("Location: decouvrir.php");
+session_start();
+$_SESSION['role'] = 'guess';
+header ("Location: decouvrir.php");
+exit;
 ?>
