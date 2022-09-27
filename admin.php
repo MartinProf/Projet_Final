@@ -1,7 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
 $titre = "Page d'administration";
 require "vues/inc/entete.inc.php";
-require "vues/inc/navbar.inc.php";
+
 include_once("modeles/DAO/articlesepicerieDAO.class.php");
 include_once("modeles/articlesepicerie.class.php");
 ?>
@@ -10,11 +12,16 @@ include_once("modeles/articlesepicerie.class.php");
 <section class="containerAdmin container-fluid">
     <div class="row d-flex flex-row">
         <div class="col-12">
-            <form action="transfert.php" method="POST" class="firstRowAdmin" enctype="multipart/form-data" id="formAdmin" runat="server"><input type="text" name="articleAjouter" placeholder="Article"><input type="text" name="prixAjouter" placeholder="Prix"><input type="text" name="idArticleAjouter" placeholder="ID Article"><INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400"><input type="file" accept="image/*" id="imgInput" name="imageLocationAjouter" placeholder="Image location">
-                <input type="submit" value="Ajouter" name="images" class="btnAjouter"></input>
+            <form action="transfert.php" method="POST" class="firstRowAdmin" enctype="multipart/form-data" id="formAdmin" runat="server">
+                <input type="text" name="articleAjouter" placeholder="Article">
+                <input type="text" name="prixAjouter" placeholder="Prix">
+                <input type="text" name="idArticleAjouter" placeholder="ID Article">
+                <INPUT TYPE ="HIDDEN" NAME ="MAX_FILE_SIZE" VALUE ="614400">
+                <input type="file" accept="image/*" id="imgInput" name="fichier" placeholder="Image location">
+                <input type="submit" value="Ajouter" name="Upload" class="btnAjouter"></input>
             </form>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
             <form action="" id="formAdmin"><input type="text" name="idSupprimer" placeholder="ID"><input type="text" name="articleSupprimer" placeholder="Article"><input type="text" name="prixSupprimer" placeholder="Prix"><input type="text" name="idArticleSupprimer" placeholder="ID Article"><input type="file" id="imgInput" name="imageLocationSupprimer" placeholder="Image location">
                 <input type="submit" value="Supprimer" name="btnSupprimer" class="btnSupprimer"></input>
             </form>
@@ -23,7 +30,7 @@ include_once("modeles/articlesepicerie.class.php");
             <form action="" id="formAdmin"><input type="text" name="idModifier" placeholder="ID"><input type="text" name="articleModifier" placeholder="Article"><input type="text" name="prixModifier" placeholder="Prix"><input type="text" name="idArticleModifier" placeholder="ID Article"><INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400"><input type="file" accept="image/*" id="imgInput" name="imageLocationModifier" placeholder="Image location">
                 <input type="submit" value="Modifier" name="btnModifier" class="btnModifier"></input>
             </form>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -56,7 +63,7 @@ include_once("modeles/articlesepicerie.class.php");
                     <img id="previewImg" src="#" alt="previewImg" />
                 </div>
                 <div class="product-description">
-                    <h4 class="product-name"><a href="#">Pommes</a></h4>
+                    <h4 class="product-name"><a href="#">Nom Article</a></h4>
                     <p id="prixpommes">$0.99</p>
                     <div class="buttons">
                         <button class="btn-minus" onclick="decreaseItem('pommes' , 'prixpommes')">-</button>
