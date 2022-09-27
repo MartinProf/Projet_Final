@@ -91,7 +91,7 @@ require "vues/inc/navbar.inc.php";
                 <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Nos viandes</div></a>
 
             <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondAutre">
-                <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Autre</div></a>
+                <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Autres</div></a>
         </div>
     </div>
 </section>
