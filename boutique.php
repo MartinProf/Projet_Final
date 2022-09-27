@@ -1,4 +1,6 @@
 <?php
+session_start();
+if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
 $titre = "Boutique biologique";
 $nav = "boutique";
 require "vues/inc/entete.inc.php";
@@ -13,23 +15,6 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
 <?php
-		/*$servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "epiceriebiologique";
-    
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "SELECT id, article, prix, idArticle, image_location FROM articlesepicerie";
-    $result = $conn->query($sql);
-    $tableauArticles = array();
-
-    include_once "modeles/epicerie.class.php";
-    while($row = $result->fetch_assoc()) {
-      $nouvelleItem = new epicerie($row["id"], $row["article"], $row["prix"], $row["idArticle"], $row["image_location"]);
-      array_push( $tableauArticles ,$nouvelleItem );
-    }
-    $conn->close();*/
-    
     include_once("modeles/articlesepicerie.class.php");
     include_once("modeles/DAO/articlesepicerieDAO.class.php");
     $tableauArticles = articlesepicerieDAO::chercherTous();

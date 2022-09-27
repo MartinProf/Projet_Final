@@ -1,4 +1,7 @@
 <?php
+session_start();
+if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
+$_SESSION['essaie'] = 3;
 $titre = "Épicerie biologique";
 $nav = "decouvrir";
 require "vues/inc/entete.inc.php";
