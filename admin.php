@@ -10,8 +10,8 @@ include_once("modeles/articlesepicerie.class.php");
 <section class="containerAdmin container-fluid">
     <div class="row d-flex flex-row">
         <div class="col-12">
-            <form action="" class="firstRowAdmin" id="formAdmin" runat="server"><input type="text" name="articleAjouter" placeholder="Article"><input type="text" name="prixAjouter" placeholder="Prix"><input type="text" name="idArticleAjouter" placeholder="ID Article"><input type="file" accept="image/*" id="imgInput" name="imageLocationAjouter" placeholder="Image location">
-                <input type="submit" value="Ajouter" name="btnAjouter" class="btnAjouter"></input>
+            <form action="transfert.php" method="POST" class="firstRowAdmin" enctype="multipart/form-data" id="formAdmin" runat="server"><input type="text" name="articleAjouter" placeholder="Article"><input type="text" name="prixAjouter" placeholder="Prix"><input type="text" name="idArticleAjouter" placeholder="ID Article"><INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400"><input type="file" accept="image/*" id="imgInput" name="imageLocationAjouter" placeholder="Image location">
+                <input type="submit" value="Ajouter" name="images" class="btnAjouter"></input>
             </form>
         </div>
         <div class="col-12">
@@ -20,7 +20,7 @@ include_once("modeles/articlesepicerie.class.php");
             </form>
         </div>
         <div class="col-12">
-            <form action="" id="formAdmin"><input type="text" name="idModifier" placeholder="ID"><input type="text" name="articleModifier" placeholder="Article"><input type="text" name="prixModifier" placeholder="Prix"><input type="text" name="idArticleModifier" placeholder="ID Article"><input type="file" id="imgInput" name="imageLocationModifier" placeholder="Image location">
+            <form action="" id="formAdmin"><input type="text" name="idModifier" placeholder="ID"><input type="text" name="articleModifier" placeholder="Article"><input type="text" name="prixModifier" placeholder="Prix"><input type="text" name="idArticleModifier" placeholder="ID Article"><INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400"><input type="file" accept="image/*" id="imgInput" name="imageLocationModifier" placeholder="Image location">
                 <input type="submit" value="Modifier" name="btnModifier" class="btnModifier"></input>
             </form>
         </div>
