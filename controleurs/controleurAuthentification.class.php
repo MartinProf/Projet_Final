@@ -11,7 +11,7 @@
 		public function executerAction(){
 			
 			$_SESSION['role']= 'admin';
-			//header("Location: Index.php?admin&action=boutique");
+			$panierEpicerie = array();
 
 			return "authentifier";
 		}

@@ -1,4 +1,6 @@
 <?php
+$titre = "Page d'administration";
+$nav = "boutique";
 require "vues/inc/navbar.inc.php";
 include_once "modeles/DAO/articlesepicerieDAO.class.php";
 ?>

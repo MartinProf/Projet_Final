@@ -1,7 +1,6 @@
 
 let total;
 
-
 // Increasing Function
 function increaseItem(param , itemPrice){
 
@@ -22,7 +21,7 @@ function decreaseItem(param , itemPrice){
 
         if (noOfItem.value <= 0) {
             noOfItem.value = 0;
-            alert('Oder Can"t Be Negative');
+            alert('La donnée ne peut être négative');
         }
         else{
             noOfItem.value = parseInt(noOfItem.value) - 1;
