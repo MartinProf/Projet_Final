@@ -1,4 +1,6 @@
 <?php
+$titre = "Épicerie biologique";
+$nav = "fonctionnement";
 require "vues/inc/navbar.inc.php";
 ?>
 <div class="banner d-flex justify-content-center align-items-center">

@@ -1,4 +1,6 @@
 <?php
+$titre = "Épicerie biologique";
+$nav = "boutique";
 require "vues/inc/navbar.inc.php";
 ?>
 
