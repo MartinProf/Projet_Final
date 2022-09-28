@@ -14,20 +14,20 @@ a:hover {
     color: rgb(152, 122, 61) !important;
 }
 
-#decouvrir>a {
+.decouvrir>a {
     color: rgb(152, 122, 61) !important;
 }
 
-#fonctionnement>a {
+.fonctionnement>a {
     color: rgb(152, 122, 61) !important;
 }
 
-#boutique>a {
+.boutique>a {
     color: rgb(152, 122, 61) !important;
     background-color: #EDF1ED;
 }
 
-#couleurDropDown, nav {
+.couleurDropDown, nav {
     background-color: #EDF1ED;
 }
 
@@ -126,7 +126,7 @@ a:hover {
     transition: 0.6s ease-in-out;
 }
 
-#imageGAFAM {
+.imageGAFAM {
     height: 50px;
 }
 

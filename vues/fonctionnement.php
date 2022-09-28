@@ -1,7 +1,7 @@
 <?php
 require "vues/inc/navbar.inc.php";
 ?>
-<section class="banner d-flex justify-content-center align-items-center">
+<div class="banner d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-lg-1"></div>
@@ -12,7 +12,7 @@ require "vues/inc/navbar.inc.php";
             <div class="col-1"></div>
         </div>
     </div>
-</section>
+</div>
 <div class="container-fluid foodwrap"></div>
 
 <div class="wrapper">
@@ -31,7 +31,7 @@ require "vues/inc/navbar.inc.php";
     </div>
 <div id="undercarousel"></div>
 
-<section class="py-5" id="couleurDropDown">
+<div class="py-5 couleurDropDown">
     <div class="container">
         <div class="row pt-5 d-flex flex-row desc justify-content-center align-items-center">
             <div class="col-lg-4 d-flex justify-content-center align-items-center imageConteneur">
@@ -85,7 +85,7 @@ require "vues/inc/navbar.inc.php";
             
         
     </div>
-</section>
+</div>
 <div class="container-fluid foodwrap"></div>
 <?php
 require "vues/inc/footer.inc.php";
