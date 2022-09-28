@@ -13,7 +13,7 @@
 			$_SESSION['role']= 'admin';
 			//header("Location: Index.php?admin&action=boutique");
 
-			return "boutique";
+			return "authentifier";
 		}
 	}
 ?>
