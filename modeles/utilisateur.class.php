@@ -69,6 +69,7 @@ class utilisateur {
         return "IdUtilisateur : ". $this->idUtilisateur . " Nom : ". $this->nom . " Prenom : ". $this->prenom . " Pseudo : ". $this->pseudo . " Courriel : ". $this->courriel . " Password : ". $this->password . " Admin : ". $this->admin;
     }
 
+
 }
 
 ?>

@@ -1,7 +1,3 @@
-<?php 
-    include_once "vues/inc/entete.inc.php";
-?>
-
 <div style="max-width:600px; display: block; margin-left: auto; margin-right: auto ">
     <!--Inscription-->
     <div class="container p-5 my-5 border bg-secondary bg-opacity-25">
@@ -30,7 +26,3 @@
         </form>     
     </div>
 </div>
-
-<?php 
-    include_once "vues/inc/piedPage.inc.php";
-?>

@@ -1,12 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
-$titre = "Notre fonctionnement";
-$nav = "fonctionnement";
-require "vues/inc/entete.inc.php";
 require "vues/inc/navbar.inc.php";
 ?>
-
 <section class="banner d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
@@ -36,9 +30,6 @@ require "vues/inc/navbar.inc.php";
       </div>
     </div>
 <div id="undercarousel"></div>
-
-
-
 
 <section class="py-5" id="couleurDropDown">
     <div class="container">
@@ -95,11 +86,7 @@ require "vues/inc/navbar.inc.php";
         
     </div>
 </section>
-
 <div class="container-fluid foodwrap"></div>
-
-
 <?php
 require "vues/inc/footer.inc.php";
-require "vues/inc/piedPage.inc.php";
 ?>

@@ -1,13 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
-$_SESSION['essaie'] = 3;
-$titre = "Épicerie biologique";
-$nav = "decouvrir";
-require "vues/inc/entete.inc.php";
 require "vues/inc/navbar.inc.php";
 ?>
-
 <section class="banner d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
@@ -37,7 +30,6 @@ require "vues/inc/navbar.inc.php";
         </div>
     </div>
 </section>
-
 
 <section class="py-5" id="couleurDropDown">
     <div class="container">
@@ -81,24 +73,22 @@ require "vues/inc/navbar.inc.php";
     <div class="container">
         <div class="d-flex flex-wrap justify-content-center gap-5">
 
-            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondFruit">
+            <a href="<?php if($_SESSION['role']==='user' || $_SESSION['role']==='admin') echo 'boutique.php'; else echo 'authentifier.php';?>" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondFruit">
                 <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Nos fruits</div></a>
 
-            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondLegume">
+            <a href="<?php if($_SESSION['role']==='user' || $_SESSION['role']==='admin') echo 'boutique.php'; else echo 'authentifier.php';?>" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondLegume">
                 <div class=" d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100" >Nos légumes</div></a>
 
-            <a href="boutique.php" class="justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondViande">
+            <a href="<?php if($_SESSION['role']==='user' || $_SESSION['role']==='admin') echo 'boutique.php'; else echo 'authentifier.php';?>" class="justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondViande">
                 <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Nos viandes</div></a>
 
-            <a href="boutique.php" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondAutre">
+            <a href="<?php if($_SESSION['role']==='user' || $_SESSION['role']==='admin') echo 'boutique.php'; else echo 'authentifier.php';?>" class="d-flex justify-content-center align-items-center m-3 bg-body rounded-3" id="imageFondAutre">
                 <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Autres</div></a>
         </div>
     </div>
 </section>
 
 <div class="container-fluid foodwrap"></div>
-
 <?php
 require "vues/inc/footer.inc.php";
-require "vues/inc/piedPage.inc.php";
 ?>

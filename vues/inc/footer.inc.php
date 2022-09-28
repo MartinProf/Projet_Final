@@ -9,9 +9,9 @@
         </div>
     
         <ul class="nav col-md-4 justify-content-end d-flex">
-            <li class="ms-3"><a class="text-muted" href="https://twitter.com"><img src="images/twitter.png" alt="Twitter" id="imageGAFAM"></li>
-            <li class="ms-3"><a class="text-muted" href="https://instagram.com"><img src="images/instagram.png" alt="Instagram" id="imageGAFAM"></li>
-            <li class="ms-3"><a class="text-muted" href="https://facebook.com"><img src="images/facebook.png" alt="Facebook" id="imageGAFAM"></li>
+            <li class="ms-3"><a class="text-muted" href="https://twitter.com"><img src="images/twitter.png" alt="Twitter" id="imageGAFAM"></a></li>
+            <li class="ms-3"><a class="text-muted" href="https://instagram.com"><img src="images/instagram.png" alt="Instagram" id="imageGAFAM"></a></li>
+            <li class="ms-3"><a class="text-muted" href="https://facebook.com"><img src="images/facebook.png" alt="Facebook" id="imageGAFAM"></a></li>
         </ul>
         </footer>
     </div>

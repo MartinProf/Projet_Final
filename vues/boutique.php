@@ -1,12 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
-$titre = "Boutique biologique";
-$nav = "boutique";
-require "vues/inc/entete.inc.php";
 require "vues/inc/navbar.inc.php";
 ?>
-
 
 <!---Fruit-->
 <div class="container-fluid foodwrap" style="height:90px;"></div>
@@ -126,10 +120,6 @@ require "vues/inc/navbar.inc.php";
     }
   ?>
 </div>
-
-
-
 <?php
 require "vues/inc/footer.inc.php";
-require "vues/inc/piedPage.inc.php";
 ?>
