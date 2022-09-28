@@ -16,16 +16,27 @@ include_once "modeles/DAO/articlesepicerieDAO.class.php";
                 <input type="submit" value="Ajouter" name="Upload" class="btnAjouter"></input>
             </form>
         </div>
-        <!-- <div class="col-12">
-            <form action="" id="formAdmin"><input type="text" name="idSupprimer" placeholder="ID"><input type="text" name="articleSupprimer" placeholder="Article"><input type="text" name="prixSupprimer" placeholder="Prix"><input type="text" name="idArticleSupprimer" placeholder="ID Article"><input type="file" id="imgInput" name="imageLocationSupprimer" placeholder="Image location">
+        <div class="col-12">
+            <form action="" id="formAdmin">
+                <input type="text" name="idSupprimer" placeholder="ID">
+                <input type="text" name="articleSupprimer" placeholder="Article">
+                <input type="text" name="prixSupprimer" placeholder="Prix">
+                <input type="text" name="idArticleSupprimer" placeholder="ID Article">
+                <input type="file" id="imgInput" name="imageLocationSupprimer" placeholder="Image location">
                 <input type="submit" value="Supprimer" name="btnSupprimer" class="btnSupprimer"></input>
             </form>
         </div>
         <div class="col-12">
-            <form action="" id="formAdmin"><input type="text" name="idModifier" placeholder="ID"><input type="text" name="articleModifier" placeholder="Article"><input type="text" name="prixModifier" placeholder="Prix"><input type="text" name="idArticleModifier" placeholder="ID Article"><INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400"><input type="file" accept="image/*" id="imgInput" name="imageLocationModifier" placeholder="Image location">
+            <form action="" id="formAdmin">
+                <input type="text" name="idModifier" placeholder="ID">
+                <input type="text" name="articleModifier" placeholder="Article">
+                <input type="text" name="prixModifier" placeholder="Prix">
+                <input type="text" name="idArticleModifier" placeholder="ID Article">
+                <INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400">
+                <input type="file" accept="image/*" id="imgInput" name="imageLocationModifier" placeholder="Image location">
                 <input type="submit" value="Modifier" name="btnModifier" class="btnModifier"></input>
             </form>
-        </div> -->
+        </div>
     </div>
 </section>
 
@@ -33,22 +44,8 @@ include_once "modeles/DAO/articlesepicerieDAO.class.php";
     <div id="tabWrap">
         <div id="tabDebut">
             <?php
-            $tabArticles = articlesepicerieDAO::chercherTous();
-            echo  '<table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Article</th>
-                            <th>Prix</th>
-                            <th>ID Catégorie</th>
-                            <th>Image location</th>                    
-                        </tr>';
-
-
-            for ($i = 0; $i < count($tabArticles); $i++) {
-                echo "<tr><td>" . $tabArticles[$i]->getId() . "</td><td>" . $tabArticles[$i]->getArticle() . "</td><td>" . $tabArticles[$i]->getPrix() . "</td><td>" . $tabArticles[$i]->getIdArticle() . "</td><td>" . $tabArticles[$i]->getImage_location() . "</td>";
-            }
-
-            echo '</table>';
+            include "vues/inc/functions.inc.php";          
+            afficherArticles($controleur->getTabArticles());
             ?>
         </div>
         <div id="previewAdmin">
