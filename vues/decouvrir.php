@@ -16,7 +16,7 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid foodwrap"></div>
 
-<section class="py-5" id="couleurDropDown">
+<section class="py-5 couleurDropDown">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -31,7 +31,7 @@ require "vues/inc/navbar.inc.php";
     </div>
 </section>
 
-<section class="py-5" id="couleurDropDown">
+<section class="py-5 couleurDropDown">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
@@ -55,7 +55,7 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid foodwrap"></div>
 
-<section class="banner2 d-flex justify-content-center align-items-center pt-5">
+<div class="banner2 d-flex justify-content-center align-items-center pt-5">
     <div class="container">
         <div class="row">
             <div class="col-2"></div>
@@ -65,11 +65,11 @@ require "vues/inc/navbar.inc.php";
             <div class="col-2"></div>
         </div>
     </div>
-</section>
+</div>
 
 <div class="container-fluid foodwrap"></div>
 
-<section class="py-5" id="couleurDropDown">
+<div class="py-5 couleurDropDown">
     <div class="container">
         <div class="d-flex flex-wrap justify-content-center gap-5">
 
@@ -86,7 +86,7 @@ require "vues/inc/navbar.inc.php";
                 <div class="d-flex align-items-center justify-content-center imageFond font-weight-bold h-100 w-100">Autres</div></a>
         </div>
     </div>
-</section>
+</div>
 
 <div class="container-fluid foodwrap"></div>
 <?php
