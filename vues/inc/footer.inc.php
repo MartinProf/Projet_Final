@@ -1,4 +1,4 @@
-<section class="py-5 couleurDropDown">
+<div class="py-5 couleurDropDown">
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -9,10 +9,10 @@
         </div>
     
         <ul class="nav col-md-4 justify-content-end d-flex">
-            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a></li>
-            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a></li>
-            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://twitter.com"><img src="images/twitter.png" alt="Twitter" height="80"></a></li>
+            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://instagram.com"><img src="images/instagram.png" alt="Instagram" height="80"></a></li>
+            <li class="ms-3"><a class="text-muted imageGAFAM" href="https://facebook.com"><img src="images/facebook.png" alt="Facebook" height="80"></a></li>
         </ul>
         </footer>
     </div>
-</section>
+</div>
