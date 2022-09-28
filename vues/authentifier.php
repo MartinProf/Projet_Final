@@ -1,12 +1,7 @@
-<?php 
-    include_once "vues/inc/entete.inc.php";
-?>
-
 <div style="max-width:600px; display: block; margin-left: auto; margin-right: auto ">
     <!--Authentification-->
     <div class="container p-5 my-5 border bg-secondary bg-opacity-25">
         <?php 
-            session_start();
             $quantite = $_SESSION['essaie'];
             if($quantite!=3)
             echo '<div class="alert alert-danger" role="alert">Les identifiants entrés sont inexactes!</div>';
@@ -21,7 +16,7 @@
           </div>
         </div>
         </div>
-        <form action="redirection.php" method="POST">
+        <form action="?action=boutique" method="POST">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Entrez votre courriel" name="email" required>
@@ -39,6 +34,3 @@
         </form>
     </div>
 </div>
-<?php 
-    include_once "vues/inc/piedPage.inc.php";
-?>

@@ -1,14 +1,7 @@
 <?php
-session_start();
-if(!isset($_SESSION['role'])) $_SESSION['role'] = 'guess';  //guess user admin
-$titre = "Page d'administration";
-require "vues/inc/entete.inc.php";
-
-include_once("modeles/DAO/articlesepicerieDAO.class.php");
-include_once("modeles/articlesepicerie.class.php");
+require "vues/inc/navbar.inc.php";
+include_once "modeles/DAO/articlesepicerieDAO.class.php";
 ?>
-
-
 <section class="containerAdmin container-fluid">
     <div class="row d-flex flex-row">
         <div class="col-12">
@@ -75,8 +68,6 @@ include_once("modeles/articlesepicerie.class.php");
         </div>
     </div>
 </section>
-
 <?php
 require "vues/inc/footer.inc.php";
-require "vues/inc/piedPage.inc.php";
 ?>
