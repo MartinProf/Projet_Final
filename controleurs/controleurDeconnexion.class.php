@@ -9,10 +9,11 @@
 		}
 
 		public function executerAction(){
-
+			
             $_SESSION['role'] = 'guess';
 
-            return "deconnexion";
+            return "decouvrir";
 		}
+
 	}	
 ?>

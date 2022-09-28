@@ -23,7 +23,7 @@
 			}
 
 			elseif($action=="deconnexion"){
-				$controleur = new Boutique();
+				$controleur = new Deconnexion();
 			}
 
 			elseif($action=="authentifier"){
