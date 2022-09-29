@@ -8,11 +8,11 @@
               <button type="button active" class="btn btn-secondary col-5">S'inscrire</button>
           </div>
       </div>
-        <form action="/action_page.php">
+        <form action="?action=enregisValidation" method="POST">
           <div class="mb-3 mt-3">
-            <input type="email" class="form-control" id="email" placeholder="Entrez votre courriel" name="email">
-            <input type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe" name="pswd">
-            <input type="password" class="form-control" id="pwdVerify" placeholder="Confirmez votre mot de passe" name="pwdVerify">
+            <input type="email" class="form-control" id="email" placeholder="Entrez votre courriel" name="email" required>
+            <input type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe" name="pswd" required>
+            <input type="password" class="form-control" id="pwdVerify" placeholder="Confirmez votre mot de passe" name="pwdVerify" required>
           </div>
           <div class="form-check mb-3">
             <label class="form-check-label">
