@@ -7,6 +7,7 @@
 	include_once("controleurs/controleurAuthentification.class.php");
 	include_once("controleurs/controleurAdministration.class.php");
 	include_once("controleurs/controleurDeconnexion.class.php");
+	include_once("controleurs/controleurEnregisValidation.class.php");
 
 	
 	class Epicerie {
@@ -36,6 +37,10 @@
 
 			elseif($action=="enregistrer"){
 				$controleur = new Enregistrer();
+			}
+
+			elseif($action=="enregisValidation"){
+				$controleur = new EnregisValidation();
 			}
 
 			else{
