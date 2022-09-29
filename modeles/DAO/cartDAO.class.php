@@ -5,11 +5,11 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/articlesepicerieDAO.interface.php");
-include_once("modeles/articlesepicerie.class.php");
+include_once("modeles/DAO/cartDAO.interface.php");
+include_once("modeles/cart.class.php");
 
 // ****** CLASSE ******
-class classDAO implements cartDAOinterface
+class cartDAO implements cartDAOinterface
 
 {
 	public static function selectParId($id)
@@ -20,9 +20,11 @@ class classDAO implements cartDAOinterface
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 
-		$id = $connexion->prepare("SELECT * FROM articlesepicerie WHERE id=?");
+		$query = $connexion->prepare("SELECT * FROM articlesepicerie WHERE id=?");
+
+		$tableauInfos = [$id->getArticle(), $id->getPrix(), $id->getIdArticle(), $id->getImage_location(), $id->getId()];
     		
 		ConnexionBD::close();		
-		return $id;
+		return $query->execute($tableauInfos);
 	}
 }
