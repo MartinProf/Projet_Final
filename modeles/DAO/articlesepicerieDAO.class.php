@@ -116,15 +116,4 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		$tableauInfos = [$id];
 		return $query->execute($tableauInfos);
 	}
-
-
-	static public function($filter) {
-		try {
-			$connexion = ConnexionBD::getInstance();
-		} catch (Exception $e) {
-			throw new Exception("Impossible d’obtenir la connexion à la BD.");
-		}
-
-		$query=$connexion->prepare("SELECT * FROM ")
-	}
 }
