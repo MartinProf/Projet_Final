@@ -1,5 +1,5 @@
 <?php
-	/* Description : interface pour tous les DAO
+	/* Description : interface pour articlesepicerie DAO
 	 * Date        : 20-09-22
      * Auteur      : Martin Forget / Martin Vézina
 	*/

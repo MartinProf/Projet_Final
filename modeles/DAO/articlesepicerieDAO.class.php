@@ -1,5 +1,5 @@
 <?php
-/* Description : DAO pour la classe epicerie de la BD epiceriebiologique
+/* Description : DAO pour la classe articlesepicerie de la BD epiceriebiologique
 	Date        : 20-09-22
     Auteur      : Martin Forget / Martin Vézina
 	*/
@@ -25,7 +25,7 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 		$query = $connexion->prepare("SELECT * FROM articlesepicerie WHERE id=?");
 		
 		$query->execute(array($id));
-
+		
 		if ($query->rowCount() != 0) {
 			$enr = $query->fetch();
 			$unItem = new articlesepicerie(
