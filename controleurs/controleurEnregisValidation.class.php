@@ -1,6 +1,7 @@
 <?php
 	include_once("controleurs/controleur.abstract.class.php");
     include_once("modeles/DAO/utilisateurDAO.class.php");
+    include_once("modeles/utilisateur.class.php");
 
 	class EnregisValidation extends Controleur  {
 
@@ -10,25 +11,49 @@
 
 		public function executerAction(){
             $leCourriel = $_POST['email'];
+            $_SESSION['leCourriel']= $leCourriel;
             $leMotPasse = $_POST['pwd'];
+            $_SESSION['leMotPasse'] = $leMotPasse;
             $laVerification = $_POST['pwdVerify'];
-            $existantDansBBD = utilisateurDAO::chercherUtilisateur($leCourriel);
+            $_SESSION['laVerification']=$laVerification;
+            $existantDansBDD = utilisateurDAO::chercherUtilisateur($leCourriel);
+            $_SESSION['utilisateur'] = $existantDansBDD;
 
             if(!isset($leCourriel) || $leCourriel == null){
-                echo "<h1>La saisie du courriel de n'a pas été fait convenablement</h1>";
+                $_SESSION['erreur'] = '<div class="alert alert-danger" role="alert">
+                La saisie du courriel de n\'a pas été fait convenablement!</div>';
+
                 header('Location: ?action=enregistrer');
-            };
-            if(!isset($leMotPasse) || $leMotPasse == null){
-                echo "<h1>La saisie du mots de passe n'a pas été fait convenablement</h1>";
+            }
+            else if(!isset($leMotPasse) || $leMotPasse == null){
+                $_SESSION['erreur'] = '<div class="alert alert-danger" role="alert">
+                La saisie du mots de passe n\'a pas été fait convenablement!</div>';
+
                 header('Location: ?action=enregistrer');
-            };
-            if(!isset($laVerification) || $laVerification == null){
-                echo "<h1>La saisie du courriel de vérification n'a pas été fait convenablement</h1>";
-                header('Location: vues/enregistrer.php');
-            };
-            if($existantDansBBD == 1){
-                echo "<h1>Le courriel saisie existe déjà dans nos bases de données</h1>";
+            }
+            else if(!isset($laVerification) || $laVerification == null){
+                $_SESSION['erreur'] = '<div class="alert alert-danger" role="alert">
+                La saisie du courriel de vérification n\'a pas été fait convenablement!</div>';
+
                 header('Location: ?action=enregistrer');
+            }
+            else if(!isset($existantDansBDD) || $existantDansBDD == null){
+                $_SESSION['erreur'] = '<div class="alert alert-primary" role="alert">
+                Le courriel saisie existe déjà dans nos bases de données!</div>';
+
+                header('Location: ?action=enregistrer');
+
+            }else if($existantDansBDD->getCourriel() == $leCourriel){
+                $_SESSION['erreur'] = '<div class="alert alert-primary" role="alert">
+                Le courriel saisie existe déjà dans nos bases de données!</div>';
+    
+                header('Location: ?action=enregistrer');
+
+            }else {
+                $nouvelleUtilisateur = new utilisateur($leCourriel, $leMotPasse, 0);
+                utilisateurDAO::ajouterUtilisateur($nouvelleUtilisateur);
+
+                header("Location: ?action=authentifier");
             }
 
 			return "enregisValidation";
