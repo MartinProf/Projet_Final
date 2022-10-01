@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 22 Septembre 2022 à 23:26
+-- Généré le :  Sam 01 Octobre 2022 à 16:16
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -89,11 +89,11 @@ INSERT INTO `idarticle` (`id`, `famille`) VALUES
 
 CREATE TABLE `utilisateur` (
   `idUtilisateur` int(4) NOT NULL,
-  `nom` varchar(20) DEFAULT NULL,
-  `prenom` varchar(20) DEFAULT NULL,
-  `pseudo` varchar(10) DEFAULT NULL,
-  `courriel` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `nom` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `prenom` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pseudo` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `courriel` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -102,10 +102,7 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `pseudo`, `courriel`, `password`, `admin`) VALUES
-(1, 'root', NULL, NULL, 'root@root.com', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785', 1),
-(2, NULL, NULL, NULL, '6187167@crosemont.qc.ca', '54669547a225ff20cba8b75a4adca540eef25858', 1),
-(3, NULL, NULL, NULL, '0048400@crosemont.qc.ca', 'martin', 1),
-(4, NULL, NULL, NULL, 'utilisateur@utilisateur.com', 'utilisateur', 0);
+(1, NULL, NULL, NULL, 'root@root.com', '$2y$10$99BFexvCkPTyFv5EC00sFusyzl8nQG.WSjOryKMVtEjt59uz8XXLK', 0);
 
 --
 -- Index pour les tables exportées
@@ -142,7 +139,7 @@ ALTER TABLE `articlesepicerie`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtilisateur` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idUtilisateur` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

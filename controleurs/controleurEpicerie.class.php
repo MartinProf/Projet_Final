@@ -8,6 +8,7 @@
 	include_once("controleurs/controleurAdministration.class.php");
 	include_once("controleurs/controleurDeconnexion.class.php");
 	include_once("controleurs/controleurEnregisValidation.class.php");
+	include_once("controleurs/controleurAuthenVerif.class.php");
 
 	
 	class Epicerie {
@@ -29,6 +30,10 @@
 
 			elseif($action=="authentifier"){
 				$controleur = new Authentification();
+			}
+
+			elseif($action=="authenVerif"){
+				$controleur = new AuthenVerif();
 			}
 
 			elseif($action=="admin"){

@@ -1,12 +1,9 @@
+<?php 
+    if(isset($_SESSION['Aerreur'])) echo $_SESSION['Aerreur']. "<br>";
+?>
 <div style="max-width:600px; display: block; margin-left: auto; margin-right: auto ">
     <!--Authentification-->
     <div class="container p-5 my-5 border bg-secondary bg-opacity-25">
-        <?php 
-            $quantite = $_SESSION['essaie'];
-            if($quantite!=3)
-            echo '<div class="alert alert-danger" role="alert">Les identifiants entrés sont inexactes!</div>';
-            echo 'Courriel: root@root.com  Password: root';
-        ?>
       <h1>Authentification</h1>
       <div class=".container">
         <div class="row">
@@ -16,14 +13,14 @@
           </div>
         </div>
         </div>
-        <form action="?action=boutique" method="POST">
+        <form action="?action=authenVerif" method="POST">
             <div class="mb-3 mt-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrez votre courriel" name="email" required>
+                <label for="authEmail" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="authEmail" placeholder="Entrez votre courriel" name="authEmail" required>
             </div>
             <div class="mb-3">
-                <label for="pwd" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe" name="pwd" required>
+                <label for="authPwd" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="authPwd" placeholder="Entrez votre mot de passe" name="authPwd" required>
             </div>
             <div class="form-check mb-3">
                 <label class="form-check-label">
