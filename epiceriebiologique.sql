@@ -102,7 +102,7 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `pseudo`, `courriel`, `password`, `admin`) VALUES
-(1, NULL, NULL, NULL, 'root@root.com', '$2y$10$99BFexvCkPTyFv5EC00sFusyzl8nQG.WSjOryKMVtEjt59uz8XXLK', 0);
+(1, NULL, NULL, NULL, 'root@root.com', '$2y$10$99BFexvCkPTyFv5EC00sFusyzl8nQG.WSjOryKMVtEjt59uz8XXLK', 1);
 
 --
 -- Index pour les tables exportées
