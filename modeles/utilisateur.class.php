@@ -23,7 +23,7 @@ class utilisateur {
     public function construct3($courriel, $password, $admin)
     {
         $this->courriel = $courriel;
-        $this->password = sha1($password);
+        $this->password = $password;
         $this->admin = $admin;
     }
 
@@ -33,7 +33,7 @@ class utilisateur {
         $this->prenom=$prenom;
         $this->pseudo=$pseudo;
         $this->courriel=$courriel;
-        $this->password=sha1($password);
+        $this->password=$password;
         $this->admin=$admin;
     }
 
@@ -44,7 +44,7 @@ class utilisateur {
         $this->prenom=$prenom;
         $this->pseudo=$pseudo;
         $this->courriel=$courriel;
-        $this->password=sha1($password);
+        $this->password=$password;
         $this->admin=$admin;
     }
 
@@ -66,10 +66,8 @@ class utilisateur {
 
     public function __toString()
     {
-        return "IdUtilisateur : ". $this->idUtilisateur . " Nom : ". $this->nom . " Prenom : ". $this->prenom . " Pseudo : ". $this->pseudo . " Courriel : ". $this->courriel . " Password : ". $this->password . " Admin : ". $this->admin;
+        return "IdUtilisateur : ". $this->idUtilisateur . " Courriel : ". $this->courriel . " Password : ". $this->password . " Admin : ". $this->admin;
     }
-
-
 }
 
 ?>

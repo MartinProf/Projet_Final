@@ -30,7 +30,7 @@
 
 <h3>Connexion à la base de données via l'interface utilisateurDAO</h3>
 <?php
-	include_once("modeles\DAO\utilisateurDAO.interface.php");
+	include_once("modeles\DAO\connexionBD.class.php");
 	try {
 		$connexion = ConnexionBD::getInstance();
 		echo '<h5>Connexion établie</h5>';

@@ -2,11 +2,7 @@
   <!--Inscription-->
     <div class="container p-5 my-5 border bg-secondary bg-opacity-25">
     <?php
-      if(isset($_SESSION['erreur'])) echo $_SESSION['erreur'];
-      if(isset($_SESSION['leCourriel'])) echo $_SESSION['leCourriel'];
-      if(isset($_SESSION['leMotPasse'])) echo $_SESSION['leMotPasse'];
-      if(isset($_SESSION['laVerification'])) echo $_SESSION['laVerification'];
-      if(isset($_SESSION['utilisateur'])) echo $_SESSION['utilisateur'];
+      if(isset($_SESSION['Eerreur'])) echo $_SESSION['Eerreur'];
     ?>
       <h1>Inscription</h1>
       <div class="row">

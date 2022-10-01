@@ -9,9 +9,6 @@
 		}
 
 		public function executerAction(){
-			
-			$_SESSION['role']= 'admin';
-			$panierEpicerie = array();
 
 			return "authentifier";
 		}
