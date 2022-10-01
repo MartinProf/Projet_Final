@@ -13,18 +13,14 @@
 		}
 
 		public function executerAction(){
+            unset($_SESSION['Aerreur']);
             $leCourriel = $_POST['authEmail'];
-            $_SESSION['AleCourriel'] = $leCourriel;
-
             $leMotPasse = $_POST['authPwd'];
-            $_SESSION['AleMotPasse'] = $leMotPasse;
-
-            $leUser = utilisateurDAO::chercherUtilisateur($leCourriel);
-            $_SESSION['ApwdBDD'] = $leUser->__toString();
 
             $lInventaire = articlesepicerieDAO::chercherTous();
+            $leUser = utilisateurDAO::chercherUtilisateur($leCourriel);
+
             $leHash = $leUser->getPassword();
-            $_SESSION['hash'] = $leHash;
             $estAdmin = $leUser->getAdmin();
  
             if(!isset($leCourriel) || !isset($leMotPasse) || $leUser == null){
@@ -36,8 +32,6 @@
             }elseif (!password_verify($leMotPasse,$leHash)) {
                 $_SESSION['Aerreur'] = '<div class="alert alert-danger" role="alert">
                 Le mot de passe est invalide!</div>';
-                $leHashDuPasswordPOST = password_hash($leMotPasse, PASSWORD_DEFAULT);
-                $_SESSION['leHashDuPasswordPOST']=$leHashDuPasswordPOST;
 
                 header('Location: ?action=authentifier');
 
@@ -52,9 +46,6 @@
                     $_SESSION['article'.$lInventaire[$i]->getId()] = 0;
                 }
                 unset($_SESSION['Aerreur']);
-                unset($_SESSION['AleCourriel']);
-                unset($_SESSION['AleMotPasse']);
-                unset($_SESSION['ApwdBDD']);
 
                 header("Location: ?action=decouvrir");
             }
