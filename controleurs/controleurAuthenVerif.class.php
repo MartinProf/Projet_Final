@@ -20,8 +20,10 @@
             $lInventaire = articlesepicerieDAO::chercherTous();
             $leUser = utilisateurDAO::chercherUtilisateur($leCourriel);
 
-            $leHash = $leUser->getPassword();
-            $estAdmin = $leUser->getAdmin();
+            if(isset($leUser)){
+                $leHash = $leUser->getPassword();
+                $estAdmin = $leUser->getAdmin();
+            }
  
             if(!isset($leCourriel) || !isset($leMotPasse) || $leUser == null){
                 $_SESSION['Aerreur'] = '<div class="alert alert-danger" role="alert">

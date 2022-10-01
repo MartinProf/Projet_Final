@@ -1,9 +1,9 @@
-<?php 
-    if(isset($_SESSION['Aerreur'])) echo $_SESSION['Aerreur']. "<br>";
-?>
 <div style="max-width:600px; display: block; margin-left: auto; margin-right: auto ">
     <!--Authentification-->
     <div class="container p-5 my-5 border bg-secondary bg-opacity-25">
+    <?php 
+        if(isset($_SESSION['Aerreur'])) echo $_SESSION['Aerreur']. "<br>";
+    ?>
       <h1>Authentification</h1>
       <div class=".container">
         <div class="row">
