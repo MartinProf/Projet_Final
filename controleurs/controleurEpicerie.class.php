@@ -9,7 +9,10 @@
 	include_once("controleurs/controleurDeconnexion.class.php");
 	include_once("controleurs/controleurEnregisValidation.class.php");
 	include_once("controleurs/controleurAuthenVerif.class.php");
-
+	include_once("controleurs/controleurAdminAjouter.class.php");
+	include_once("controleurs/controleurAdminModifier.class.php");
+	include_once("controleurs/controleurAdminSupprimer.class.php");
+	include_once("controleurs/controleurAdminPromotion.class.php");
 	
 	class Epicerie {
 		//  Méthode qui crée une instance du controleur associé à l'action
@@ -38,6 +41,22 @@
 
 			elseif($action=="admin"){
 				$controleur = new Administration();
+			}
+
+			elseif($action=="adminAjouter"){
+				$controleur = new AdminAjouter();
+			}
+
+			elseif($action=="adminModifier"){
+				$controleur = new AdminModifier();
+			}
+
+			elseif($action=="adminSupprimer"){
+				$controleur = new AdminSupprimer();
+			}
+
+			elseif($action=="adminPromotion"){
+				$controleur = new AdminPromotion();
 			}
 
 			elseif($action=="enregistrer"){

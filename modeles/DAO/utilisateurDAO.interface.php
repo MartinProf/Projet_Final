@@ -13,5 +13,7 @@
 		static public function chercherUtilisateur($email);
         static public function ajouterUtilisateur($utilisateur);
         static public function supprimerUtilisateur($utilisateur);
+		static public function promoAdminUtilisateur($email);
+		static public function retirerAdminUtilisateur($email);
 	}
 ?>

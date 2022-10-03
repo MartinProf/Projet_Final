@@ -95,9 +95,9 @@ class articlesepicerieDAO implements articlesepicerieDAOinterface
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 		
-		$query = $connexion->prepare("UPDATE articlesepicerie SET article=?,prix=?,idArticle=?,image_location=? WHERE id=?");
+		$query = $connexion->prepare("UPDATE articlesepicerie SET article=?,prix=?,idArticle=? WHERE id=?");
 		
-		$tableauInfos = [$article->getArticle(), $article->getPrix(), $article->getIdArticle(), $article->getImage_location(), $article->getId()];
+		$tableauInfos = [$article->getArticle(), $article->getPrix(), $article->getIdArticle(), $article->getId()];
 		
 		return $query->execute($tableauInfos);
     }
