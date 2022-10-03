@@ -122,6 +122,12 @@ require "vues/inc/navbar.inc.php";
     }
   ?>
 </div>
+
+<div class="row">
+
+</div>
+
+
 <?php
 require "vues/inc/footer.inc.php";
 ?>
