@@ -8,15 +8,9 @@
 		public function __construct() {
 			parent::__construct();
 		}
-
-		public function getTabArticles(){
-			return $this->tabArticles;
-		}
 		
 		public function executerAction(){
 
-			$id = 0;
-			$this->tabArticles = cartDAO::selectParId($id);
 			return "cart";
 		}
 	}	
