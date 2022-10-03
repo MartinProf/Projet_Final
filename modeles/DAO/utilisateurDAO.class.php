@@ -71,4 +71,35 @@ class utilisateurDAO implements utilisateurDAOinterface
 		$tableauInfos = [$courriel];
 		return $query->execute($tableauInfos);
 	}
+
+	static public function promoAdminUtilisateur($email)
+	{
+		try {
+			$connexion = ConnexionBD::getInstance();
+		} catch (Exception $e) {
+			throw new Exception("Impossible d’obtenir la connexion à la BD.");
+		}
+
+		$query = $connexion->prepare("UPDATE utilisateur SET admin=1 WHERE courriel=?");
+		
+		$tableauInfos = [$email];
+		
+		return $query->execute($tableauInfos);
+	}
+
+	static public function retirerAdminUtilisateur($email)
+	{
+		try {
+			$connexion = ConnexionBD::getInstance();
+		} catch (Exception $e) {
+			throw new Exception("Impossible d’obtenir la connexion à la BD.");
+		}
+
+		$query = $connexion->prepare("UPDATE utilisateur SET admin=0 WHERE courriel=?");
+		
+		$tableauInfos = [$email];
+		
+		return $query->execute($tableauInfos);
+	}
+	
 }
