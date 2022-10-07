@@ -5,12 +5,14 @@
 	include_once("modeles/articlesepicerie.class.php");
 
 	class Cart extends Controleur  {
+
 		
 		public function __construct() {
 			parent::__construct();
 		}
 		
 		public function executerAction(){
+    
 			$tableauArticles = articlesepicerieDAO::chercherTous();
 						
 			for ($i=0; $i < count($tableauArticles); $i++){
