@@ -10,7 +10,6 @@ for ($i=0; $i < count($tableauArticles); $i++){
     if ($quantite >0) {
         echo $tableauArticles[$i]->getId() . " avec une quantite de: " . $quantite . "<br>";
     }
-    
 }
 
 ?>

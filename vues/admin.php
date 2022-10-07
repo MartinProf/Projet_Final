@@ -147,45 +147,6 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
   </div>
   </div>
  
-
-<!--
-<section class="containerAdmin container-fluid">
-    <div class="row d-flex flex-row">
-        <div class="col-12">
-            <form action="transfert.php" method="POST" class="firstRowAdmin" enctype="multipart/form-data" id="formAdmin" runat="server">
-                <input type="text" name="articleAjouter" placeholder="Article">
-                <input type="text" name="prixAjouter" placeholder="Prix">
-                <input type="text" name="idArticleAjouter" placeholder="ID Article">
-                <INPUT TYPE ="HIDDEN" NAME ="MAX_FILE_SIZE" VALUE ="614400">
-                <input type="file" accept="image/*" id="imgInput" name="fichier" placeholder="Image location">
-                <input type="submit" value="Ajouter" name="Upload" class="btnAjouter"></input>
-            </form>
-        </div>
-        <div class="col-12">
-
-            <form action="" id="formAdmin">
-            <input type="text" name="idSupprimer" placeholder="ID">
-            <input type="text" name="articleSupprimer" placeholder="Article">
-            <input type="text" name="prixSupprimer" placeholder="Prix">
-            <input type="text" name="idArticleSupprimer" placeholder="ID Article">
-            <input type="file" id="imgInput" name="imageLocationSupprimer" placeholder="Image location">
-             <input type="submit" value="Supprimer" name="btnSupprimer" class="btnSupprimer"></input>
-            </form>
-        </div>
-        <div class="col-12">
-            <form action="" id="formAdmin">
-                <input type="text" name="idModifier" placeholder="ID">
-                <input type="text" name="articleModifier" placeholder="Article">
-                <input type="text" name="prixModifier" placeholder="Prix">
-                <input type="text" name="idArticleModifier" placeholder="ID Article">
-                <INPUT TYPE = "HIDDEN" NAME = "MAX_FILE_SIZE" VALUE = "614400">
-                <input type="file" accept="image/*" id="imgInput" name="imageLocationModifier" placeholder="Image location">
-                <input type="submit" value="Modifier" name="btnModifier" class="btnModifier"></input>
-            </form>
-        </div>
-    </div>
-</section>
--->
 <?php
     if(isset($_SESSION['AjoutErreur'])) echo $_SESSION['AjoutErreur']. "<br>";
     if(isset($_SESSION['modifierErreur'])) echo $_SESSION['modifierErreur']. "<br>";
@@ -193,7 +154,6 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
     if(isset($_SESSION['PromoErreur'])) echo $_SESSION['PromoErreur']. "<br>";
 ?>
 <div class="container-fluid foodwrap"></div>
-
 
 <section class="container">
     <div class="row">
