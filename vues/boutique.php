@@ -3,6 +3,7 @@ $titre = "Épicerie biologique";
 $nav = "boutique";
 require "vues/inc/navbar.inc.php";
 ?>
+<form action="?action=cart" name="bouttton" method="POST">
 
 <!---Fruit-->
 <div class="container-fluid foodwrap" style="height:90px;"></div>
@@ -27,7 +28,7 @@ require "vues/inc/navbar.inc.php";
           <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
             <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-            <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0">
+            <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
             <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
           </div>
         </div>
@@ -57,7 +58,7 @@ require "vues/inc/navbar.inc.php";
             <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
             <div class="buttons">
               <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0">
+              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
               <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
             </div>
           </div>
@@ -85,7 +86,7 @@ require "vues/inc/navbar.inc.php";
             <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
             <div class="buttons">
               <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0">
+              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
               <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
             </div>
           </div>
@@ -113,7 +114,7 @@ require "vues/inc/navbar.inc.php";
               <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
               <div class="buttons">
                 <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-                <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0">
+                <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
                 <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
               </div>
             </div>
@@ -122,6 +123,8 @@ require "vues/inc/navbar.inc.php";
     }
   ?>
 </div>
+<button type="submit" name="bouttton">Je suis pret</button>
+</form>
 <?php
 require "vues/inc/footer.inc.php";
 ?>

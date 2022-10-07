@@ -37,7 +37,7 @@
                         </ul>
                     </li>
                     <?php if($_SESSION['role'] === 'user' || $_SESSION['role'] === 'admin')
-                        echo '<li class="nav-item"><a class="nav-link pe-2" aria-current="page"><img src="images/cart-plus.png" alt="Cart" height="40"></a></li>';?>
+                        echo '<li class="nav-item"><a class="nav-link pe-2" href="?action=cart" aria-current="page"><img src="images/cart-plus.png" alt="Cart" height="40"></a></li>';?>
                 </ul>
             </div>
         </div>
