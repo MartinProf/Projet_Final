@@ -38,15 +38,18 @@
                 header('Location: ?action=authentifier');
 
             }elseif(isset($leCourriel) && isset($leMotPasse)){
+                $tableauPanier = "allo";
                 if (password_verify($leMotPasse, $leHash)) {
                     if($estAdmin == 1){
                         $_SESSION['role'] = 'admin';
                     }else $_SESSION['role'] = 'user';
                 }
-                for ($i=0; $i < count($lInventaire); $i++) { 
-                    $lInventaire[$i]->getId();
-                    $_SESSION['article'.$lInventaire[$i]->getId()] = 0;
+                $tableauPanier = "";
+                for ($i=0; $i < 20; $i++) { 
+                $tableauPanier += $lInventaire[$i]->getId()+',0:';
                 }
+                setcookie($leCourriel,$tableauPanier);
+                
                 unset($_SESSION['Aerreur']);
 
                 header("Location: ?action=decouvrir");

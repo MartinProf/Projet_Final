@@ -13,10 +13,10 @@
 		public function executerAction(){
 			$tableauArticles = articlesepicerieDAO::chercherTous();
 						
-			for ($i=0; $i < count($tableauArticles); $i++){
-				$_SESSION['article'.$tableauArticles[$i]->getId()] = $_POST['article'.$tableauArticles[$i]->getId()];
+			/*for ($i=0; $i < count($tableauArticles); $i++){
+				$_COOKIE['article'.$tableauArticles[$i]->getId()];
 				
-			}
+			}*/
 			return "cart";
 		}
 	}	
