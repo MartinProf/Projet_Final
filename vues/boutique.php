@@ -27,9 +27,9 @@ require "vues/inc/navbar.inc.php";
           <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
           <p>' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
-            <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\')">-</button>
-            <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
-            <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\')">+</button>
+            <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
         </div>
       </div>';
@@ -50,19 +50,19 @@ require "vues/inc/navbar.inc.php";
       if ($tableauArticles[$i]->getIdArticle() == 2) {
         echo '
         <div class="product-item">
-          <div class="product-img">
-            <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+        <div class="product-img">
+          <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+        </div>
+        <div class="product-description">
+          <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
+          <p>' . $tableauArticles[$i]->getPrix() . '</p>
+          <div class="buttons">
+            <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
-          <div class="product-description">
-            <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
-            <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
-            <div class="buttons">
-              <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
-              <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
-            </div>
-          </div>
-        </div>';
+        </div>
+      </div>';
       }
     }
   ?>
@@ -78,19 +78,19 @@ require "vues/inc/navbar.inc.php";
       if ($tableauArticles[$i]->getIdArticle() == 3) {
         echo '
         <div class="product-item">
-          <div class="product-img">
-            <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+        <div class="product-img">
+          <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+        </div>
+        <div class="product-description">
+          <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
+          <p>' . $tableauArticles[$i]->getPrix() . '</p>
+          <div class="buttons">
+            <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
-          <div class="product-description">
-            <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
-            <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
-            <div class="buttons">
-              <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-              <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
-              <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
-            </div>
-          </div>
-        </div>';
+        </div>
+      </div>';
       }
     }
   ?>
@@ -105,32 +105,46 @@ require "vues/inc/navbar.inc.php";
     for ($i=0; $i < count($tableauArticles); $i++) { 
       if ($tableauArticles[$i]->getIdArticle() == 4) {
         echo '
-          <div class="product-item">
-            <div class="product-img">
-              <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
-            </div>
-            <div class="product-description">
-              <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
-              <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
-              <div class="buttons">
-                <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
-                <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
-                <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
-              </div>
-            </div>
-          </div>';
+        <div class="product-item">
+        <div class="product-img">
+          <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+        </div>
+        <div class="product-description">
+          <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
+          <p>' . $tableauArticles[$i]->getPrix() . '</p>
+          <div class="buttons">
+            <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
+          </div>
+        </div>
+      </div>';
       }
     }
   ?>
 </div>
 <script>
+  /*function getCookie(name){
+     if(document.cookie.length == 0)
+       return null;
 
-let x = document.cookie;
-alert(x);
+     var regSepCookie = new RegExp('(; )', 'g');
+     var cookies = document.cookie.split(regSepCookie);
+      
+     for(var i = 0; i < cookies.length; i++){
+       var regInfo = new RegExp('=', 'g');
+       var infos = cookies[i].split(regInfo);
+       if(infos[0] == name){
+         return unescape(infos[1]);
+       }
+     }
+     return null;
+   }*/
 
 function increaseItem(param){
     let noOfItem = document.getElementById(param);
     noOfItem.value = parseInt(noOfItem.value) + 1;
+    document.cookie=param + "="+noOfItem.value;
 }
 
 function decreaseItem(param){
@@ -141,6 +155,7 @@ function decreaseItem(param){
     }else{
         noOfItem.value = parseInt(noOfItem.value) - 1;
     }
+    document.cookie=param + "=" + noOfItem.value;
 }
 
 </script>

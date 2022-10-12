@@ -2,19 +2,18 @@
 include_once("modeles/DAO/articlesepicerieDAO.class.php");
 include_once("modeles/articlesepicerie.class.php");
 $tableauArticles = articlesepicerieDAO::chercherTous();
-
+$tableauPanier[] = new articlesepicerie;
 
 for ($i=0; $i < count($tableauArticles); $i++){
-    $quantite = $_COOKIE['article'.$tableauArticles[$i]->getId()];
-    if ($quantite >0) {
-        echo $tableauArticles[$i]->getId() . " avec une quantite de: " . $quantite . "<br>";
+    $quantite = $_COOKIE[$tableauArticles[$i]->getId()];
+    if ($quantite >0 || $quantite != null) {
+		array_push($tableauPanier, new articlesepicerie($tableauArticles[$i]->getId(), $tableauArticles[$i]->getArticle(), $tableauArticles[$i]->getPrix(), $quantite, $tableauArticles[$i]->getImage_location()));
     }
 }
-
 ?>
 
 <h1>Une erreur c'Est produit, veuillez communiquer avec l'administrateur</h1>
-/*
+
 <div id="shopping-cart">
 <div class="txt-heading">Shopping Cart</div>
 
@@ -68,4 +67,4 @@ if(isset($_SESSION["cart_item"])){
 }
 ?>
 </div>
-*/
+
