@@ -3,7 +3,7 @@ $titre = "Épicerie biologique";
 $nav = "boutique";
 require "vues/inc/navbar.inc.php";
 ?>
-<form action="?action=cart" name="bouttton" method="POST">
+
 
 <!---Fruit-->
 <div class="container-fluid foodwrap" style="height:90px;"></div>
@@ -15,7 +15,7 @@ require "vues/inc/navbar.inc.php";
     include_once("modeles/articlesepicerie.class.php");
     include_once("modeles/DAO/articlesepicerieDAO.class.php");
     $tableauArticles = articlesepicerieDAO::chercherTous();
-
+  
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 1) {
       echo '
@@ -25,11 +25,11 @@ require "vues/inc/navbar.inc.php";
         </div>
         <div class="product-description">
           <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
-          <p id="prix'.$tableauArticles[$i]->getId().'">' . $tableauArticles[$i]->getPrix() . '</p>
+          <p>' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
-            <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">-</button>
+            <button class="btn-minus" onclick="decreaseItem(\'article'.$tableauArticles[$i]->getId().'\')">-</button>
             <input type="text" id="article'.$tableauArticles[$i]->getId().'" value="0" name="article'.$tableauArticles[$i]->getId().'">
-            <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\' , \'prix'.$tableauArticles[$i]->getId().'\')">+</button>
+            <button class="btn-plus" onclick="increaseItem(\'article'.$tableauArticles[$i]->getId().'\')">+</button>
           </div>
         </div>
       </div>';
@@ -123,8 +123,28 @@ require "vues/inc/navbar.inc.php";
     }
   ?>
 </div>
-<button type="submit" name="bouttton">Je suis pret</button>
-</form>
+<script>
+
+let x = document.cookie;
+alert(x);
+
+function increaseItem(param){
+    let noOfItem = document.getElementById(param);
+    noOfItem.value = parseInt(noOfItem.value) + 1;
+}
+
+function decreaseItem(param){
+    let noOfItem = document.getElementById(param);
+    if (noOfItem.value <= 0) {
+        noOfItem.value = 0;
+        alert('La donnée ne peut être négative');
+    }else{
+        noOfItem.value = parseInt(noOfItem.value) - 1;
+    }
+}
+
+</script>
+
 <?php
 require "vues/inc/footer.inc.php";
 ?>

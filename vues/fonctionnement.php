@@ -89,6 +89,7 @@ require "vues/inc/navbar.inc.php";
     </div>
 </div>
 <div class="container-fluid foodwrap"></div>
+
 <?php
 require "vues/inc/footer.inc.php";
 ?>
