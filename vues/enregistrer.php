@@ -7,8 +7,10 @@
       <h1>Inscription</h1>
       <div class="row">
           <div class="btn-group-horizontal">
+            <form action="?action=authentifier">
               <button type="button" class="btn btn-secondary col-5">Se connecter</button>
-              <button type="button active" class="btn btn-secondary col-5">S'inscrire</button>
+            </form>
+            <button type="button active" class="btn btn-secondary col-5">S'inscrire</button>
           </div>
       </div>
         <form action="?action=enregisValidation" method="POST">
