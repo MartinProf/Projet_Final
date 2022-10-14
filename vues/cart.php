@@ -20,9 +20,8 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 		<?php
 		if (count($tableauPanier) > 0) {
 			$total_quantity = $tableauPanier[$i]->getIdArticle();
-			$total_price = ($tableauPanier[$i]->getPrix() * $tableauPanier[$i]->getIdArticle())
-		?>
-			<table class="tbl-cart" cellpadding="10" cellspacing="1">
+			$total_price = ($tableauPanier[$i]->getPrix() * $tableauPanier[$i]->getIdArticle());
+			echo '<table class="tbl-cart" cellpadding="10" cellspacing="1">
 				<tbody>
 					<tr>
 						<th style="text-align:left;">Nom</th>
@@ -31,47 +30,41 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 						<th style="text-align:right;" width="10%">Prix u</th>
 						<th style="text-align:right;" width="10%">Price</th>
 						<th style="text-align:center;" width="5%">Remove</th>
-					</tr>
-					<?php
+					</tr>';
+					
 					for ($i = 0; $i < count($tableauPanier); $i++) {
 						$item_price = $tableauPanier[$i]->getIdArticle() * $tableauPanier[$i]->getPrix();
 
 						if ($tableauPanier[$i]->getIdArticle() > 0) {
-					?>
-
-							<tr>
-								<td><img src="<?php echo $tableauPanier[$i]->getImage_location(); ?>" class="cart-item-image" style="height:75px" /><?php echo $tableauPanier[$i]->getArticle(); ?></td>
-								<td><?php echo $tableauPanier[$i]->getId(); ?></td>
+							echo '<tr>
+								<td><img src="'.$tableauPanier[$i]->getImage_location().'" class="cart-item-image" style="height:75px" />'.$tableauPanier[$i]->getArticle().'</td>
+								<td>'.$tableauPanier[$i]->getId().'</td>
 								<td style="text-align:right;">
 									<button class="btn-minus" onclick="decreaseItem('.$tableauPanier[$i]->getId().')">-</button>
-									<input type="text" id="'.$tableauPanier[$i]->getId().'" value="<?php echo $tableauPanier[$i]->getIdArticle() ?>" name="'.$tableauPanier[$i]->getId().'">
+									<input type="text" id="'.$tableauPanier[$i]->getId().'" value="'.$tableauPanier[$i]->getIdArticle().'" name="'.$tableauPanier[$i]->getId().'">
 									<button class="btn-plus" onclick="increaseItem('.$tableauPanier[$i]->getId().')">+</button>
 								</td>
-								<td style="text-align:right;"><?php echo "$ " . $tableauPanier[$i]->getPrix(); ?></td>
-								<td style="text-align:right;"><?php echo "$ " . number_format($item_price, 2); ?></td>
+								<td style="text-align:right;">'."$ " . $tableauPanier[$i]->getPrix().'</td>
+								<td style="text-align:right;">'."$ " . number_format($item_price, 2).'</td>
 								<td style="text-align:center;"><a href="index.php?action=remove&code=<?php echo $tableauPanier[$i]->getId(); ?>" class="btnRemoveAction"><img src="images/icon-delete.png" alt="Remove Item" /></a></td>
-							</tr>
-					<?php
-						}
+							</tr>';
+
+						};
 						$total_quantity += $tableauPanier[$i]->getIdArticle();
 						$total_price += ($tableauPanier[$i]->getPrix() * $tableauPanier[$i]->getIdArticle());
 					}
-					?>
-
+					
+					echo '
 					<tr>
 						<td colspan="2" align="right">Total:</td>
 						<td align="right"><?php echo $total_quantity; ?></td>
-						<td align="right" colspan="2"><strong><?php echo "$ " . number_format($total_price, 2); ?></strong></td>
+						<td align="right" colspan="2"><strong>'."$ ". number_format($total_price, 2).'</strong></td>
 						<td></td>
 					</tr>
 				</tbody>
-			</table>
-		<?php
-		} else {
-		?>
-			<div class="no-records">Your Cart is Empty</div>
-		<?php
-		}
+			</table>';
+		} else echo '<div class="no-records">Your Cart is Empty</div>';
+
 		?>
 	</div>
 </div>
