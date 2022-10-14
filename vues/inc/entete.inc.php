@@ -10,5 +10,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style1.css">
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type ="text/javascript">
+        function negatealert() {
+            swal({
+                title: 'Error!',
+                text: 'La valeur ne peut être négative!',
+                icon: "error",
+                type: 'error'
+            });
+        }
+    </script>
 </head>
 <body>

@@ -151,7 +151,7 @@ function decreaseItem(param){
     let noOfItem = document.getElementById(param);
     if (noOfItem.value <= 0) {
         noOfItem.value = 0;
-        alert('La donnée ne peut être négative');
+        negatealert();
     }else{
         noOfItem.value = parseInt(noOfItem.value) - 1;
     }
