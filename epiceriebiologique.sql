@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Sam 01 Octobre 2022 à 16:16
+-- Généré le :  Sam 15 Octobre 2022 à 16:13
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -63,6 +63,18 @@ INSERT INTO `articlesepicerie` (`id`, `article`, `prix`, `idArticle`, `image_loc
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `commande`
+--
+
+CREATE TABLE `commande` (
+  `id` int(4) NOT NULL,
+  `courriel` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `commande` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `idarticle`
 --
 
@@ -102,7 +114,9 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `pseudo`, `courriel`, `password`, `admin`) VALUES
-(1, NULL, NULL, NULL, 'root@root.com', '$2y$10$99BFexvCkPTyFv5EC00sFusyzl8nQG.WSjOryKMVtEjt59uz8XXLK', 1);
+(1, NULL, NULL, NULL, 'root@root.com', '$2y$10$99BFexvCkPTyFv5EC00sFusyzl8nQG.WSjOryKMVtEjt59uz8XXLK', 1),
+(2, NULL, NULL, NULL, '1234@1234.com', '$2y$10$lBHFXn35h4yURc.XUsdIPeSGpK64W74Mc6jfwLTz3DszUiYuTYtJa', 0),
+(3, NULL, NULL, NULL, 'martin@martin.com', '$2y$10$7YEHDgQtQok5cX3TfiXBhOfYmGViv66PlSeXAW6p/t3POmT6440Gy', 0);
 
 --
 -- Index pour les tables exportées
@@ -112,6 +126,12 @@ INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `pseudo`, `courriel
 -- Index pour la table `articlesepicerie`
 --
 ALTER TABLE `articlesepicerie`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `commande`
+--
+ALTER TABLE `commande`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -136,10 +156,15 @@ ALTER TABLE `utilisateur`
 ALTER TABLE `articlesepicerie`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
+-- AUTO_INCREMENT pour la table `commande`
+--
+ALTER TABLE `commande`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtilisateur` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idUtilisateur` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

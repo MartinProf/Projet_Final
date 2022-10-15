@@ -20,6 +20,15 @@
                 type: 'error'
             });
         }
+
+        function alerteAchat() {
+            swal({
+                title: 'Transaction effectué avec succès!',
+                text: 'Un courriel vous a été envoyé!',
+                icon: "success",
+                button: 'Merci'
+            });
+        }
     </script>
 </head>
 <body>

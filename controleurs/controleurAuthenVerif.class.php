@@ -47,6 +47,8 @@
                 for ($i=0; $i < count($lInventaire); $i++) { 
                     setcookie($lInventaire[$i]->getId(),0);
                 }
+                setcookie($leCourriel, "Commande:");
+                $_SESSION['courriel'] = $leCourriel;
                 
                 unset($_SESSION['Aerreur']);
 

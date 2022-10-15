@@ -5,14 +5,14 @@
 	*/
 
 // ****** INLCUSIONS *******
-include_once("modeles/DAO/cartDAO.interface.php");
-include_once("modeles/cart.class.php");
+include_once("modeles/DAO/commandeDAO.interface.php");
+include_once("modeles/commande.class.php");
 
 // ****** CLASSE ******
-class cartDAO implements cartDAOinterface
+class commandeDAO implements commandeDAOinterface
 
 {
-	public static function selectParId($id)
+	public static function envoieCommande($email, $commande)
 	{
         try {
 			$connexion = ConnexionBD::getInstance();
@@ -20,11 +20,9 @@ class cartDAO implements cartDAOinterface
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 
-		$query = $connexion->prepare("SELECT * FROM articlesepicerie WHERE id=?");
-
-		$tableauInfos = [$id->getArticle(), $id->getPrix(), $id->getIdArticle(), $id->getImage_location(), $id->getId()];
-    		
-		ConnexionBD::close();		
+		$query = $connexion->prepare("INSERT INTO commande (courriel,commande) VALUES (?,?)");
+		
+		$tableauInfos = [$email, $commande];
 		return $query->execute($tableauInfos);
 	}
 }
