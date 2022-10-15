@@ -13,10 +13,10 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 <div class="container pt-5">
 
 	<div class="pt-5 row">
-		<div class="d-flex justify-content-center align-items-center">
-			<a id="btnEmpty"  href="?action=cart" onclick="viderPanier()" class="pt-5" style="color: rgb(152, 122, 61);"><img src="images/icon-empty-cart.png" alt="Empty-cart" class="imgCartEmpty text-end">&nbspVider le panier</a>
+		<div class="d-flex justify-content-end">
+			<a id="btnEmpty" href="?action=cart" onclick="viderPanier()" class="pt-5" style="color: rgb(152, 122, 61);"><img src="images/icon-empty-cart.png" alt="Empty-cart" class="imgCartEmpty">&nbspVider le panier</a>
 		</div>
-
+		<div class="pt-3"></div>
 		<?php
 		if (count($tableauPanier) > 0) {
 			$total_quantity = $tableauPanier[$i]->getIdArticle();
@@ -24,8 +24,8 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 			echo '<table class="tbl-cart" cellpadding="10" cellspacing="1">
 				<tbody>
 					<tr>
-						<th style="text-align:left;">Nom</th>
-						<th style="text-align:left;">ID</th>
+						<th style="text-align:left;">Produit</th>
+						
 						<th style="text-align:right;width=5%" >Quantité</th>
 						<th style="text-align:right;" width="20%">Prix unitaire</th>
 						<th style="text-align:right;" width="10%">Prix total</th>
@@ -38,7 +38,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 				if ($tableauPanier[$i]->getIdArticle() > 0) {
 					echo '<tr>
 								<td><img src="' . $tableauPanier[$i]->getImage_location() . '" class="cart-item-image" style="height:75px" />' . $tableauPanier[$i]->getArticle() . '</td>
-								<td>' . $tableauPanier[$i]->getId() . '</td>
+								
 								<td style="text-align:right;">
 									<button class="btn-minus" onclick="decreaseItem(' . $tableauPanier[$i]->getId() . ')">-</button>
 									<input class"viderLePanier" type="text" id="' . $tableauPanier[$i]->getId() . '" value="' . $tableauPanier[$i]->getIdArticle() . '" name="' . $tableauPanier[$i]->getId() . '">
@@ -55,7 +55,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 
 			echo '
 					<tr>
-						<td colspan="2" align="right">Total:</td>
+						<td align="right">Total:</td>
 						<td align="right">' . $total_quantity . '</td>
 						<td align="right" colspan="2"><strong>' . "$ " . number_format($total_price, 2) . '</strong></td>
 						<td></td>
@@ -65,6 +65,9 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 		} else echo '<div class="no-records">Votre panier est vide</div>';
 
 		?>
+		<div class="d-flex justify-content-end align-items-center">
+			<a id="btnCommander" href="?action=cart" onclick="" style="color: rgb(152, 122, 61);"><img src="images/icon-create-order.png" alt="Create-order" class="imgCreateOrder">&nbspCréer la commande</a>
+		</div>
 	</div>
 </div>
 
@@ -86,13 +89,13 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 		document.cookie = param + "=" + noItem.value;
 	}
 
-	function retirerArticle(param){
+	function retirerArticle(param) {
 		let noItem = document.getElementById(param);
 		noItem.value = 0;
 		document.cookie = param + "=" + noItem.value;
 	}
 
-	function viderPanier(){
+	function viderPanier() {
 		let classAvider = document.getElementsByTagName('input');
 		console.log(classAvider);
 		for (let i = 0; i < classAvider.length; i++) {
@@ -100,5 +103,4 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 			document.cookie = classAvider[i].id + "=" + 0;
 		}
 	}
-
 </script>
