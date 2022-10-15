@@ -18,6 +18,7 @@ require "vues/inc/navbar.inc.php";
   
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 1) {
+      $laValeur = $_COOKIE[$i+1];
       echo '
       <div class="product-item">
         <div class="product-img">
@@ -28,7 +29,7 @@ require "vues/inc/navbar.inc.php";
           <p>' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
             <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
-            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="'. $laValeur .'" name="'.$tableauArticles[$i]->getId().'">
             <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
         </div>
@@ -46,25 +47,26 @@ require "vues/inc/navbar.inc.php";
 <div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
 
-    for ($i=0; $i < count($tableauArticles); $i++) { 
-      if ($tableauArticles[$i]->getIdArticle() == 2) {
-        echo '
-        <div class="product-item">
-        <div class="product-img">
-          <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+for ($i=0; $i < count($tableauArticles); $i++) { 
+  if ($tableauArticles[$i]->getIdArticle() == 2) {
+    $laValeur = $_COOKIE[$i+1];
+    echo '
+    <div class="product-item">
+      <div class="product-img">
+        <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
+      </div>
+      <div class="product-description">
+        <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
+        <p>' . $tableauArticles[$i]->getPrix() . '</p>
+        <div class="buttons">
+          <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
+          <input type="text" id="'.$tableauArticles[$i]->getId().'" value="'. $laValeur .'" name="'.$tableauArticles[$i]->getId().'">
+          <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
         </div>
-        <div class="product-description">
-          <h4 class="product-name"><a href="#">'.$tableauArticles[$i]->getArticle().'</a></h4>
-          <p>' . $tableauArticles[$i]->getPrix() . '</p>
-          <div class="buttons">
-            <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
-            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
-            <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
-          </div>
-        </div>
-      </div>';
-      }
-    }
+      </div>
+    </div>';
+  }
+}
   ?>
 </div>
 <!---Viandes-->
@@ -74,10 +76,11 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
-    for ($i=0; $i < count($tableauArticles); $i++) { 
-      if ($tableauArticles[$i]->getIdArticle() == 3) {
-        echo '
-        <div class="product-item">
+  for ($i=0; $i < count($tableauArticles); $i++) { 
+    if ($tableauArticles[$i]->getIdArticle() == 3) {
+      $laValeur = $_COOKIE[$i+1];
+      echo '
+      <div class="product-item">
         <div class="product-img">
           <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
         </div>
@@ -86,13 +89,14 @@ require "vues/inc/navbar.inc.php";
           <p>' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
             <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
-            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="'. $laValeur .'" name="'.$tableauArticles[$i]->getId().'">
             <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
         </div>
       </div>';
-      }
     }
+  }
+    
   ?>
 </div>
 <!---Autres-->
@@ -102,10 +106,11 @@ require "vues/inc/navbar.inc.php";
 
 <div class="container-fluid d-inline-flex justify-content-center flex-wrap py-5">
   <?php
-    for ($i=0; $i < count($tableauArticles); $i++) { 
-      if ($tableauArticles[$i]->getIdArticle() == 4) {
-        echo '
-        <div class="product-item">
+  for ($i=0; $i < count($tableauArticles); $i++) { 
+    if ($tableauArticles[$i]->getIdArticle() == 4) {
+      $laValeur = $_COOKIE[$i+1];
+      echo '
+      <div class="product-item">
         <div class="product-img">
           <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
         </div>
@@ -114,13 +119,13 @@ require "vues/inc/navbar.inc.php";
           <p>' . $tableauArticles[$i]->getPrix() . '</p>
           <div class="buttons">
             <button class="btn-minus" onclick="decreaseItem('.$tableauArticles[$i]->getId().')">-</button>
-            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="0" name="'.$tableauArticles[$i]->getId().'">
+            <input type="text" id="'.$tableauArticles[$i]->getId().'" value="'. $laValeur .'" name="'.$tableauArticles[$i]->getId().'">
             <button class="btn-plus" onclick="increaseItem('.$tableauArticles[$i]->getId().')">+</button>
           </div>
         </div>
       </div>';
-      }
     }
+  }
   ?>
 </div>
 <script>
