@@ -5,13 +5,13 @@
       if(isset($_SESSION['Eerreur'])) echo $_SESSION['Eerreur'];
     ?>
       <h1>Inscription</h1>
-      <div class="row">
-          <div class="btn-group-horizontal">
-            <form action="?action=authentifier">
-              <button type="button" class="btn btn-secondary col-5">Se connecter</button>
-            </form>
-            <button type="button active" class="btn btn-secondary col-5">S'inscrire</button>
-          </div>
+      <div class=".container">
+        <div class="row">
+            <div class="btn-group">
+              <a type="button" href="?action=authentifier" class="btn btn-secondary col-6">Se connecter</a>
+              <button type="button active" class="btn btn-secondary col-6" autofocus>S'inscrire</button>
+              </div>
+        </div>
       </div>
         <form action="?action=enregisValidation" method="POST">
           <div class="mb-3 mt-3">

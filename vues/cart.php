@@ -14,7 +14,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 
 	<div class="pt-5 row">
 		<div class="d-flex justify-content-center align-items-center">
-			<a id="btnEmpty"  href="index.php?action=empty" class=" pt-5" style="color: rgb(152, 122, 61);"><img src="images/icon-empty-cart.png" alt="Empty-cart" class="imgCartEmpty text-end">&nbspVider le panier</a>
+			<a id="btnEmpty"  href="?action=cart" onclick="viderPanier()" class="pt-5" style="color: rgb(152, 122, 61);"><img src="images/icon-empty-cart.png" alt="Empty-cart" class="imgCartEmpty text-end">&nbspVider le panier</a>
 		</div>
 
 		<?php
@@ -28,8 +28,8 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 						<th style="text-align:left;">ID</th>
 						<th style="text-align:right;width=5%" >Quantité</th>
 						<th style="text-align:right;" width="20%">Prix unitaire</th>
-						<th style="text-align:right;" width="10%">Price</th>
-						<th style="text-align:center;" width="5%">Remove</th>
+						<th style="text-align:right;" width="10%">Prix total</th>
+						<th style="text-align:center;" width="5%">Retirer</th>
 					</tr>';
 
 			for ($i = 0; $i < count($tableauPanier); $i++) {
@@ -41,12 +41,12 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 								<td>' . $tableauPanier[$i]->getId() . '</td>
 								<td style="text-align:right;">
 									<button class="btn-minus" onclick="decreaseItem(' . $tableauPanier[$i]->getId() . ')">-</button>
-									<input type="text" id="' . $tableauPanier[$i]->getId() . '" value="' . $tableauPanier[$i]->getIdArticle() . '" name="' . $tableauPanier[$i]->getId() . '">
+									<input class"viderLePanier" type="text" id="' . $tableauPanier[$i]->getId() . '" value="' . $tableauPanier[$i]->getIdArticle() . '" name="' . $tableauPanier[$i]->getId() . '">
 									<button class="btn-plus" onclick="increaseItem(' . $tableauPanier[$i]->getId() . ')">+</button>
 								</td>
 								<td style="text-align:right;">' . "$ " . $tableauPanier[$i]->getPrix() . '</td>
 								<td style="text-align:right;">' . "$ " . number_format($item_price, 2) . '</td>
-								<td style="text-align:center;"><a href="index.php?action=remove&code=<?php echo $tableauPanier[$i]->getId(); ?>" class="btnRemoveAction"><img src="images/icon-delete.png" alt="Remove Item" /></a></td>
+								<td style="text-align:center;"><a href="?action=cart" onclick="retirerArticle(' . $tableauPanier[$i]->getId() . ')" class="btnRemoveAction"><img src="images/icon-delete.png" alt="Remove Item" /></a></td>
 							</tr>';
 				};
 				$total_quantity += $tableauPanier[$i]->getIdArticle();
@@ -62,7 +62,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 					</tr>
 				</tbody>
 			</table>';
-		} else echo '<div class="no-records">Your Cart is Empty</div>';
+		} else echo '<div class="no-records">Votre panier est vide</div>';
 
 		?>
 	</div>
@@ -70,19 +70,35 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 
 <script>
 	function increaseItem(param) {
-		let noOfItem = document.getElementById(param);
-		noOfItem.value = parseInt(noOfItem.value) + 1;
-		document.cookie = param + "=" + noOfItem.value;
+		let noItem = document.getElementById(param);
+		noItem.value = parseInt(noItem.value) + 1;
+		document.cookie = param + "=" + noItem.value;
 	}
 
 	function decreaseItem(param) {
-		let noOfItem = document.getElementById(param);
-		if (noOfItem.value <= 0) {
-			noOfItem.value = 0;
+		let noItem = document.getElementById(param);
+		if (noItem.value <= 0) {
+			noItem.value = 0;
 			negatealert();
 		} else {
-			noOfItem.value = parseInt(noOfItem.value) - 1;
+			noItem.value = parseInt(noItem.value) - 1;
 		}
-		document.cookie = param + "=" + noOfItem.value;
+		document.cookie = param + "=" + noItem.value;
 	}
+
+	function retirerArticle(param){
+		let noItem = document.getElementById(param);
+		noItem.value = 0;
+		document.cookie = param + "=" + noItem.value;
+	}
+
+	function viderPanier(){
+		let classAvider = document.getElementsByTagName('input');
+		console.log(classAvider);
+		for (let i = 0; i < classAvider.length; i++) {
+			classAvider[i].value = 0;
+			document.cookie = classAvider[i].id + "=" + 0;
+		}
+	}
+
 </script>

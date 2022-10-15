@@ -9,9 +9,7 @@
         <div class="row">
           <div class="btn-group">
               <button type="button active" class="btn btn-secondary col-6" autofocus>Se connecter</button>
-              <form action="?action=enregistrer">
-                <button type="button" class="btn btn-secondary col-6">S'inscrire</button>
-              </form>
+              <a type="button" href="?action=enregistrer" class="btn btn-secondary col-6"> S'inscrire</a>
           </div>
         </div>
         </div>
@@ -21,7 +19,7 @@
                 <input type="email" class="form-control" id="authEmail" placeholder="Entrez votre courriel" name="authEmail" required>
             </div>
             <div class="mb-3">
-                <label for="authPwd" class="form-label">Mot de pass:</label>
+                <label for="authPwd" class="form-label">Mot de passe:</label>
                 <input type="password" class="form-control" id="authPwd" placeholder="Entrez votre mot de passe" name="authPwd" required>
             </div>
             <div class="form-check mb-3">
