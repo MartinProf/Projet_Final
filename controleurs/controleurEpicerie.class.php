@@ -14,6 +14,7 @@
 	include_once("controleurs/controleurAdminSupprimer.class.php");
 	include_once("controleurs/controleurAdminPromotion.class.php");
 	include_once("controleurs/controleurCart.class.php");
+	include_once("controleurs/controleurCaisse.class.php");
 	
 	class Epicerie {
 		//  Méthode qui crée une instance du controleur associé à l'action
@@ -70,6 +71,10 @@
 
 			elseif($action=="cart"){
 				$controleur = new Cart();
+			}
+
+			elseif($action=="caisse"){
+				$controleur = new caisse();
 			}
 
 			else{

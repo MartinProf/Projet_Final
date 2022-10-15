@@ -129,22 +129,6 @@ for ($i=0; $i < count($tableauArticles); $i++) {
   ?>
 </div>
 <script>
-  /*function getCookie(name){
-     if(document.cookie.length == 0)
-       return null;
-
-     var regSepCookie = new RegExp('(; )', 'g');
-     var cookies = document.cookie.split(regSepCookie);
-      
-     for(var i = 0; i < cookies.length; i++){
-       var regInfo = new RegExp('=', 'g');
-       var infos = cookies[i].split(regInfo);
-       if(infos[0] == name){
-         return unescape(infos[1]);
-       }
-     }
-     return null;
-   }*/
 
 function increaseItem(param){
     let noOfItem = document.getElementById(param);

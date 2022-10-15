@@ -2,6 +2,11 @@
 $titre = "Épicerie biologique";
 $nav = "decouvrir";
 require "vues/inc/navbar.inc.php";
+
+if(isset($_SESSION['achat'])){
+    echo '<script>', 'alerteAchat();', '</script>';
+    unset($_SESSION['achat']);
+};
 ?>
 <section class="banner d-flex justify-content-center align-items-center">
     <div class="container">

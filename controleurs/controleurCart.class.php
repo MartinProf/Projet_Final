@@ -12,13 +12,7 @@
 		}
 		
 		public function executerAction(){
-    
-			$tableauArticles = articlesepicerieDAO::chercherTous();
 						
-			/*for ($i=0; $i < count($tableauArticles); $i++){
-				$_COOKIE['article'.$tableauArticles[$i]->getId()];
-				
-			}*/
 			return "cart";
 		}
 	}	

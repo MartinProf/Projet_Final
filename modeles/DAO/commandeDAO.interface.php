@@ -8,8 +8,8 @@
 	include_once('modeles/DAO/connexionBD.class.php');
 
 	// ****** INTERFACE *******
-	interface cartDAOinterface {
+	interface commandeDAOinterface {
 
-        static public function selectParId($id);
+        static public function envoieCommande($email, $commande);
 
     }

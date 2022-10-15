@@ -1,7 +1,10 @@
 <?php
 include_once("modeles/DAO/articlesepicerieDAO.class.php");
 include_once("modeles/articlesepicerie.class.php");
+include_once("modeles/DAO/commandeDAO.class.php");
+include_once("modeles/commande.class.php");
 include_once("vues/inc/navbar.inc.php");
+
 $tableauArticles = articlesepicerieDAO::chercherTous();
 $tableauPanier[] = new articlesepicerie;
 
@@ -66,7 +69,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 
 		?>
 		<div class="d-flex justify-content-end align-items-center">
-			<a id="btnCommander" href="?action=cart" onclick="" style="color: rgb(152, 122, 61);"><img src="images/icon-create-order.png" alt="Create-order" class="imgCreateOrder">&nbspCréer la commande</a>
+			<a id="btnCommander" class="<?php echo $_SESSION['courriel'] ?>" href="?action=caisse" style="color: rgb(152, 122, 61);"><img src="images/icon-create-order.png" alt="Create-order" class="imgCreateOrder">&nbspCréer la commande</a>
 		</div>
 	</div>
 </div>
@@ -97,10 +100,10 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 
 	function viderPanier() {
 		let classAvider = document.getElementsByTagName('input');
-		console.log(classAvider);
 		for (let i = 0; i < classAvider.length; i++) {
 			classAvider[i].value = 0;
 			document.cookie = classAvider[i].id + "=" + 0;
 		}
 	}
+
 </script>
