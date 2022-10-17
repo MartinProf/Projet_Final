@@ -44,7 +44,7 @@ require "vues/inc/navbar.inc.php";
                     <div class="card-header">Employés et bénévoles</div>
                     <div class="card-body">
                         <h5 class="card-title">Au service des gens et de la planète</h5>
-                        <p>Depuis le tout début, lors de notre ouverture en 2008, bon nombre d'individus se joignent à l'équipe avec, comme mission, l'intention de faire la différence. D'une part, mettre l'épaule à la roue du développement durable et d'autre part, rallier les gens à cette cause qui requiert un mouvement de masse pour se réaliser. </p>
+                        <p>Depuis le tout début, lors de notre ouverture en 2008, bon nombre d'individus se joignent à l'équipe avec une mission commune qui est de faire la différence. D'une part, en mettant l'épaule à la roue du développement durable et d'autre part, en ralliant les gens à cette cause qui requiert un mouvement de masse pour se réaliser. </p>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,10 @@ require "vues/inc/navbar.inc.php";
             <div class="col-lg-2"></div>
             <div class="col-lg-6 d-flex p-5">
                 <div class="card mb-3 textAnim">
-                    <div class="card-header">Boutique</div>
+                    <div class="card-header">Qualité des produits</div>
                     <div class="card-body">
-                        <h5 class="card-title">Information sur la boutique</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis eius cupiditate quisquam impedit consequatur nihil velit eum illum soluta, corrupti facilis numquam nisi deleniti rem dolorum saepe neque non quas quos! Aut incidunt nesciunt ad, quos delectus ipsam dolores labore doloribus, doloremque soluta laudantium aliquam magni ut veritatis ipsa.</p>
+                        <h5 class="card-title">Du champ à votre assiette </h5>
+                        <p class="card-text">Soucieux de la marchandise que nous vendons, une attention particulière leur est portée, de l'ensemencement à la mise en marché. Nous offrons aux gens des produits répondant aux standards de qualité les plus élevés. Ils sont synonyme d'alimentation saine et d'écoresponsabilité. La quiétude dans l'assiette des gens soucieux.</p>
                     </div>
                 </div>
             </div>
@@ -74,10 +74,10 @@ require "vues/inc/navbar.inc.php";
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center align-items-center p-5">
                     <div class="card mb-3 textAnim">
-                        <div class="card-header">Boutique</div>
+                        <div class="card-header">Viandes et respect</div>
                         <div class="card-body">
-                            <h5 class="card-title">Information sur la boutique</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis eius cupiditate quisquam impedit consequatur nihil velit eum illum soluta, corrupti facilis numquam nisi deleniti rem dolorum saepe neque non quas quos! Aut incidunt nesciunt ad, quos delectus ipsam dolores labore doloribus, doloremque soluta laudantium aliquam magni ut veritatis ipsa.</p>
+                            <h5 class="card-title">Des journées au soleil</h5>
+                            <p class="card-text">Tous nos animaux sont libres de circuler dans des espaces vastes et adéquats. Quand la température le permet, ils errent dans les paturages en profitant du soleil. Le temps venu, ils sont nourris avec des grains de qualité supérieure, leur assurant les nutriments et les menant vers une croissance saine et naturelle.</p>
                         </div>
                     </div>
                 </div>
