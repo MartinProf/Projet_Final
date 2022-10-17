@@ -37,7 +37,7 @@
                 $articleModifie =  $_POST['articleModifier'];
             }else{
                 $_SESSION['AjoutErreur']= '<div class="alert alert-danger" role="alert">
-                L\'article n\'a pas été saisie!</div>';
+                L\'article n\'a pas été saisi!</div>';
 
                 header("Location: ?action=admin");
             }
@@ -46,7 +46,7 @@
                 $prixModifie =  $_POST['prixModifier'];
             }else{
                 $_SESSION['AjoutErreur']= '<div class="alert alert-danger" role="alert">
-                Le prix n\'a pas été saisie!</div>';
+                Le prix n\'a pas été saisi!</div>';
 
                 header("Location: ?action=admin");
             }
@@ -55,7 +55,7 @@
                 $idArticleModifie =  $_POST['idArticleModifier'];
             }else{
                 $_SESSION['AjoutErreur']= '<div class="alert alert-danger" role="alert">
-                Le ID de l\'article n\'a pas été saisie!</div>';
+                Le ID de l\'article n\'a pas été saisi!</div>';
 
                 header("Location: ?action=admin");
             }

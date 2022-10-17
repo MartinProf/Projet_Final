@@ -44,14 +44,15 @@ require "vues/inc/navbar.inc.php";
                     <div class="card-header">Employés et bénévoles</div>
                     <div class="card-body">
                         <h5 class="card-title">Au service des gens et de la planète</h5>
-                        <p>Depuis le tout début, lors de notre ouverture en 2008, bon nombre d'individus se joignent à l'équipe avec une mission commune qui est de faire la différence. D'une part, en mettant l'épaule à la roue du développement durable et d'autre part, en ralliant les gens à cette cause qui requiert un mouvement de masse pour se réaliser. </p>
+                        <p>Depuis le tout début, lors de notre ouverture, bon nombre d'individus se joignent à l'équipe avec une mission commune qui est de faire la différence. D'une part, en mettant l'épaule à la roue du développement durable et d'autre part, en ralliant les gens à cette cause qui requiert un mouvement de masse pour se réaliser. </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2"></div>
         </div>
 
-        <div class="row pt-5 d-flex flex-row desc justify-content-center align-items-center ">
+        
+        <div class="row pt-5 d-flex flex-row justify-content-center align-items-center ">
             <div class="col-lg-2"></div>
             <div class="col-lg-6 d-flex p-5">
                 <div class="card mb-3 textAnim">

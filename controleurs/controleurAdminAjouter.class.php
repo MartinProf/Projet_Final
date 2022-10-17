@@ -43,7 +43,7 @@
                 header("Location: ?action=admin");
             }
 
-            $Direction_Fichier = 'images/'; // dossier où sera déplacé le fichier
+            $Direction_Fichier = 'images/';
 
             if (isset($_POST['Upload'])){
                 $Fichier_Temporaire = $_FILES['fichier']['tmp_name'];
@@ -53,7 +53,7 @@
                     header("Location: ?action=admin");
                 }
 
-                // on vérifie maintenant l'extension
+                
                 $Type_du_Fichier = $_FILES['fichier']['type'];
                 if (!strstr($Type_du_Fichier, 'jpg') && !strstr($Type_du_Fichier, 'jpeg') 
                     && !strstr($Type_du_Fichier, 'bmp') && !strstr($Type_du_Fichier, 'gif') 
@@ -63,7 +63,7 @@
                     header("Location: ?action=admin");
                 }
 
-                // on copie le fichier dans le dossier de destination
+                
                 $Nom_du_Fichier = $_FILES['fichier']['name'];
                 if( !move_uploaded_file($Fichier_Temporaire, $Direction_Fichier . $Nom_du_Fichier)){
                     $_SESSION['AjoutErreur']= "<b>Problème : Impossible de copier le fichier dans " . $Direction_Fichier . "</b>" ;	 

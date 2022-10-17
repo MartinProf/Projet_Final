@@ -79,6 +79,7 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 		let noItem = document.getElementById(param);
 		noItem.value = parseInt(noItem.value) + 1;
 		document.cookie = param + "=" + noItem.value;
+		window.location.reload(true)
 	}
 
 	function decreaseItem(param) {
@@ -90,12 +91,14 @@ for ($i = 0; $i < count($tableauArticles); $i++) {
 			noItem.value = parseInt(noItem.value) - 1;
 		}
 		document.cookie = param + "=" + noItem.value;
+		window.location.reload(true)
 	}
 
 	function retirerArticle(param) {
 		let noItem = document.getElementById(param);
 		noItem.value = 0;
 		document.cookie = param + "=" + noItem.value;
+		
 	}
 
 	function viderPanier() {

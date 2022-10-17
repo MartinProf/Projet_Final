@@ -20,7 +20,7 @@ require "vues/inc/navbar.inc.php";
     if ($tableauArticles[$i]->getIdArticle() == 1) {
       $laValeur = $_COOKIE[$i+1];
       echo '
-      <div class="product-item">
+      <div class="product-item"">
         <div class="product-img">
           <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
         </div>
@@ -51,7 +51,7 @@ for ($i=0; $i < count($tableauArticles); $i++) {
   if ($tableauArticles[$i]->getIdArticle() == 2) {
     $laValeur = $_COOKIE[$i+1];
     echo '
-    <div class="product-item">
+    <div class="product-item"">
       <div class="product-img">
         <img src="'.$tableauArticles[$i]->getImage_location().'" alt="'.$tableauArticles[$i]->getArticle().'">
       </div>
@@ -145,6 +145,7 @@ function decreaseItem(param){
         noOfItem.value = parseInt(noOfItem.value) - 1;
     }
     document.cookie=param + "=" + noOfItem.value;
+    
 }
 
 </script>
