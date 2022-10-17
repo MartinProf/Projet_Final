@@ -1,5 +1,1 @@
-<div class="container">
-    <div class="row d-flex flex-wrap justify-content-center align-items-center">
-       Ca va pas ben!!
-    </div>
-</div>
+<h1>Une erreur c'Est produit, veuillez communiquer avec l'administrateur</h1>

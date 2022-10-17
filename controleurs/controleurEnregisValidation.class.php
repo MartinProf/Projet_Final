@@ -10,6 +10,7 @@
 		}
 
 		public function executerAction(){
+            unset($_SESSION['Eerreur']);
             $leCourriel = htmlentities($_POST['email']);
             $leMotPasse = htmlentities($_POST['pwd']);
             $laVerification = htmlentities($_POST['pwdVerify']);
@@ -18,19 +19,19 @@
 
             if(!isset($leCourriel) || $leCourriel == null){
                 $_SESSION['Eerreur'] = '<div class="alert alert-danger" role="alert">
-                La saisie du courriel de n\'a pas été fait convenablement!</div>';
+                La saisie du courriel de n\'a pas été faite convenablement!</div>';
 
                 header('Location: ?action=enregistrer');
             }
             else if(!isset($leMotPasse) || $leMotPasse == null){
                 $_SESSION['Eerreur'] = '<div class="alert alert-danger" role="alert">
-                La saisie du mots de passe n\'a pas été fait convenablement!</div>';
+                La saisie du mots de passe n\'a pas été faite convenablement!</div>';
 
                 header('Location: ?action=enregistrer');
             }
             else if(!isset($laVerification) || $laVerification == null){
                 $_SESSION['Eerreur'] = '<div class="alert alert-danger" role="alert">
-                La saisie du courriel de vérification n\'a pas été fait convenablement!</div>';
+                La saisie du courriel de vérification n\'a pas été faite convenablement!</div>';
 
                 header('Location: ?action=enregistrer');
             }else if($existantDansBDD != null){
@@ -41,7 +42,7 @@
 
             }elseif ($leMotPasse != $laVerification) {
                 $_SESSION['Eerreur'] = '<div class="alert alert-primary" role="alert">
-                Les mots de passe saisies ne sont pas identique!</div>';
+                Les mots de passe saisies ne sont pas identiques!</div>';
 
                 header('Location: ?action=enregistrer');
             }else {

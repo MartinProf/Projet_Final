@@ -135,7 +135,7 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                                 <th>ID</th>
                                 <th>Article</th>
                                 <th>Prix</th>
-                                <th>ID Catégorie</th>
+                                <th>ID Article</th>
                                 <th>Image location</th>                    
                             </tr>';
                 for ($i = 0; $i < count($tabArticles); $i++) {

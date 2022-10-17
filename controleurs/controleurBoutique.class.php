@@ -10,7 +10,7 @@
 
 		public function executerAction(){
 
-			$this->tabArticles = articlesepicerieDAO::chercherTous();
+			
 			return "boutique";
 		}
 	}	
