@@ -31,12 +31,13 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                         <div class="row">
                             <div class="col-8">
                             <form action="?action=adminAjouter" method="POST" class="d-flex flex-column" enctype="multipart/form-data" id="formAdmin" runat="server">
-                                <input type="text" name="articleAjouter" placeholder="Article">
-                                <input type="text" name="prixAjouter" placeholder="Prix">
+                                <input class="jsArticle" type="text" name="articleAjouter" placeholder="Article">
+                                <input class="jsPrix" type="text" name="prixAjouter" placeholder="Prix">
                                 <input type="text" name="idArticleAjouter" placeholder="ID Article">
-                                <INPUT TYPE ="HIDDEN" NAME ="MAX_FILE_SIZE" VALUE ="614400">
-                                <input type="file" accept="image/*" id="imgInput" name="fichier" placeholder="Image location">
-                                <input type="submit" value="Ajouter" name="Upload" class="btnAjouter"></input>
+                                <input TYPE ="HIDDEN" NAME ="MAX_FILE_SIZE" VALUE ="614400">
+                                <input class="jsImage" type="file" accept="image/*" id="imgInput" name="fichier" placeholder="Image location">
+                                <button type="button" class="btn btn-info" onclick="previsualiser()">Prévisualiser</button>
+                                <input type="submit" value="Ajouter" name="Upload" class="btnAjouter"></input>                                
                             </form>
                             <?php 
                                 if(isset($_SESSION['AjoutErreur'])) echo $_SESSION['AjoutErreur']. "<br>";
@@ -48,12 +49,12 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                                         <img id="previewImg" src="#" alt="previewImg"/>
                                     </div>
                                     <div class="product-description">
-                                        <h4 class="product-name"><a href="#">Nom Article</a></h4>
-                                        <p id="prixpommes">$0.99</p>
+                                        <h4 class="product-name"><a id="nomProduit" href="#">Nom Article</a></h4>
+                                        <p class="prixAffiche" id="prixpommes">$0.99</p>
                                         <div class="buttons">
-                                            <button class="btn-minus" onclick="decreaseItem('pommes' , 'prixpommes')">-</button>
+                                            <button class="btn-minus">-</button>
                                             <input type="text" value="0" />
-                                            <button class="btn-plus" onclick="increaseItem('pommes' , 'prixpommes')">+</button>
+                                            <button class="btn-plus">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +69,7 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                     <h3>Modifier</h3>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-10">
                             <form action="?action=adminModifier" method="POST" id="formAdmin">
                                 <input type="text" name="idModifier" placeholder="ID">
                                 <input type="text" name="articleModifier" placeholder="Article">
@@ -76,22 +77,6 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                                 <input type="text" name="idArticleModifier" placeholder="ID Article">
                                 <input type="submit" value="Modifier" name="btnModifier" class="btnModifier"></input>
                             </form>
-                            </div>
-                            <div class="col-4">
-                                <div class="product-item justify-content-center align-item-center">
-                                    <div class="product-img">
-                                        <img id="previewImg" src="#" alt="previewImg" />
-                                    </div>
-                                    <div class="product-description">
-                                        <h4 class="product-name"><a href="#">Nom Article</a></h4>
-                                        <p id="prixpommes">$0.99</p>
-                                        <div class="buttons">
-                                            <button class="btn-minus" onclick="decreaseItem('pommes' , 'prixpommes')">-</button>
-                                            <input type="text" value="0" />
-                                            <button class="btn-plus" onclick="increaseItem('pommes' , 'prixpommes')">+</button>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,22 +91,6 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
                             <input type="text" name="idSupprimer" placeholder="ID">
                             <input type="submit" value="Supprimer" name="btnSupprimer" class="btnSupprimer"></input>
                         </form>
-                    </div>
-                    <div class="col-4">
-                        <div class="product-item justify-content-center align-item-center">
-                            <div class="product-img">
-                                <img id="previewImg" src="#" alt="previewImg" />
-                            </div>
-                            <div class="product-description">
-                                <h4 class="product-name"><a href="#">Nom Article</a></h4>
-                                <p id="prixpommes">$0.99</p>
-                                <div class="buttons">
-                                    <button class="btn-minus" onclick="decreaseItem('pommes' , 'prixpommes')">-</button>
-                                    <input type="text" value="0" />
-                                    <button class="btn-plus" onclick="increaseItem('pommes' , 'prixpommes')">+</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -181,6 +150,23 @@ include_once "modeles/DAO/utilisateurDAO.class.php";
 
 <div class="container-fluid foodwrap"></div>
 
+<script>
+
+    imgInput.onchange = evt =>{
+        const [file] = imgInput.files
+        if(file) {
+            previewImg.src = URL.createObjectURL(file)
+        }
+    }
+
+    function previsualiser(){
+        const jsArticle = document.getElementsByClassName('jsArticle')[0].value;
+        const jsPrix = document.getElementsByClassName('jsPrix')[0].value;
+        document.getElementById('nomProduit').textContent = jsArticle;
+        document.getElementById('prixpommes').innerHTML = jsPrix;
+    }
+    
+</script>
 
 <?php
 require "vues/inc/footer.inc.php";
