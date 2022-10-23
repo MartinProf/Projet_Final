@@ -18,7 +18,7 @@ require "vues/inc/navbar.inc.php";
   
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 1) {
-      $laValeur = $_COOKIE[$i+1];
+      $laValeur = $_COOKIE[$tableauArticles[$i]->getIdArticle()];
       echo '
       <div class="product-item">
         <div class="product-img">
@@ -49,7 +49,7 @@ require "vues/inc/navbar.inc.php";
 
 for ($i=0; $i < count($tableauArticles); $i++) { 
   if ($tableauArticles[$i]->getIdArticle() == 2) {
-    $laValeur = $_COOKIE[$i+1];
+    $laValeur = $_COOKIE[$tableauArticles[$i]->getIdArticle()];
     echo '
     <div class="product-item">
       <div class="product-img">
@@ -78,7 +78,7 @@ for ($i=0; $i < count($tableauArticles); $i++) {
   <?php
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 3) {
-      $laValeur = $_COOKIE[$i+1];
+      $laValeur = $_COOKIE[$tableauArticles[$i]->getIdArticle()];
       echo '
       <div class="product-item">
         <div class="product-img">
@@ -108,7 +108,7 @@ for ($i=0; $i < count($tableauArticles); $i++) {
   <?php
   for ($i=0; $i < count($tableauArticles); $i++) { 
     if ($tableauArticles[$i]->getIdArticle() == 4) {
-      $laValeur = $_COOKIE[$i+1];
+      $laValeur = $_COOKIE[$tableauArticles[$i]->getIdArticle()];
       echo '
       <div class="product-item">
         <div class="product-img">
