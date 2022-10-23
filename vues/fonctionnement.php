@@ -63,7 +63,7 @@ require "vues/inc/navbar.inc.php";
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 d-flex imageConteneur justify-content-center align-items-center">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center imageConteneur">
                 <img src="images/tomateCueillie.gif" alt="" style="height: 285px;" class="img-responsive imageRonde ">
             </div>
         </div>
