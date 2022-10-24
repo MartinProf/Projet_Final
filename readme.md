@@ -2,6 +2,8 @@
 
 ## Travail présenté à: **Dini Ahamada**
 >##### Travail réalisé par ***Martin Forget*** et ***Martin Vézina***
+>Administrateur: root@root.com
+Password: root
 
 ![Logo_Rosemont](/images/logo_college_rosemontReduit.png)
 
